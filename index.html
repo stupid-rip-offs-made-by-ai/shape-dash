@@ -77,6 +77,65 @@ button:hover{filter:brightness(1.12)}
 .fbadge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:linear-gradient(var(--y),#e09b00);color:#2a1800;font-size:12px;letter-spacing:1px;padding:2px 12px;border-radius:10px;border:2px solid #5a3a00;white-space:nowrap}
 .by{font-family:system-ui,sans-serif;font-size:12px;color:rgba(255,255,255,.75);margin-top:2px}
 @media (max-width:560px){.tbar h2{display:none}.ltabs button{padding:5px 10px;font-size:14px}}
+/* title v2 */
+.ttag{margin:-6px 0 0;color:var(--mut);font-family:system-ui,sans-serif;font-size:14px;letter-spacing:.5px}
+.tprog{flex:1;font-family:system-ui,sans-serif;font-size:13px;color:var(--mut)}.tprog b{color:#fff;font-family:var(--f);font-weight:400;font-size:16px}
+.tmid{display:flex;align-items:center;gap:clamp(14px,3vw,34px);flex-wrap:wrap;justify-content:center}
+.tquick{display:flex;flex-direction:column;gap:10px}
+.qcard{display:flex;align-items:center;gap:10px;min-width:min(300px,86vw);padding:8px 12px 8px 8px;border-radius:16px;text-align:left;background:linear-gradient(120deg,hsl(var(--h),70%,34%),hsl(var(--h),60%,14%));border:2px solid rgba(255,255,255,.22);box-shadow:0 5px 0 rgba(0,0,0,.4)}
+.qcard canvas{width:96px;height:54px;border-radius:9px;background:#000;flex:0 0 auto}.qcard small{display:block;font-family:system-ui,sans-serif;font-size:11px;color:rgba(255,255,255,.75);letter-spacing:.5px;text-transform:uppercase}
+.qcard b{font-weight:400;font-size:18px;display:block;line-height:1.1}.qcard em{font-style:normal;font-size:12px;font-family:system-ui,sans-serif;color:rgba(255,255,255,.7)}
+.tbf{background:linear-gradient(var(--y),#e09b00)!important;border-color:#5a3a00!important;box-shadow:0 4px 0 #5a3a00!important;color:#2a1800!important;text-shadow:none!important}.tbf svg{fill:#2a1800!important}
+/* level browser */
+.lfil{display:flex;gap:6px;flex-wrap:wrap;justify-content:center;margin:2px 0 8px;flex:0 0 auto}
+.lfil button{padding:4px 11px;border-radius:14px;font-size:13px;background:rgba(0,0,0,.4);border:2px solid var(--line);color:var(--mut)}
+.lfil button.on{background:#fff;color:#14163e;border-color:#fff}.lfil .sep{width:2px;background:var(--line);margin:2px 4px}
+.lgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(230px,100%),1fr));gap:14px;width:min(1240px,100%);padding:6px 6px 28px;align-content:start}
+.lcard{position:relative;display:flex;flex-direction:column;gap:6px;padding:8px;border-radius:16px;text-align:left;background:linear-gradient(160deg,hsl(var(--h),62%,30%),hsl(var(--h),60%,12%));border:2px solid rgba(255,255,255,.16);box-shadow:0 6px 0 rgba(0,0,0,.4);transition:transform .15s,border-color .15s}
+.lcard:hover,.lcard:focus-visible{transform:translateY(-3px);border-color:#fff;outline:none}.lcard.sel{border-color:var(--y)}
+.lthumb{width:100%;aspect-ratio:16/9;border-radius:10px;background:#000;display:block}
+.lmeta{display:flex;align-items:center;gap:8px}.lmeta canvas{width:38px;height:38px;flex:0 0 auto}
+.ltxt{min-width:0}.ltxt b{display:block;font-weight:400;font-size:18px;line-height:1.1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.ltxt span{font-family:system-ui,sans-serif;font-size:12px;color:rgba(255,255,255,.75)}
+.lfoot{display:flex;justify-content:space-between;align-items:center;font-family:system-ui,sans-serif;font-size:12px;color:rgba(255,255,255,.7);gap:6px}.lfoot .lsong{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.lfoot .coins .cn{font-size:15px}
+.lbar{height:6px;border-radius:3px;background:rgba(0,0,0,.45);overflow:hidden}.lbar i{display:block;height:100%;background:linear-gradient(90deg,#8dffa3,#fff)}
+.ldone{position:absolute;top:12px;right:12px;font-style:normal;background:var(--g2);border:2px solid var(--g1);border-radius:10px;padding:0 8px;font-size:14px}
+.lfeat{position:absolute;top:12px;left:12px;font-style:normal;background:linear-gradient(var(--y),#e09b00);color:#2a1800;border-radius:9px;padding:0 8px;font-size:12px}
+.lempty{grid-column:1/-1;text-align:center;color:var(--mut);font-family:system-ui,sans-serif;padding:30px}
+/* level detail */
+.lbox{width:min(560px,100%);text-align:left}.lbox #lPrev{width:100%;aspect-ratio:16/9;border-radius:14px;background:#000;display:block;margin-bottom:10px}
+.lhead{display:flex;align-items:center;gap:12px}.lhead .face{width:64px;height:64px}.ltit h2{text-align:left;margin:0}.ltit div{font-family:system-ui,sans-serif;font-size:13px;color:var(--mut)}
+.lstats{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:8px;margin:12px 0}.lstats div{background:rgba(0,0,0,.35);border-radius:12px;padding:8px 10px;font-family:system-ui,sans-serif;font-size:12px;color:var(--mut)}
+.lstats b{display:block;font-family:var(--f);font-weight:400;font-size:18px;color:#fff}
+/* menu v3: featured list on the title screen (online-list style rows) */
+#s_explore .tfeat{margin-top:6px}.efil{margin:8px 0 2px}
+.tcenter .trow{flex:0 0 auto}
+
+.tfeat{width:min(760px,100%);flex:1;min-height:0;display:flex;flex-direction:column;background:rgba(10,8,30,.55);border:3px solid rgba(255,210,59,.55);border-radius:20px;box-shadow:0 8px 0 rgba(0,0,0,.45);overflow:hidden}
+.tfhead{display:flex;justify-content:space-between;align-items:center;padding:8px 14px;background:linear-gradient(var(--y),#e09b00);color:#2a1800;font-size:20px}
+.tfc{font-family:system-ui,sans-serif;font-size:12px;opacity:.8}
+.tflist{flex:1;overflow-y:auto;padding:8px;display:flex;flex-direction:column;gap:8px;touch-action:pan-y;scrollbar-width:thin}
+.frow{flex:0 0 auto;display:grid;grid-template-columns:62px 1fr auto auto;align-items:center;gap:10px;padding:7px 10px 7px 6px;border-radius:14px;text-align:left;
+  background:linear-gradient(90deg,hsl(var(--h),55%,26%),hsl(var(--h),50%,14%));border:2px solid rgba(255,255,255,.14);box-shadow:0 4px 0 rgba(0,0,0,.35);position:relative;overflow:hidden}
+.frow:hover,.frow:focus-visible{border-color:#fff;outline:none;filter:brightness(1.1)}
+.fdiff{display:flex;flex-direction:column;align-items:center;gap:0}.fdiff canvas{width:46px;height:46px}.fdiff span{font-size:13px;color:#fff;text-shadow:0 2px 0 #000}
+.finfo{min-width:0;display:flex;flex-direction:column}.finfo b{font-weight:400;font-size:21px;line-height:1.05;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-shadow:0 2px 0 rgba(0,0,0,.5)}
+.finfo .by{font-family:var(--f);font-size:14px;color:#8dff8a;margin:1px 0}.finfo .fm{font-family:system-ui,sans-serif;font-size:12px;color:#9fd8ff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.fcoins .cn{font-size:16px}
+.fgo{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 35% 30%,#b6ffc5,var(--g1) 35%,var(--g2) 80%);border:3px solid var(--gd);box-shadow:0 3px 0 var(--gd)}
+.fgo svg{width:20px;fill:#fff;margin-left:3px}
+.fprog{position:absolute;left:0;bottom:0;height:3px;background:#8dffa3}
+.fdone{position:absolute;top:4px;right:62px;font-size:11px;font-family:system-ui,sans-serif;color:#8dffa3}
+.tbplay{background:linear-gradient(var(--g1),var(--g2))!important;border-color:var(--gd)!important;box-shadow:0 4px 0 var(--gd),0 0 24px rgba(98,255,131,.35)!important;min-width:140px!important}
+.tbplay svg{width:34px!important;height:34px!important}
+@media (max-width:560px){.frow{grid-template-columns:52px 1fr auto}.fcoins{display:none}.finfo b{font-size:18px}}
+/* main level panels */
+.card.mpan{flex-basis:min(420px,86vw);padding:0;overflow:hidden;gap:0}
+.mban{position:relative}.mban canvas{display:block;width:100%;aspect-ratio:16/8;background:#000}
+.mban .lvn{position:absolute;left:0;right:0;bottom:8px;text-align:center;font-size:clamp(26px,4.4vw,38px);text-shadow:0 3px 0 rgba(0,0,0,.7),0 0 12px rgba(0,0,0,.6);padding:0 10px}
+.mbody{padding:10px 14px 14px;display:flex;flex-direction:column;gap:9px}
+.mrow{display:flex;align-items:center;gap:10px}.mrow canvas{width:54px;height:54px}.mrow .md{flex:1}.mrow .md b{display:block;font-weight:400;font-size:18px}.mrow .md span{font-family:system-ui,sans-serif;font-size:12px;color:rgba(255,255,255,.75)}
+.mnum{position:absolute;top:8px;left:10px;background:rgba(0,0,0,.55);border-radius:10px;padding:1px 9px;font-size:14px}
 /* garage */
 #gprev{width:min(720px,100%);height:clamp(60px,13vh,110px);flex:0 0 auto;background:rgba(0,0,0,.35);border-radius:16px;border:2px solid var(--line);margin:4px 0}
 .tabs{display:flex;gap:6px;overflow-x:auto;width:100%;justify-content:safe center;padding:4px 2px 8px;scrollbar-width:none;flex:0 0 auto;touch-action:pan-x}
@@ -117,6 +176,8 @@ textarea{width:100%;background:rgba(0,0,0,.45);color:#fff;border:2px solid var(-
 #hPrac{pointer-events:auto;position:absolute;left:10px;bottom:max(10px,env(safe-area-inset-bottom));display:none;gap:8px}
 #hPrac button{font-size:14px!important;padding:8px 12px!important;background:linear-gradient(#3bd65c,#168a32)!important;border-color:#063d14!important;box-shadow:0 4px 0 #063d14!important}
 #hPrac small{opacity:.7;font-size:11px}
+#hStart{pointer-events:auto;position:absolute;right:max(10px,env(safe-area-inset-right));top:max(8px,env(safe-area-inset-top));display:none;align-items:center;gap:6px;background:rgba(0,0,0,.45);border:2px solid var(--line);border-radius:12px;padding:3px}
+#hStart button{width:34px;height:32px;border-radius:9px;background:rgba(255,255,255,.12);font-size:20px;line-height:1}#hStart span{min-width:70px;text-align:center;font-size:14px}
 /* modals */
 .modal{position:fixed;inset:0;background:rgba(4,4,18,.6);display:none;align-items:center;justify-content:center;z-index:10;padding:14px;backdrop-filter:blur(3px)}
 .modal.on{display:flex;animation:fade .18s}
@@ -175,25 +236,35 @@ body.ed #toast{bottom:auto;top:calc(120px + env(safe-area-inset-top,0px))}
 <canvas id="cv"></canvas>
 
 <div class="screen" id="s_title">
-  <div class="tbar"><span></span><div class="wallet"></div></div>
+  <div class="tbar"><span class="tprog" id="tProg"></span><div class="wallet"></div></div>
   <div class="tcenter">
     <h1 class="logo"><span class="l1">SHAPE</span><span class="l2">DASH</span></h1>
-    <button id="bPlay" class="bigplay" aria-label="Play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button>
+    <p class="ttag">8 game modes · <span id="tCount"></span> levels · build your own</p>
+    <button id="bPlay" class="bigplay" aria-label="Play main levels"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button>
     <div class="trow">
+      <button id="bExplore" class="tb tbf"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm4.2 5.8l-2.5 6-6 2.4 2.5-6z"/></svg><span>Explore</span></button>
       <button id="bGarage" class="tb"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="8" y="8" width="3" height="3"/><rect x="13" y="8" width="3" height="3"/><rect x="8" y="14" width="8" height="2"/></svg><span>Garage</span></button>
       <button id="bCreate" class="tb"><svg viewBox="0 0 24 24"><path d="M3 21h4l11-11-4-4L3 17zM15 5l4 4 2-2-4-4z"/></svg><span>Create</span></button>
       <button id="bSettings" class="tb"><svg viewBox="0 0 24 24"><path d="M12 8a4 4 0 100 8 4 4 0 000-8zm9 4l-2.2-.7-.5-1.3 1-2.1-1.4-1.4-2.1 1-1.3-.5L13.8 3h-2l-.7 2.2-1.3.5-2.1-1-1.4 1.4 1 2.1-.5 1.3L3 11.2v2l2.2.7.5 1.3-1 2.1 1.4 1.4 2.1-1 1.3.5.7 2.2h2l.7-2.2 1.3-.5 2.1 1 1.4-1.4-1-2.1.5-1.3L21 13z"/></svg><span>Settings</span></button>
       <button id="bFull" class="tb" style="display:none"><svg viewBox="0 0 24 24"><path d="M4 9V4h5v2H6v3zm11-5h5v5h-2V6h-3zM4 15h2v3h3v2H4zm14 0h2v5h-5v-2h3z"/></svg><span>Fullscreen</span></button>
     </div>
-    <p class="hint tiny">Click, tap or press Space to jump · 18 levels · 8 featured · 8 game modes</p>
     <div id="saveWarn" class="warn" style="display:none"></div>
   </div>
 </div>
 
 <div class="screen" id="s_levels">
-  <div class="tbar"><button class="back" data-back>‹</button><h2>Levels</h2><div id="ltabs" class="ltabs"><button data-lt="main" class="on">Main</button><button data-lt="feat">★ Featured</button></div><div class="wallet"></div></div>
+  <div class="tbar"><button class="back" data-back>‹</button><h2>Main Levels</h2><div class="wallet"></div></div>
   <div id="cards" class="cards"></div>
-  <div class="nav"><button id="lp" class="arrow">‹</button><div id="dots"></div><button id="ln" class="arrow">›</button></div>
+  <div class="nav"><button id="lp" class="arrow" aria-label="Previous level">‹</button><div id="dots"></div><button id="ln" class="arrow" aria-label="Next level">›</button></div>
+</div>
+
+<div class="screen" id="s_explore">
+  <div class="tbar"><button class="back" data-back>‹</button><h2>Explore</h2><div class="wallet"></div></div>
+  <div class="tfeat">
+    <div class="tfhead"><span class="tft">★ Featured Levels</span><span class="tfc" id="tFeatN"></span></div>
+    <div class="lfil efil" id="eFil"></div>
+    <div class="tflist" id="tFeat"></div>
+  </div>
 </div>
 
 <div class="screen" id="s_garage">
@@ -216,6 +287,7 @@ body.ed #toast{bottom:auto;top:calc(120px + env(safe-area-inset-top,0px))}
 </div>
 
 <div id="hud"><button id="hPause" aria-label="Pause"><svg viewBox="0 0 24 24"><rect x="6" y="5" width="4" height="14"/><rect x="14" y="5" width="4" height="14"/></svg></button><span id="hTag"></span>
+  <div id="hStart"><button id="hSpP" aria-label="Previous start position">‹</button><span id="hSpL">Start</span><button id="hSpN" aria-label="Next start position">›</button></div>
   <div id="hPrac"><button id="hCp">◆ Checkpoint <small>Z</small></button><button id="hUn">✖ Remove <small>X</small></button></div></div>
 
 <div id="edUI">
@@ -234,6 +306,10 @@ body.ed #toast{bottom:auto;top:calc(120px + env(safe-area-inset-top,0px))}
   <div class="vol"><label>Music<input type="range" id="pMus" min="0" max="1" step=".05"></label><label>Sound<input type="range" id="pSfx" min="0" max="1" step=".05"></label></div></div></div>
 <div class="modal" id="m_win"><div class="box win"><h2 id="wTitle">Level Complete!</h2><div id="wBody"></div>
   <div class="rowb"><button id="wReplay">↻ Replay</button><button id="wMenu">Menu</button><button id="wNext" class="pri">Next ›</button></div></div></div>
+<div class="modal" id="m_lvl"><div class="box lbox"><canvas id="lPrev"></canvas>
+  <div class="lhead"><canvas id="lFace" class="face" width="96" height="96"></canvas><div class="ltit"><h2 id="lName"></h2><div id="lSub"></div></div></div>
+  <div id="lStats" class="lstats"></div>
+  <div class="rowb"><button id="lPlay" class="pri">▶ Play</button><button id="lPrac">Practice</button><button id="lWatch" title="Watch the bot beat this level">Watch</button><button id="lClose">Close</button></div></div></div>
 <div class="modal" id="m_ask"><div class="box"><h2 id="qTitle"></h2><div id="qBody"></div><div id="qBtns" class="rowb"></div></div></div>
 <div id="toast"></div>
 <script>/* ===== Shape Dash core: physics, level generator, solver (shared with the build-time verifier) ===== */
@@ -245,7 +321,10 @@ const FLY={ship:1,ball:1,ufo:1,wave:1,spider:1,swing:1};
 const SD_FLY=m=>!!FLY[m];
 const BOTH={ship:1,ball:1,ufo:1,swing:1,spider:1};
 const SPEEDS=[8.4,10.4,12.9,15.6,19.2];
-const SIZE={cube:[.88,.88],ship:[.9,.62],ball:[.86,.86],ufo:[.86,.76],wave:[.34,.34],robot:[.86,.9],spider:[.86,.64],swing:[.8,.8]};
+/* GD-style hitboxes: a full outer box (hazards, landing) and a small inner box (dying to blocks) */
+const SIZE={cube:[1,1],ship:[1,.7],ball:[1,1],ufo:[1,1],wave:[.33,.33],robot:[1,1],spider:[1,.66],swing:[1,1]};
+const INNER=.3;
+const psz=p=>{const s=SIZE[p.m];return p.mini?[s[0]*.6,s[1]*.6]:s};
 const PH={cube:{g:91,j:20,t:26},robot:{g:91,j:12,b:.22,t:26},ball:{g:70,k:5,t:22},ufo:{g:50,j:11,t:13},
   ship:{u:54,dn:46,mu:8.6,md:10},spider:{g:91,t:26},swing:{g:42,t:9.5},wave:{}};
 const PADJ={cube:28,robot:28,ball:19,ufo:15,ship:13,spider:28,swing:12,wave:0};
@@ -260,14 +339,13 @@ function derive(o){
     case 'B':o.w=o.w||1;o.h=o.h||1;o.x0=x;o.x1=x+o.w;o.y0=y;o.y1=y+o.h;o.sol=!o.fk;b=x+o.w;break;
     case 'H':o.x0=x;o.x1=x+1;o.y0=y;o.y1=y+.5;o.sol=!o.fk;break;
     case 'T':o.x0=x;o.x1=x+1;o.y0=y+.5;o.y1=y+1;o.sol=!o.fk;break;
-    case 'S':o.hz=!o.fk;o.x0=x+.36;o.x1=x+.64;o.y0=y;o.y1=y+.58;break;
-    case 'D':o.hz=!o.fk;o.x0=x+.36;o.x1=x+.64;o.y0=y+.42;o.y1=y+1;break;
-    case 's':o.hz=!o.fk;o.x0=x+.38;o.x1=x+.62;o.y0=y;o.y1=y+.3;break;
-    case 'd':o.hz=!o.fk;o.x0=x+.38;o.x1=x+.62;o.y0=y+.7;o.y1=y+1;break;
+    case 'S':case 'D':o.hz=!o.fk;o.x0=x+.4;o.x1=x+.6;o.y0=y+.3;o.y1=y+.7;break;
+    case 's':o.hz=!o.fk;o.x0=x+.4;o.x1=x+.6;o.y0=y+.15;o.y1=y+.35;break;
+    case 'd':o.hz=!o.fk;o.x0=x+.4;o.x1=x+.6;o.y0=y+.65;o.y1=y+.85;break;
     case 'W':o.r=o.r||1;o.cx=x+.5;o.cy=y+.5;a=o.cx-o.r;b=o.cx+o.r;break;
     case 'P':o.x0=x+.05;o.x1=x+.95;o.y0=o.f?y+.65:y;o.y1=o.f?y+1:y+.35;break;
     case 'O':o.cx=x+.5;o.cy=y+.5;a=x-.3;b=x+1.3;break;
-    case 'M':case 'G':case 'V':o.h=o.h||3;o.x0=x+.25;o.x1=x+.75;o.y0=y;o.y1=y+o.h;break;
+    case 'M':case 'G':case 'V':case 'N':case 'R':case 'Y':case 'Z':o.h=o.h||3;o.x0=x+.25;o.x1=x+.75;o.y0=y;o.y1=y+o.h;break;
     case 'C':o.cx=x+.5;o.cy=y+.5;a=x-.3;b=x+1.3;break;
   }
   o.bx0=a;o.bx1=b;
@@ -285,13 +363,13 @@ function secAt(L,x){const s=L.secs;for(let i=s.length-1;i>=0;i--)if(x>=s[i].x0)r
 
 /* ---------- player & physics ---------- */
 function newPlayer(L){const m=L.start.m;return{x:0,y:FLY[m]?4.5:SIZE[m][1]/2,vy:0,m,d:1,g:!FLY[m],sp:SPEEDS[L.start.sp],
-  boost:0,buf:0,hold:false,used:[],coins:0,dead:0,won:0,tick:0,ev:0,tpy:0}}
+  boost:0,buf:0,hold:false,used:[],coins:0,dead:0,won:0,tick:0,ev:0,tpy:0,mini:0,mir:0}}
 function clone(p){const q=Object.assign({},p);q.used=p.used.slice();return q}
 let STAMP=0;
 function used(p,o){return p.used.indexOf(o.id)>=0}
 function use(p,o){p.used.push(o.id);if(p.used.length>6)p.used.shift()}
 function setMode(p,m){p.m=m;p.vy*=.5;p.boost=0;p.g=false;p.d=1;p.ev|=32;
-  const hh=SIZE[m][1]/2;if(p.y-hh<0)p.y=hh;if(FLY[m]&&p.y+hh>CEIL)p.y=CEIL-hh}
+  const hh=psz(p)[1]/2;if(p.y-hh<0)p.y=hh;if(FLY[m]&&p.y+hh>CEIL)p.y=CEIL-hh}
 function pad(p,c){const m=p.m;
   if(c==='b'){p.d=-p.d;p.vy=-p.d*6}
   else if(m!=='wave'){p.vy=p.d*PADJ[m]*(c==='p'?.66:1)}
@@ -301,7 +379,7 @@ function orb(p,c){const m=p.m;
   else if(c==='g'){p.d=-p.d;p.vy=m==='wave'?0:p.d*ORBJ[m]}
   else if(m!=='wave'){if(c==='k')p.vy=-p.d*28;else p.vy=p.d*ORBJ[m]*(c==='p'?.66:1)}
   p.g=false;p.boost=0;p.ev|=4}
-function teleport(p,L){const sz=SIZE[p.m],hw=sz[0]/2-.02,hh=sz[1]/2,d=p.d;
+function teleport(p,L){const sz=psz(p),hw=sz[0]/2-.02,hh=sz[1]/2,d=p.d;
   let tg=d===1?CEIL:0;const top=p.y+hh,bot=p.y-hh;
   const c0=Math.max(0,Math.floor(p.x-hw)),c1=Math.floor(p.x+hw);
   for(let c=c0;c<=c1;c++){const a=L.cols[c];if(!a)continue;for(let i=0;i<a.length;i++){const o=a[i];if(!o.sol)continue;
@@ -317,14 +395,14 @@ function step(p,L,hold,M){
   p.x+=p.sp*DT;
   const want=hold||p.buf>0;
   switch(m){
-    case 'cube':if(p.g&&want){p.vy=d*ph.j;p.g=false;p.buf=0;p.ev|=1}
+    case 'cube':if(p.g&&want){p.vy=d*ph.j*(p.mini?.82:1);p.g=false;p.buf=0;p.ev|=1}
       p.vy-=d*ph.g*DT;if(p.vy*d<-ph.t)p.vy=-d*ph.t;break;
-    case 'robot':if(p.g&&want){p.vy=d*ph.j;p.g=false;p.buf=0;p.boost=ph.b;p.ev|=1}
+    case 'robot':if(p.g&&want){p.vy=d*ph.j*(p.mini?.85:1);p.g=false;p.buf=0;p.boost=ph.b;p.ev|=1}
       else if(p.boost>0){if(hold){p.vy=d*ph.j;p.boost-=DT}else p.boost=0}
       if(p.boost<=0){p.vy-=d*ph.g*DT;if(p.vy*d<-ph.t)p.vy=-d*ph.t}break;
     case 'ball':if(p.g&&p.buf>0){d=p.d=-d;p.vy=-d*ph.k;p.g=false;p.buf=0;p.ev|=1}
       p.vy-=d*ph.g*DT;if(p.vy*d<-ph.t)p.vy=-d*ph.t;break;
-    case 'ufo':if(p.buf>0){p.vy=d*ph.j;p.g=false;p.buf=0;p.ev|=1}
+    case 'ufo':if(p.buf>0){p.vy=d*ph.j*(p.mini?.85:1);p.g=false;p.buf=0;p.ev|=1}
       p.vy-=d*ph.g*DT;if(p.vy*d<-ph.t)p.vy=-d*ph.t;break;
     case 'ship':{p.vy+=(hold?d*ph.u:-d*ph.dn)*DT;const r=p.vy*d;if(r>ph.mu)p.vy=d*ph.mu;else if(r<-ph.md)p.vy=-d*ph.md;break}
     case 'wave':p.vy=(hold?d:-d)*p.sp;break;
@@ -339,12 +417,12 @@ function step(p,L,hold,M){
   p.tick++;
 }
 function collide(p,L,py,M){
-  let m=p.m,sz=SIZE[m],hw=sz[0]/2,hh=sz[1]/2;
+  let m=p.m,sz=psz(p),hw=sz[0]/2,hh=sz[1]/2;
   p.g=false;
   if(p.y-hh<0){p.y=hh;if(p.vy<0)p.vy=0;if(p.d===1)p.g=true}
   if(FLY[m]&&p.y+hh>CEIL){p.y=CEIL-hh;if(p.vy>0)p.vy=0;if(p.d===-1)p.g=true}
   if(p.y>15||p.y<-3){p.dead=1;return}
-  const pb=py-hh,pt=py+hh,cols=L.cols;
+  const pb=py-hh,pt=py+hh,cols=L.cols,ih=INNER/2;
   const c0=Math.max(0,Math.floor(p.x-hw-.4)),c1=Math.floor(p.x+hw+.4);
   let st=++STAMP;
   for(let c=c0;c<=c1;c++){const a=cols[c];if(!a)continue;
@@ -352,12 +430,12 @@ function collide(p,L,py,M){
       if(p.x+hw<=o.x0+1e-3||p.x-hw>=o.x1-1e-3)continue;
       if(p.y+hh<=o.y0+1e-3||p.y-hh>=o.y1-1e-3)continue;
       if(m==='wave'){p.dead=1;return}
-      if(pb>=o.y1-SNAP){if(p.d===1||BOTH[m]){p.y=o.y1+hh;if(p.vy<0)p.vy=0;if(p.d===1)p.g=true}else{p.dead=1;return}}
-      else if(pt<=o.y0+SNAP){if(p.d===-1||BOTH[m]){p.y=o.y0-hh;if(p.vy>0)p.vy=0;if(p.d===-1)p.g=true}else{p.dead=1;return}}
-      else{p.dead=1;return}
+      if(pb>=o.y1-SNAP&&(p.d===1||BOTH[m])){p.y=o.y1+hh;if(p.vy<0)p.vy=0;if(p.d===1)p.g=true}
+      else if(pt<=o.y0+SNAP&&(p.d===-1||BOTH[m])){p.y=o.y0-hh;if(p.vy>0)p.vy=0;if(p.d===-1)p.g=true}
+      else if(p.x+ih>o.x0&&p.x-ih<o.x1&&p.y+ih>o.y0&&p.y-ih<o.y1){p.dead=1;return}
     }}
   st=++STAMP;
-  const wv=m==='wave',hw2=(wv?hw-.02:hw-.07)+M,hh2=(wv?hh-.02:hh-.07)+M;
+  const hw2=hw+M,hh2=hh+M;
   for(let c=c0;c<=c1;c++){const a=cols[c];if(!a)continue;
     for(let i=0;i<a.length;i++){const o=a[i];if(o.sol||o._s===st)continue;o._s=st;
       switch(o.t){
@@ -368,7 +446,10 @@ function collide(p,L,py,M){
         case 'P':if(ov(p,o,hw,hh)&&!used(p,o)){use(p,o);pad(p,o.c)}break;
         case 'O':if(p.buf>0&&!used(p,o)){const dx=Math.max(Math.abs(p.x-o.cx)-hw,0),dy=Math.max(Math.abs(p.y-o.cy)-hh,0);
           if(dx*dx+dy*dy<.4){use(p,o);orb(p,o.c);p.buf=0}}break;
-        case 'M':if(p.m!==o.m&&ov(p,o,hw,hh)){setMode(p,o.m);m=p.m;sz=SIZE[m];hw=sz[0]/2;hh=sz[1]/2}break;
+        case 'M':if(p.m!==o.m&&ov(p,o,hw,hh)){setMode(p,o.m);m=p.m;sz=psz(p);hw=sz[0]/2;hh=sz[1]/2}break;
+        case 'N':if(p.mini!==o.mini&&ov(p,o,hw,hh)){p.mini=o.mini;p.ev|=128;sz=psz(p);hw=sz[0]/2;hh=sz[1]/2;if(p.y-hh<0)p.y=hh}break;
+        case 'R':if(p.mir!==o.mir&&ov(p,o,hw,hh)){p.mir=o.mir;p.ev|=256}break;
+        case 'Y':if(o.link&&!used(p,o)&&ov(p,o,hw,hh)){use(p,o);p.tpy=p.y;p.y=Math.max(hh,Math.min((FLY[m]?CEIL:14)-hh,o.link.y+1.5));p.g=false;p.ev|=512}break;
         case 'G':if(p.d!==o.g&&ov(p,o,hw,hh)){p.d=o.g;p.vy*=.5;p.g=false;p.ev|=8}break;
         case 'V':if(ov(p,o,hw,hh)&&p.sp!==SPEEDS[o.v]){p.sp=SPEEDS[o.v];p.ev|=64}break;
         case 'C':{const dx=p.x-o.cx,dy=p.y-o.cy;if(dx*dx+dy*dy<.56&&!(p.coins>>o.k&1)){p.coins|=1<<o.k;p.ev|=16}break}
@@ -377,7 +458,7 @@ function collide(p,L,py,M){
 }
 
 /* ---------- section generator ---------- */
-let GO={};
+let GO={};const DENSE=.84;
 function genSection(O,D,r,m,d,spi,x0,x1,first,coinKs){
   const V=SPEEDS[spi];
   const ri=n=>Math.floor(r()*n),ch=q=>r()<q;
@@ -396,7 +477,7 @@ function genSection(O,D,r,m,d,spi,x0,x1,first,coinKs){
   const coins=coinKs.slice(),span=end-x;
   const coinAt=coins.map((k,i)=>x+Math.max(0,Math.min(Math.floor(span*(i+1)/(coins.length+1)+(r()-.5)*span*.15),span-36)));
   let c=4.5,lastX=x,gst=1;
-  const gap=()=>{const base=fam==='g'?JD:V*.42;return Math.max(fam==='g'?2:3,Math.round((base*(1.45-d*.065)+r()*base*.5)*(GO.tight||1)))};
+  const gap=()=>{const base=fam==='g'?JD:V*.42;return Math.max(fam==='g'?2:3,Math.round((base*(1.45-d*.065)+r()*base*.5)*(GO.tight||1)*DENSE))};
   /* ground family (cube, robot) */
   const G1=x=>{SP(x);return x+1};
   const G2=x=>{SP(x);SP(x+1);return x+2};
@@ -532,6 +613,46 @@ const FEAT=[
 FEAT.forEach(f=>{f.feat=1;DEFS.push(f)});
 DEFS.push({n:'Heavy Heart',st:10,df:7,sp:3,hue:356,hues:[356,350,2,354],dset:4,fx:'dark',dark:1,grey:[6,10],sty:'gloom',opt:{tight:.74,spam:1},dec:8,M:.08,
   secs:[['wave',80,9.5],['ship',60,9.5],['wave',70,9.5,4],['cube',60,9.5],['wave',75,9.5],['ufo',55,9.5],['wave',70,9.5,3],['spider',50,9.5],['wave',75,9.5,4],['robot',55,9.5],['wave',70,9.5],['ball',50,9.5],['wave',80,9.5]],coins:[1,5,9]});
+DEFS.push({n:'Quiet Mind',by:'stillwater',feat:1,st:10,df:7,sp:2,hue:250,hues:[250,240,262],dset:6,fx:'mono',mono:1,sty:'synth',opt:{tight:.8},
+  secs:[['cube',70,9],['ship',65,9],['ball',55,9],['wave',60,9,3],['ufo',55,9],['robot',60,9],['spider',50,9],['swing',60,9],['wave',60,9],['cube',70,9],['ship',60,9]],coins:[1,5,8]});
+DEFS.push({n:'Violet Geode',by:'prism_fox',feat:1,st:10,df:7,sp:2,hue:278,hues:[278,290,265,300,252],dset:5,fx:'geode',sty:'electro',opt:{tight:.8},
+  secs:[['ufo',65,9],['cube',70,9],['ship',65,9,3],['wave',60,9],['ball',55,9],['robot',60,9],['swing',60,9],['wave',60,9],['spider',50,9],['ship',65,9],['cube',70,9]],coins:[0,4,7]});
+/* ---------- themes: every level gets its own look ---------- */
+const BGS=['city','mount','forest','space','ruins','crystal','ocean','grid'],BLKS=['brick','tech','crystal','stone','panel','glass'],GNDS=['tiles','grass','metal','rock','sand'],
+  FXS=['none','snow','embers','stars','fog','bubbles','sparks','none'],STYS=['house','break','dnb','synth','electro','dub'];
+const OLDTH=[['city','tech','tiles','none'],['ocean','glass','sand','bubbles'],['city','panel','tiles','stars'],['grid','tech','metal','sparks'],['ruins','stone','rock','embers'],['forest','stone','grass','fog'],
+  ['mount','brick','grass','none'],['crystal','crystal','rock','sparks'],['ruins','panel','metal','embers'],['space','glass','metal','stars'],['grid','tech','metal','sparks'],['space','crystal','tiles','stars'],
+  ['mount','stone','rock','snow'],['ruins','brick','rock','embers'],['ruins','stone','rock','embers'],['space','tech','metal','stars'],['ruins','stone','rock','embers'],
+  ['grid','tech','tiles','sparks'],['ocean','glass','sand','bubbles'],['forest','stone','grass','fog'],['city','panel','metal','none'],['forest','brick','grass','none'],['mount','stone','sand','none'],['grid','tech','metal','sparks'],['city','tech','tiles','stars'],
+  ['forest','stone','rock','fog'],['forest','stone','rock','none'],['crystal','crystal','rock','sparks']];
+DEFS.forEach((d,i)=>{const t=OLDTH[i]||OLDTH[0];d.th=d.th||{bg:t[0],blk:t[1],gnd:t[2],fx:t[3]}});
+/* ---------- the level designer: many new levels, each with a signature ---------- */
+const SIGS={orbs:{Gorb:6,Gpad:3,Gpink:3},tunnels:{Ftun:5,Gtun:4},saws:{Fsaw:5,Gsaw:5},spam:{Ftun:4},stairs:{Gstairs:5,Graise:4,Gpits:3},
+  ceilings:{Gceil:5,Gblkspk:3},gravity:{Fgrav:6},blocks:{Gblk:4,Gblkspk:4,Gpits:4},flips:{Balt:4,Bzig:4,Bbump:3},ufo:{Fufo:6},mixed:{}};
+const NEWL=[
+ // name, df, signature, [modes], by (featured only)
+ ['Sunny Steps',0,'stairs',['cube','ship','cube']],['Paper Planes',0,'mixed',['ship','cube','ship','cube']],['Lagoon Hop',0,'flips',['cube','ball','cube']],
+ ['Copper Circuit',1,'blocks',['cube','robot','ship','cube']],['Maple Rush',1,'stairs',['cube','ufo','cube','ship']],['Neon Alley',1,'orbs',['cube','wave','cube','ball']],
+ ['Frost Relay',2,'ceilings',['cube','ship','spider','cube','ufo']],['Lantern Row',2,'orbs',['robot','ball','ship','cube']],['Tidal Pulse',2,'flips',['ball','wave','cube','swing']],
+ ['Ember Falls',3,'saws',['cube','ship','robot','wave','cube']],['Glass Garden',3,'mixed',['ufo','cube','spider','ship','ball']],['Iron Orchard',3,'blocks',['robot','cube','swing','ship','cube']],
+ ['Static Bloom',4,'spam',['wave','cube','ship','wave','robot']],['Midnight Ferry',4,'tunnels',['ship','ufo','cube','ship','spider','cube']],['Rumble Yard',4,'gravity',['cube','ship','ball','swing','wave']],
+ ['Obsidian Choir',5,'saws',['cube','wave','robot','ship','spider','ball']],['Thunder Loom',5,'gravity',['ship','cube','wave','ufo','swing','cube']],['Velvet Abyss',5,'ceilings',['ball','cube','ship','wave','robot','spider']],
+ ['Shatterline',6,'spam',['wave','cube','ship','wave','robot','ufo','wave']],['Hollow Comet',6,'tunnels',['ship','cube','swing','ship','ball','wave','cube']],['Sable Engine',6,'blocks',['robot','cube','spider','ship','wave','robot','cube']],
+ ['Eclipse Protocol',7,'mixed',['cube','wave','ship','robot','ball','ufo','spider','swing','wave']],['Null Cathedral',7,'saws',['ship','cube','wave','swing','robot','ship','ball','wave']],['Last Lightyear',7,'spam',['wave','ship','cube','wave','ufo','robot','wave','spider','wave']],
+ ['Pixel Picnic',1,'blocks',['cube','cube','ship'],'crumbs'],['Orb Lagoon',2,'orbs',['cube','ball','cube','robot'],'bubblepop'],['Robot Rhapsody',3,'stairs',['robot','robot','ship','robot'],'boltbard'],
+ ['Saucer Circus',3,'ufo',['ufo','cube','ufo','ufo'],'ringmaster'],['Neon Noodle',4,'spam',['wave','wave','ship','wave'],'spaghettio'],['Gravity Waltz',4,'gravity',['ship','ufo','ship','swing'],'twostep'],
+ ['Saw Mill',4,'saws',['cube','ship','cube','ufo','cube'],'lumberjax'],['Spider Silk',5,'flips',['spider','ball','spider','ball','spider'],'tangle'],['Ship of Planks',5,'tunnels',['ship','ship','wave','ship','ship'],'plankton'],
+ ['Chaos Lab',6,'mixed',['cube','ship','ball','ufo','wave','robot','spider','swing'],'labcoat'],['Zigzag Zenith',6,'spam',['wave','wave','ship','wave','wave','wave'],'peakwave'],['Hyperdrive Heist',7,'mixed',['cube','robot','ship','wave','cube','ufo'],'vaultkid']];
+const DLV=[2,3.2,4.6,6,7.4,8.4,9.2,10],STN=[1,2,3,5,6,8,9,10],SPD=[1,1,1,2,2,2,3,3];
+{const R=rng(424242);const ri=n=>Math.floor(R()*n),pk=a=>a[ri(a.length)];
+ NEWL.forEach((n,k)=>{const [name,df,sig,modes,by]=n;const base=DLV[df];let sp=SPD[df];
+   const secs=modes.map((m,i)=>{const len=55+ri(30)+(df>=5?10:0);const d=Math.min(10,Math.round((base-.6+i/(modes.length-1||1)*1.2)*10)/10);
+     const s=[m,len,d];if(df>=3&&i>0&&R()<.25){const ns=Math.max(0,Math.min(4,sp+(R()<.6?1:-1)));if(ns!==sp){s.push(ns);sp=ns}}return s});
+   const nc=modes.length,coins=[Math.floor(nc*.15),Math.floor(nc*.5),Math.max(Math.floor(nc*.5)+1,nc-1)].map(v=>Math.min(nc-1,v));
+   if(coins[1]===coins[0])coins[1]=Math.min(nc-1,coins[0]+1);if(coins[2]<=coins[1])coins[2]=Math.min(nc-1,coins[1]+1);
+   const hue=(k*47+ri(40))%360,th={bg:BGS[(k*3+ri(3))%BGS.length],blk:BLKS[(k*5+ri(2))%BLKS.length],gnd:GNDS[(k+ri(2))%GNDS.length],fx:FXS[(k*7+ri(3))%FXS.length]};
+   const def={n:name,st:STN[df],df,sp:SPD[df],hue,secs,coins,th,sty:STYS[(k+ri(3))%STYS.length],dset:(k+ri(4))%4,opt:{boost:SIGS[sig],spam:sig==='spam'?1:0,tight:df>=6?.82:1}};
+   if(by){def.by=by;def.feat=1}DEFS.push(def)})}
 DEFS.forEach((d,i)=>{d.id=i;d.seeds=d.seeds||[]});
 const LENF=1.5;
 const DSETS=[
@@ -539,13 +660,16 @@ const DSETS=[
   {g:['grass','crystal','flame','grass'],s:['cloud','bubble','star'],c:['drip','chain']},
   {g:['pillar','torch','grass'],s:['orbit','pulse','checker','gear'],c:['chain','orbit']},
   {g:['crystal','grass','torch'],s:['star','diamond','ring','orbit'],c:['drip','diamond']},
-  {g:['thorn','thorn','torch'],s:['mandala','eyes','glow','mandala','star'],c:['drip','eyes','chain']}];
+  {g:['thorn','thorn','torch'],s:['mandala','eyes','glow','mandala','star'],c:['drip','eyes','chain']},
+  {g:['bigcrystal','crystal','crystal','glow'],s:['snowstar','diamond','glow','star','snowstar'],c:['hangcrystal','hangcrystal','diamond']},
+  {g:['pillar','thorn','torch','glow'],s:['glow','orbit','ring','eyes'],c:['vine','vine','chain']}];
 function decorate(def,O,D,secs,end){const r=rng(def.id*977+13),ri=n=>Math.floor(r()*n),pk=a=>a[ri(a.length)];
   const T=def.dset!=null?DSETS[def.dset]:DSETS[def.id%4];
   const mk=(k,x,y)=>{switch(k){case 'pillar':return{k,x,y:0,h:1.5+r()*3};case 'chain':case 'drip':return{k,x,y:9,h:.8+r()*2};
     case 'grass':case 'crystal':case 'flame':case 'torch':case 'thorn':case 'lamp':return{k,x,y};
     case 'cloud':return{k,x,y:6+r()*2.5};case 'checker':return{k,x,y:2+r()*5};
-    case 'mandala':return{k,x,y,s:.6+r()*.8};case 'eyes':return{k,x,y,s:.4+r()*.3};
+    case 'mandala':return{k,x,y,s:.6+r()*.8};case 'snowstar':return{k,x,y,s:.4+r()*.5};
+    case 'bigcrystal':return{k,x,y,s:.8+r()*.9};case 'hangcrystal':case 'vine':return{k,x,y:9,h:.8+r()*2.2};case 'eyes':return{k,x,y,s:.4+r()*.3};
     default:return{k,x,y,s:.3+r()*.5}}};
   for(const s of secs){const fly=FLY[s.m];
     for(let x=s.x0+3;x<s.x1-1;x+=2+ri(4)){const k=pk(T.g);if(fly&&k==='pillar')continue;D.push(mk(k,x+.5,0))}
@@ -570,7 +694,7 @@ function genLevel(def){
   GO={};decorate(def,O,D,secs,x);
   if(def.fx==='blood'){const r=rng(def.id*31+5);for(let dx=4;dx<x;dx+=2+Math.floor(r()*4)){const sec=secs.find(s=>dx>=s.x0&&dx<s.x1)||secs[0];
       D.push({k:'drip',x:dx+.5,y:SD_FLY(sec.m)?9:10.6,h:.6+r()*1.8});if(r()<.35)D.push({k:'thorn',x:dx+1.5,y:0});if(r()<.18)D.push({k:'pulse',x:dx+.5,y:2+r()*6,s:.4+r()*.5})}}
-  const L=prep(O,{end:x,start:{m:def.secs[0][0],sp:def.sp},secs,deco:D});L.bg=def.bg!=null?def.bg:def.id%4;L.fx=def.fx||null;L.dark=!!def.dark;if(def.fx==='dark'){const r=rng(def.id*53+9);for(let dx=30;dx<x;dx+=60+Math.floor(r()*50))D.push({k:'moon',x:dx,y:7.4,s:.9})}return L;
+  const L=prep(O,{end:x,start:{m:def.secs[0][0],sp:def.sp},secs,deco:D});L.bg=def.bg!=null?def.bg:def.id%4;L.fx=def.fx||null;L.th=def.th||null;L.dark=!!def.dark;L.mono=!!def.mono;if(def.fx==='dark'){const r=rng(def.id*53+9);for(let dx=30;dx<x;dx+=60+Math.floor(r()*50))D.push({k:'moon',x:dx,y:7.4,s:.9})}return L;
 }
 
 /* ---------- custom levels ---------- */
@@ -580,6 +704,7 @@ function decObj(a){const t=a[0],o={t,x:a[1],y:a[2]};const p=a[3];
   else if(t==='P'){o.c=(p||'y')[0];o.f=(p||'').length>1?1:0}
   else if(t==='M')o.m=p||'cube';else if(t==='G')o.g=p||-1;else if(t==='V')o.v=p==null?1:p;
   else if(t==='C')o.k=p|0;else if(t==='X')o.k=p||'lamp';
+  else if(t==='N')o.mini=p?1:0;else if(t==='R')o.mir=p?1:0;else if(t==='K')o.hue=p||0;else if(t==='U')o.c=p||1;else if(t==='J')o.s=p||1;
   return o}
 function decoFor(o){const x=o.x,y=o.y;switch(o.k){
   case 'gear':return{k:'gear',x:x+.5,y:y+.5,s:1.1,u:1};case 'ring':return{k:'ring',x:x+.5,y:y+.5,s:.6,u:1};
@@ -591,18 +716,26 @@ function decoFor(o){const x=o.x,y=o.y;switch(o.k){
   case 'lamp':return{k:'lamp',x:x+.5,y,u:1};
   default:return{k:o.k,x:x+.5,y:y+.5,s:.5,u:1}}}
 function buildCustom(c){
-  const all=(c.o||[]).map(decObj),objs=all.filter(o=>o.t!=='X');let mx=0;for(const o of all)mx=Math.max(mx,o.x+(o.w||1));
+  const NONOBJ={X:1,K:1,U:1,J:1,Q:1};const all=(c.o||[]).map(decObj),objs=all.filter(o=>!NONOBJ[o.t]);let mx=0;for(const o of all)mx=Math.max(mx,o.x+(o.w||1));
   const end=Math.max(30,mx+10),secs=[];const ps=objs.filter(o=>o.t==='M').sort((a,b)=>a.x-b.x);
   let x=0,m=c.m||'cube';for(const p of ps){secs.push({x0:x,x1:p.x,m,hue:c.h});x=p.x;m=p.m}
   secs.push({x0:x,x1:end,m,hue:c.h});
   const r=rng(77),D=[];if(c.ad!==0)for(let dx=2;dx<end;dx+=4+Math.floor(r()*6)){const k=r();
     D.push(k<.4?{k:'gear',x:dx,y:5+r()*4,s:.8+r()*1.4}:k<.7?{k:'ring',x:dx,y:4+r()*4,s:.5+r()*1}:{k:'cross',x:dx,y:3+r()*6,s:.3+r()*.5})}
   for(const o of all)if(o.t==='X')D.push(decoFor(o));
-  return prep(objs,{end,start:{m:c.m||'cube',sp:c.sp==null?1:c.sp},secs,deco:D});
+  const Ys=objs.filter(o=>o.t==='Y'),Zs=objs.filter(o=>o.t==='Z').sort((a,b)=>a.x-b.x);
+  for(const y of Ys)y.link=Zs.find(z=>z.x>=y.x-1)||Zs[Zs.length-1]||null;
+  const L=prep(objs,{end,start:{m:c.m||'cube',sp:c.sp==null?1:c.sp},secs,deco:D});
+  L.trig=all.filter(o=>o.t==='K'||o.t==='U'||o.t==='J').sort((a,b)=>a.x-b.x);
+  const flow=objs.filter(o=>o.t==='M'||o.t==='V'||o.t==='N'||o.t==='G').sort((a,b)=>a.x-b.x);
+  L.starts=all.filter(o=>o.t==='Q').sort((a,b)=>a.x-b.x).map(q=>{let m=c.m||'cube',sp=c.sp==null?1:c.sp,mini=0,d=1;
+    for(const f of flow){if(f.x>=q.x)break;if(f.t==='M')m=f.m;else if(f.t==='V')sp=f.v;else if(f.t==='N')mini=f.mini;else if(f.t==='G')d=f.g}
+    return{x:q.x+.5,y:q.y,m,sp,mini,d}});
+  return L;
 }
 
 /* ---------- solver (bot) ---------- */
-function stKey(q){return Math.round(q.y*10)+'|'+Math.round(q.vy)+'|'+q.d+q.m+(q.g?1:0)+(q.hold?1:0)+(q.buf>0?1:0)+'|'+Math.round(q.boost*40)+'|'+q.coins+'|'+q.used.join(',')+'|'+q.sp}
+function stKey(q){return Math.round(q.y*10)+'|'+Math.round(q.vy)+'|'+q.d+q.m+(q.g?1:0)+(q.hold?1:0)+(q.buf>0?1:0)+'|'+Math.round(q.boost*40)+(q.mini?'m':'')+'|'+q.coins+'|'+q.used.join(',')+'|'+q.sp}
 function stepFront(L,front,M,DEC,CAP,track){
   const next=new Map();const par=track?[]:null,hd=track?[]:null;let wins=null;
   for(let si=0;si<front.length;si++){const s=front[si];
@@ -624,12 +757,12 @@ Solver.prototype.tick=function(ms){const t0=Date.now();while(!this.done&&Date.no
   this.front=arr.map(e=>e.q);this.best=Math.max(this.best,this.front[0].x/this.L.end)}
   return this};
 
-return{DT,CEIL,MODES,FLY,BOTH,SPEEDS,SIZE,PH,rng,prep,derive,secAt,newPlayer,clone,step,setMode,genLevel,buildCustom,decObj,decoFor,DEFS,DIFF,
+return{DT,CEIL,MODES,FLY,BOTH,SPEEDS,SIZE,INNER,psz,PH,rng,prep,derive,secAt,newPlayer,clone,step,setMode,genLevel,buildCustom,decObj,decoFor,DEFS,DIFF,
   stepFront,stKey,Solver};
 })();
 if(typeof module!=='undefined')module.exports=SD;
 
-const LEVELDATA=[{"seeds":[0,0,1,0,0],"dd":[1,1,1.5,1.5,2],"dec":12,"path":"17.1.d.1.j.1.l.1.f.1.h.1.c.1.h.1.g.1.e.1.f.1.x.1.e.1.j.1.k.1.7.1.6.1.1.1.3.2.1.4.1.1.3.1.1.4.2.1.1.1.3.1.1.2.3.2.2.1.4.1.2.2.1.2.2.2.2.1.2.1.2.3.4.2.1.1.1.5.3.1.3.5.1.1.1.1.1.3.5.1.1.2.1.1.2.2.1.4.2.1.7.5.1.2.4.1.2.1.2.2.2.3.1.2.1.1.1.1.1.1.1.1.2.2.2.1.3.1.1.3.2.1.2.2.1.2.12.1.k.1.h.1.i.1.h.1.g.1.j.1.t.1.e.1.f.1.g.1.f.1.e.1.x.1.1.1.4.1.1.2.2.2.4.1.1.4.2.1.3.4.4.1.1.2.7.4.1.3.2.2.1.2.7.4.1.1.5.1.2.1.1.3.4.3.2.1.1.3.5.2.2.1.2.2.3.2.1.1.1.3.3.1.1.2.2.3.1.2.1.1.1.1.2.2.2.1.1.2.2.1.2.1.6.1.10.1.g.1.j.1.g.1.1i.1.19.1.11.1.k","time":61},{"seeds":[1,0,1,0,0],"dd":[2,1.5,2,2,2.5],"dec":12,"path":"17.1.g.1.e.1.j.1.i.1.c.1.s.1.e.1.h.1.k.1.g.1.1w.1.t.1.h.1.t.1.h.1.e.1.1j.1.1n.1.i.1.6.1.8.1.i.1.e.1.d.1.f.1.i.1.c.1.m.1.i.1.l.1.i.1.7.1.5.2.1.1.1.2.1.1.2.3.1.2.3.1.1.1.2.2.3.1.5.3.3.1.2.3.1.1.1.2.4.2.1.3.1.1.3.1.2.1.2.1.1.1.1.2.1.1.3.3.3.1.3.1.1.2.2.1.2.2.1.1.1.1.3.2.3.3.1.1.3.2.4.2.1.2.1.3.2.1.2.1.36.1.g.1.f.1.h.1.n.1.i.1.m.1.7.1.y","time":59},{"seeds":[0,0,0,0,0],"dd":[2.5,2,3,3,3],"dec":12,"path":"17.1.i.1.g.1.13.1.f.1.g.2.l.1.14.1.y.1.6.1.1.1.2.1.a.1.1.3.2.1.1.1.2.8.2.1.1.6.8.1.1.1.1.4.1.8.5.1.6.1.2.1.6.2.5.1.6.1.d.1.17.1.2.1.h.1.5.1.3.2.9.1.1.6.1f.1.a.1.7.1.c.1.k.2.x.1.e.1.9.1.2.1.8.1.w.1.8.1.q.1.h.1.2.3.2.1.4.1.1.1.1.1.2.2.2.1.2.1.2.2.1.1.2.6.1.2.6.2.1.3.2.1.6.4.2.1.1.4.1.2.1.1.5.3.4.4.1.1.4.1.3.1.3.3.2.2.1.2.1.1.1.2.2.1.1.3.7.2.4.3.4.1.1.4.3.2.3.2.3.3.2.4.8.2.1.1.1.1.1.2.1.1.1.2.4.1.4.1.2u.1.d.1.1u.1.p.1.o","time":59},{"seeds":[0,0,0,0,0],"dd":[3,3,2.5,3.5,3],"dec":12,"path":"1j.1.r.1.d.1.1b.1.9.1.1b.2.s.1.g.1.d.1.d.1.6.1.b.1.6.1.7.1.i.1.6.1.n.1.1s.5.3.1.1.1.1.1.1.1.1.1.1.6.12.8.6.6.32.1.5.1.e.1.f.1.i.1.c.1.7.1.2.1.7.1.u.1.b.1.7.1.8.1.2.1.6.4.2.3.3.1.2.2.5.1.5.4.6.6.2.9.1.c.2.1.1.1.1.3.3.3.4.1.3.c.1.4.2.1.5.3.10","time":47},{"seeds":[0,0,0,0,0],"dd":[3.5,4,4,4,4.5],"dec":8,"path":"w.3.1.1.7.1.8.6.2.1.4.1.t.3.2.1.1.2.b.6.1.1.1.1.3.1.5.2.1.3.c.7.3.2.a.4.2.1.2.1.1.7.4.4.2.2.1.2.1.1.7.2.1.1.2.1.4.1.5.4.1.1.2.1.4.1.1.3.1.1.1.1.1.3.v.2.1.2.1.1.1.1.1.1.1.1.1.2.1.1.8.9.b.3.1.3.1.2.2.2.h.1.2.2.1.2.2.1.1.1.2.2.1.1.1.1.2.2.2.3.3.4.3.1.3.1.2.1.2.1.2.1.1.1.2.1.1.2.3.1.1.1.1.2.8.1.1.7.4.3.3.1.1.3.2.1.2.1.1.1.1.1.1.3.2.2.4.3.2.1.2.1.1.1.1.1.1.1.4.1.1.2.1.1.2.4.1.2.6.3.2.1.3.2.1.4.2.3.2.1.1.1.1.1.1.4.2.1.2.1.3.4.2.2.3.2.1.2.1.1.3.1.2.2.2.1.1.2.1.1.4.3.1.1.1.1.2.1.4.1.1.1.1.1.2.5.1.2.1.1.1.1.7.4.1.2.5.1.1.1.2.7.3.2.1.2.2.5.4.1.1.6.7.4.1.1.3.1.5.1.1.2.1.2.1.6.2.2.1.1.1.2.2.2.1.1.9.4.2.1.2.2.2.2.1.3.7.2.1.1.1.4.1.3.2.1.2.2.4.2.1.1.2.1.2.1.1.1.8.1.c.1.d.1.3.1.4.2.1.1.d.1.g.1.o.1.9.1.k.1.d.1.3.2.2.1.2.1.q.1.a.1.l.1.b.1.d.1.c.1.1p.1.l.1.2.1.8.1.e.1.2.1.2.2.4.1.4.1.1l.1.5.f.7.1.7.6.3.1.1.e.3.1.6.4.f.1.3.5.9.9.3.7.1.c.2.3.1.a.b.1.5.6.1.2.9.b.3.b.3.1.1.4.8.2.1.5.6.4.1.1.1.5.8.2.1.3.1.1.2.1.3.2.3.1.3.1.5.1.8.1.3.1.3.3.2.2.1.1.2.1.2.1.1.4.2.1.4.1.2.1.3.1.1.1.3.1.5.1.1.6.7.4.5.1.1.2.1.1.3.1.n.5.2.1.4.1.2.1.2.1.3.2.1.1.5.1.2.1.2.7.2.1.8.1.1.2.2.1.1.2.2.1.2.3.1.1.1.2.2.1.t.4.1.1.4.1.2.2.b.1.b.1.4.1.1.7.7.3.q","time":63},{"seeds":[0,1,0,1,0],"dd":[4,4.5,4,5,5],"dec":8,"path":"1t.1.u.1.1m.1.j.1.e.1.1z.1.g.1.1c.1.j.1.b.1.32.1.o.1.b.1.m.1.14.1.r.1.c.1.1h.1.r.1.n.1.m.1.4o.d.1.1.1.1.g.3.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1f.4.1.1.1.1.10.7.1.1.11.7.1.1.1w.1.v.1.s.1.17.1.g.1.j.1.h.1.1q.1.d.1.27.1.1.2.2.1.3.1.2.2.1.3.1.2.3.6.1.1.1.1.4.1.2.2.1.1.1.1.1.1.2.1.1.1.4.3.1.2.3.1.3.2.2.1.1.1.2.2.1.2.4.1.3.4.1.3.3.4.2.3.2.1.3.1.2.1.1.1.3.1.1.1.1.1.5.3.7.2.1.5.2.1.1.2.5.1.2.1.2.2.1.1.5.5.1.1.1.1.4.1.1.2.1.1.2.1.3.2.4.1.1.2.1.1.1.2.3.1.1.3.1.1.1.1.1.1.1.1.1.1.2.1.2.1.1.2.2.2.2.1.3.1.3.1.4.1.1.2.2.1.1.1.1t","time":61},{"seeds":[0,0,0,0,0],"dd":[4,5,5,5,5],"dec":8,"path":"5.1.3.1.1.2.2.2.2.4.3.1.2.2.2.2.1.1.2.1.1.1.1.1.2.2.1.1.1.1.3.2.3.3.1.1.4.2.3.1.2.1.1.2.3.1.1.3.1.2.2.1.5.1.3.1.2.3.3.1.1.3.2.1.1.1.2.1.1.1.1.2.3.5.1.1.3.1.1.2.3.2.5.1.2.1.2.4.3.2.1.1.4.1.2.1.3.1.4.2.1.1.1.4.1.5.1.2.5.1.1.5.1.1.2.1.2.6.2.1.7.2.2.1.1.1.1.1.2.1.1.2.1.1.1.1.y.1.1.2.2.1.1.1.3a.1.8.1.d.1.1o.1.j.1.n.1.j.1.1v.1.b.1.2.2.1.1.3.1.1.2.2.2.b.6.1.3.3.1.f.2.2.1.5.2.1.1.1.1.1.2.1.6.5.1.j.5.b.7.1.2.8.1.8.2.8.1.3.2.3.7.3.3.2.1.1.3.2.1.2.1.1.1.5.3.2.1.f.1.1.1.4.1.1.2.1.4.4.2.8.5.a.1.5.2.1.1.2.1.4.1.1.1.4.1.3.2.2.2.1.1.3.4.1.2.2.2.1.2.2.1.3.1.1.1.5.4.2.2.2.1.2.1.1.1.1.3.1.1.1.1.2.3.2.4.2.2.1.1.1.2.2.3.1.1.1.1.2.1.3.2.1.1.3.2.2.1.2.1.1.3.1.1.2.3.1.4.2.1.2.1.2.3.1.1.4.1.1.2.6.2.1.1.1.2.1.1.1.4.2.1.1.1.5.4.3.2.1.1.1.3.2.1.1.1.1.1.5.6.2.4.1.1.1.3.2.1.2.2.2.1.1.2.2.2.6.2.4.2.5.1.2.1.2.1.6.1.6.1.1.1.4.4.1.1.1.1.2.1.2.2.2.3.1.1.1.4.1.1.b.1.1.c.1.1.5.1.1.1.1.8.1.1.4.4.1.1.4.4.1.1.5.7.1.1.1.1.1.1.1.1.1.1.3.1.2.1.7.1.5.1.2.4.1.1.6.1.1.3.1.1.2.6.1.2.2.d.2.2.1.2.12","time":49},{"seeds":[0,0,0,0,0,0],"dd":[5.5,5.5,5.5,5.5,6,6],"dec":8,"path":"1t.1.k.1.1c.1.b.1.q.1.p.1.b.1.j.1.t.1.b.1.f.1.m.1.1j.1.c.1.2c.1.p.1.p.1.1t.1.p.1.k.1.2a.1.1g.1.q.1.2.2.6.1.2.5.11.2.1.b.4.1.1.1.4.2.3.1.3.1.2.1.1.5.6.2.3.2.4.3.e.1.3.c.3.1.1.a.3.1.4.g.2.2.d.1.5.1.2.b.5.1.1.1.f.3.5.1.e.5.6.4.9.2.3.8.9.2.3.9.1.a.2.2.2.1.1.1.4.5.2.2.1.1.1.1.1.1.1.1.1.1.1.4.1.1.2.1.5.1.1.1.1.6.1.2.7.1.1.1.2.8.7.1.1.1.5.5.7.a.1.1.b.b.1.1.7.7.8.2.1.1.1.1.1r.4.1.1.1.1.z.j.1.1.1.1.1.1.b.2.1.1.1.1.1.1.6.9.1.1.1.1.1.1.2j.1.x.1.z.1.1h.1.e.1.1f.1.m.1.30.1.o.1.8.1.d.1.q.1.p.1.k.1.n.1.n.1.15.1.b.1.s.1.19","time":73},{"seeds":[0,3,0,0,0],"dd":[6,6,6.5,6.5,6.5],"dec":8,"path":"1.3.9.1.5.2.1.2.8.1.8.2.5.1.2.1.8.1.8.3.9.3.l.4.9.1.1.1.5.1.1.1.8.5.p.2.9.5.c.3.9.1.4.1.3.5.5.1.5.3.a.4.a.1.6.1.1.2.j.3.j.3.6.2.1.1.16.1.f.1.g.1.h.1.1a.1.v.1.x.1.v.1.b.1.20.1.1.1.5.3.2.3.1.1.3.1.2.1.6.6.1.1.1.1.1.2.1.1.1.3.3.1.4.2.1.2.3.3.2.1.2.1.2.2.1.1.7.2.4.1.1.a.1.1.4.2.2.1.3.1.2.2.5.1.3.1.1.2.2.4.5.2.2.2.1.2.1.5.5.3.2.1.2.1.4.2.3.1.1.2.1.1.1.2.1.1.1.1.1.1.4.4.2.3.2.1.2.1.1.4.2.1.3.1.2.1.5.1.3.1.2.3.1.4.1.1.1.3.2n.1.d.1.h.1.f.1.a.1.11.1.k.1.8.1.c.1.l.1.a.1.t.1.v.1.1i.1.1.1.1.1.1.1.1.3.3.3.1.1.4.1.1.1.1.1.1.1.1.6.5.1.4.2.4.2.1.1.1.1.1.1.2.6.4.1.5.1.5.1.2.2.2.1.1.1.4.4.1.1.1.1.2.1.3.2.2.5.1.1.3.1.1.3.3.1.2.4.1.1.2.1.1.1.3.1.3.1.2.1.1.1.1.2.1.1.1.1.1.3.2.3.2.1.6.1.3.1.1.1.1.1.3.2.3.1.3.1.6.1.2.1.1.2.5.1.1.1.2.1.1.1.2.2.1.2.1.2.5.1.1.1.h.1.1.2.1.1.2.2.2.2.1.1.2.1.1.1.6","time":53},{"seeds":[0,0,0,0,0,0],"dd":[6.5,6.5,7,7,7,7],"dec":8,"path":"1d.3.2.1.1.1.c.1.3.1.6.4.12.1.1.1.r.1.2.1.1.1.d.1.i.1.1.6.t.1.2.1.1.1.1.1.8.h.20.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.8.1.1.8.1.1.1.1.6.1.1.1.1.6.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.d.1.1.9.2.6.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.6.1.1.1.1.6.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.3.1.1.1.1.3.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.d.1.1.1.1.9.b.1.1.1.1.f.1.1.1.1.4.4.4.a.8.6.2.c.4.9.1.8.1.5.1.4.2.c.7.5.1.d.5.e.1.8.4.a.1.3.1.2.1.1.5.15.1.8.5.b.5.f.1.9.1.q.5.1s.1.p.1.13.1.1y.1.1j.1.10.1.d.1.2.2.4.1.1.5.1.1.3.1.3.3.2.2.3.1.2.2.1.1.4.1.1.2.3.4.1.1.1.1.2.1.1.2.4.2.1.1.1.1.5.1.3.3.2.2.1.1.2.3.1.3.4.1.1.2.2.1.3.1.1.2.7.2.1.3.1.1.6.1.1.2.3.4.1.2.2.2.1.1.1.2.1.1.2.5.1.1.1.2.2.2.5.2.1.5.1.1.2.1.4.2.1.2.1.1.3.1.1.2.2.2.1.2.2.3.3.1.3.1.3.1.29.1.r.1.8.1.d.1.c.1.n.1.g.1.a.1.o.1.f.1.e.1.a.1.y","time":59},{"seeds":[0,0,2,0,0,0],"dd":[7,7.5,7.5,7.5,7.5,8],"dec":7,"path":"1y.1.k.1.c.1.1a.1.o.1.a.1.e.1.e.1.1d.1.k.1.a.1.e.1.e.1.u.1.2p.3.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.14.7.1.1.2.7.1.1.s.7.1.1.4.1.1.1.1.1.1.9.1.1.13.8.14.9.1.1.3.1.4.c.1.1.38.1.k.1.l.1.c.1.1j.1.c.1.i.1.10.1.f.1.13.1.n.1.1k.1.1.1.2.1.1.1.4.1.6.1.3.1.1.3.1.1.1.1.1.2.1.1.4.1.1.2.1.1.3.1.1.1.a.1.2.4.1.7.3.1.1.3.1.5.1.1.4.1.7.1.2.3.2.1.5.1.5.5.1.3.2.2.2.1.2.1.1.1.2.1.1.5.5.2.1.1.1.4.5.1.4.1.3.1.1.1.1.1.4.1.6.1.2.1.1.1.1.1.1.1.1.1.2.1.2.1.2.2.1.2.2.5.5.1.4.3.1.3.5.1.1.1.2.3.1.1.2.1.1.1.1.1.1.1.2.1.3.2.2.1.1.1.1.2.4.1.4.1.1.1.1.3.2.1.1.1.5.5.1.1.1.1.4.1.2.1.1.4.2.4.2.1.2.1.2.1.4.1.1.2.1.3.1.1.4.1.1.1.13.2.h.4.9.1.2.1.6.3.b.3.a.1.b.8.2.1.n.1.1.2.9.6.f.3.a.1.8.7.c.1.7.3.a.1.8.1.2.1.1.2.6.8.c.4.m.7.s.3.2q.1.1.4.2.2.2.1.2.1.b.5.2.6.3.5.2.1.5.1.1.1.4.2.4.1.1.1.1.1.1.1.3.5.2.1.5.6.1.3.6.2.5.1.4.3.1.2.1.2.1.2.1.2.1.4.1.1.2.2.4.1.1.3.15","time":64},{"seeds":[0,0,0,5,0,1],"dd":[7.5,7.5,8,8,8,8],"dec":7,"path":"1.7.6.1.1.1.1.4.6.1.1.1.3.1.1.1.1.2.3.1.2.1.5.2.1.3.3.3.1.2.2.1.2.1.1.6.1.1.4.1.4.2.1.2.1.1.8.2.2.6.2.3.1.5.4.4.1.1.5.1.2.2.3.1.3.4.1.2.6.1.5.1.1.1.5.1.1.2.3.2.1.1.3.2.1.1.5.1.2.2.1.1.1.3.1.2.5.1.1.3.2.4.2.2.1.4.2.1.2.3.1.4.1.2.2.2.9.3.3.2.4.1.1.1.2.1.1.1.1.3.1.1e.u.1.j.1.e.1.i.1.a.1.e.1.e.1.q.1.p.1.9.1.3.1.c.1.1e.1.m.1.n.1.i.1.12.1.1.8.4.1.2.1.1.1.1.2.1.b.c.1.1.1.1.1.2.1.1.2.1.1.1.7.5.1.1.2.3h.5.2.6.1a.1.b.1.3.1.1.1.4.1.2.1.1.b.4.1.1.e.1.1.4.1.2.1.1.1.1.2.8.1.1.1.1.1.1.1.1.1.2.1.1.1.1.1.2.1.1.1.1.1.4.1.1.1.1.1.2.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1o.3.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.2.1.1.1.f.1.1.g.3.1.1.5.c.1.1.1.1.7.7.1.1.1.1.1.1.7.c.1.1.1.1.3j.1.f.1.10.1.f.1.1s.1.p.1.2g.1.e.1.h.1.a.1.1i.1.r.1.j.1.f.1.29","time":56},{"seeds":[8,0,0,0,0,6],"dd":[8,8.5,8.5,8.5,8.5,9],"dec":7,"path":"1p.8.1.1.1.1.d.3.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.2x.4.5.4.k.h.1.1.d.2.1.1.1.1.s.a.1.1.1.1.e.a.7.1.7.1.1.2.6.1.3.2.j.2.a.1.9.2.m.4.g.2.c.2.9.3.7.e.4.1.f.2.h.7.h.2.a.8.1.1.q.1.8.2.c.2.1.1.2.2.3.5.b.1.7.1.4.2.4.8.5.2.2.4.1.1.1.1.3.2.2.4.1.1.1.1.3.1.1.2.2.1.3.1.2.1.1.1.2.1.2.2.1.2.9.3.4.3.1.1.2.1.5.1.2.1.2.2.6.1.2.1.3.1.1.1.1.3.1.2.1.2.1.1.1.1.3.1.5.1.1.3.3.1.1.2.1.5.4.1.1.2.1.3.1.1.1.3.1.1.2.1.2.1.3.1.1.1.2.3.1.1.2.4.1.1.1.2.2.1.2.1.1.1.5.1.6.1.7.1.2.2.1.5.1.1.3.1.4.6.7.3.1.1.2.1.5.5.1.1.1.6.1o.1.l.1.c.1.e.1.r.1.l.1.g.1.k.1.c.1.1i.1.h.1.w.1.p.1.18.1.3.1.4.2.3.1.1.1.2.4.5.1.1.4.1.2.4.2.6.1.3.1.1.1.1.4.3.1.2.1.4.3.1.3.3.1.2.1.2.2.1.1.2.2.5.2.1.1.3.1.1.4.1.2.4.2.1.1.1.2.1.2.2.1.2.3.3.1.3.1.1.1.1.1.2.1.2.2.1.1.2.1.2.4.3.1.4.1.5.3.1.1.1.4.1.5.1.1.5.2.3.2.1.1.6.1.3.1.4.1.5.4.1.1.1.3.4.1.3.1.1.1.2.1.3.2.2.2.1.4.1.1.4.2.1.1.1.1.1.3.2.6.1.1.3.3.2.1.1.3.2.2.1.1.2.1.1.1.1.1.1.1.5.1.3.3.2.1.1.2.1.1.1.1.1.1.2.1.1.1.3.1.2.1.1.1.3.1.1.2.2.3.1.1.8.1.2.d.4.1.2.1.2.1.1.b.1.1.1.1.1.1.2.1.1.1.1.1.7.b.2.2.2.2.2.1.1.3.3.1.1.1.1.1.1.1.1.1.1.1.1.2.2.1.1.2.1.1.1.4.1.1.1.2.5.1.1.1.1.2.2.1.1.1.1.2.3.5.5.1.1.1.1.e.1.1.6.3.1.8.3.1.e.4.2.t.1","time":59},{"seeds":[0,0,0,1,0,0,0],"dd":[9,9,9,9,9,9,9],"dec":6,"path":"26.1.n.1.h.1.1l.1.c.1.g.1.h.1.u.1.i.1.o.1.n.1.1b.1.1l.1.g.1.d.2.3.5.1.3.2.2.2.1.1.1.2.1.1.2.1.4.3.1.2.1.3.1.2.2.3.1.2.1.3.3.1.2.2.1.2.2.1.4.2.4.2.2.1.3.1.1.7.1.4.1.1.2.3.1.3.1.1.1.1.1.1.4.1.1.3.2.3.1.3.1.1.2.2.g.1.2.2.1.2.3.1.2.1.1.8.6.3.1.3.2.5.2.2.1.1.1.1.4.1.3.1.1.1.4.1.1.1.1.2.2.1.1.4.2.2.1.4.1.6.4.2.3.1.2.1.4.1.4.3.3.1.2.2.2.1.1.7.1.4.2.1.3.1.1.2.1.1.3.5.1.2.1.1.1.1.3.1.3.2.2.2.1.4.1.5.3.1.2.5.1.3.2.1.1.1.1.2.7.2.4.3.2.2.2.2b.1.h.1.8.1.1x.1.h.1.7o.e.1.1.1.2.1.1.1.8.1.1.1.1.4.1.1.1.1.1.a.8.1.1.4.1.1.6.1.1.9.2.1.1.q.8.1.1.1.1.h.1.1.1.1.1.3l.9.1.1.e.3.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.y.6.1d.1.8.2.1.1.6.1.3.3.a.1.5.1.6.3.a.1.2.4.2.1.6.1.3.1.4.2.3.2.3.1.3.3.4.1.2.1.3.1.1.9.8.1.1.1.d.6.2.1.a.1.1.5.7.1.6.1.o.2.c.5.1.1.1.1.1.1.7.4.2.1.6.2.1.4.2.2.1.2.2.1.1.2.f.1.1.1.1.1.3.1.7.5.3.1.2.1.1.1.2.1.9.2.1.3.4.2.1.1.1.1.19.1.n.1.x.1.y.1.2y.1.3e.1.3.1.4.6.1.3.3.3.5.2.6.6.1.4.1.3.2.1.2.2.3.7.5.1.3.1.1.1.3.1.2.4.2.1.1.1.3.1.4.1.1.3.1.2.2.1.2.5.1.1.8.1.1.1.2.4.a.4.1.1.2.1.2.2.3.5.1.2.2.2.1.1.2.1.2.1.1.2.1.2.1.1.4.1.1.3.3.2.3.1.3.1.3.1.4.2.3.1.1.4.1.1.3.1.3.1.1.2.1.1.3.2.1.3.2.5.1.4.1.1.1.1.2.1.1.4.2.1.2.3.1.3.1.1.4.1.1.1.2.1.1.1.1.1.1.1.3.5.1.1.1.3.13","time":71},{"seeds":[0,0,1,0,0,0,0,0],"dd":[9.3,9.5,9.5,9.5,9.5,9.5,9.5,9.5],"dec":6,"path":"1z.1.u.1.1h.1.w.1.24.1.e.1.4u.1.r.1.q.1.m.1.a.1.e.1.h.1.g.1.v.1.m.1.j.1.h.1.k.1.r.1.g.1.r.1.1x.8.v.8.1.1.b.6.1.1.1z.g.1.1.1.1.j.3.1.1.1.1.1.1.1.1.1.1.1.1.1.1.14.7.1.1.1.1.1h.9.1.1.1.1.5.5.1.4.1.7.5.4.6.1.1.2.1.1.3.2.2.2.1.1.2.3.k.1.3.3.9.1.1.5.2.2.1.2.1.1.3.1.1.3.2.5.1.1.4.1.1.2.3.1.i.1.1.3.1.8.1.2.1.2.1.2.3.2.7.1.4.1.1.4.2.8.6.2.3.1.1.1.2.2.1.3.2.1.1.2.3.1.2.1.3.2.1.1.2.2.1.1.8.1.1.2.3.4.3.3.4.4.4.8.9.2.4.1.1.1.1.2.2.1.3.4.1.1.1.1.1.1.4.2.w.3.2.3.3.2.a.1.1.e.2e.1.1.1.1.1.1.4.2.1.1t.1.e.1.9.1.2c.d.4.4.1.2.5.9.2.1.f.3.c.8.f.9.g.3.c.8.r.2.c.6.8.1.1.1.h.4.1.1.a.8.3.1.a.1.9.1.1.3.a.4.a.1.q.1.6.1.13.5.e.2.3.1.4.5.c.1.1.1.6.1.3.2.4.1.8.2.4.1.4.1.4.4.1b.1.t.1.u.1.10.1.1z.1.c.1.16.1.36.1.5.1.3.1.2.6.2.1.2.2.4.1.2.1.1.7.6.1.1.2.2.4.2.2.1.1.2.3.1.3.1.1.1.2.2.1.1.1.2.2.6.1.3.5.2.1.2.1.2.4.2.1.1.1.2.2.2.1.3.2.2.2.5.1.1.1.1.4.1.1.2.1.1.1.1.3.1.3.1.1.1.1.1.1.1.3.2.2.3.2.4.8.2.1.1.1.2.1.1.1.1h.3.4.1.2.1.1.5.1.1.1.1.1.1.2.1.2.1.3.2.3.3.1.1.3.2.1.3.3.1.2.3.2.1.1.2.19","time":77},{"seeds":[0,5,0,0,0,0,0,0,3],"dd":[10,10,10,10,10,10,10,10,10],"dec":6,"path":"20.1.h.1.i.1.g.1.j.1.p.1.u.1.l.1.j.1.1.1.w.1.g.1.1f.1.2l.8.1.1.4.c.1.1.1.1.4.7.3.c.1.1.c.1.1.1.1.1.1.1.1.1.1.9.1.1.6.6.1.1.9.1.1.5.1.1.3.1.1.1.1.1.1.1.1.1.3.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.c.1.1.7.7.1.1.1.1.5.9.g.1.1.1.1.o.6.1.7.1.a.7.l.1.6.1.1.1.1.1.6.6.5.1.6.1.1.1.1.4.d.4.a.3.1.1.1.1.8.2.2.1.3.1.7.1.3.1.1.1.5.4.a.1.1.1.5.1.2.4.2.1.6.1.4.5.d.5.d.1.a.3.c.2.2.1.7.1.1.1.3.2.2.1.3.4.9.1.2.1.1.1.6.1.2.1.a.1.2.1.1.1.4.1.1.9.2.1.8.2.1.5.2.1.1.4.2.1.1.5.2.3.2.1.2.1.1.1.4.2.2.2.2.1.3.1.3.2.2.1.3.5.1.2.1.1.3.1.7.1.2.9.2.1.6.1.2.2.1.3.3.1.3.1.1.4.4.2.4.3.2.2.2.1.s.6.a.1.1.2.3.1.1.4.7.1.1.1.7.4.2.1.5.4.6.2.4.4.3.1.1.2.1.1.1.2.2.3.2.1.1.1.1.2.1.2.3.2.4.1.c.1.3.3.2.1.3.2.2.1.2.5.1.2.1.1n.15.1.w.1.k.1.c.1.f.1.o.1.2d.1.1a.1.g.1.21.1.o.1.q.1.i.1.h.1.e.1.e.1.o.1.a.1.6.1.w.1.h.1.i.1.h.1.i.1.g.1.j.1.2.1.1.2.b.1.6.3.2.3.1.1.2.1.1.1.2.3.2.1.3.3.2.3.2.1.2.1.3.1.3.1.1.1.1.2.4.2.3.1.1.1.1.1.1.1.1.1.1.2.3.4.2.5.5.4.1.5.2.g.1.1.1.2.1.2.s.6.2.2.2.6.2.2.1.5.2.2.5.1.2.1.1.1.7.1.6.6.5.1.1.1.1.2.6.3.1.2.1.3.2.1.2.1.2.1.1.1.2.1.1.1.1.1.1.1.1.4.2.1.3.1.1.1.1.1.2.5.1.2.3.1.1.1.1.1.2.1.1.1.2.5.6.1.1.1.1.1.1.1.2.1.2.3.2.9.h.1.4.1.1.4.3.1.5.1.c.1.8.l.1.1.3.1.e.1.6.1.3.1.b.f.2.f.4.1.2.1.1.3.l.1.1.2.1.1.1.b.c.2.2.c.k.1.1.2.d.1.m.2.4.1.1.l.3.1.5.4.2.5.6.1.1.1.1.2.1.2.3.1.1.1.1.1.2.1.1.8.3.2.1.1.7.3.1.1.5.1.1.3.1.1.1.1.3.1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.d.1.1.6.8.1.1.b.1.1.1.4.2.2.2.2.4.9.c.1g","time":81},{"seeds":[0,0,0,0,0,0,0,0,2,0,0,2],"dd":[10,10,10,10,10,10,10,10,10,10,10,10],"dec":6,"path":"1w.1.h.1.g.1.c.1.h.1.g.1.h.1.m.1.e.1.m.1.h.1.1m.1.3.1.1.2.1.3.6.1.2.1.1.1.6.1.1.3.2.2.1.2.4.2.1.2.2.5.8.1.2.2.3.2.2.2.1.1.1.2.1.1.4.1.2.1.1.1.1.1.2.2.2.1.2.1.3.2.1.1.1.1.1.2.2.4.1.1.1.1.3.1.a.2.1.7.1.3.1.1.2.1.1.2.1.3.1.1.1.2.2.1.3.8.1.1.2.1.1.1.5.1.4.1.2.1.1.1.1.1.1.9.1.17.1j.5.1.1.1.1.5.7.1.1.j.7.1.1.1.1.4.6.1.1.1.1.1r.4.1.1.13.m.f.1.8.c.f.a.f.6.c.1.e.1.i.1.c.1.l.g.2b.1.3e.1.h.c.2.2.2.b.3.6.8.1.3.1.6.1.3.1.1t.6.9.1.2.2.3.h.2x.1.1l.1.b.1.1g.1.3.1.3.1.5.1.7.2.2.2.7.e.1.5.1.1.5.1.1.1.1.1.1.1.2.2.3.1.6.6.4.1.5.1.2.1.6.1.2.1.1.2.1.2.1.1.7.2.1.1.1.1.2.1.2.1.3.1.1.1.1.1.2.a.25.c.1.1.1.1.5.a.1.1.1.1.1.1.6.6.1.1.7.9.1.1.2.2.1.1.1.1.1.1.1.1.7.7.1.1.1.1.7.2.1.1.1.1.1.1.5.8.1.1.5.7.1.1.1.1.1.1.7.7.1.1.1.1.1.1.1t.1.i.1.n.1.2f.1.h.1.h.1.r.1.14.1.g.4.5.1.3.1.1.2.3.1.2.1.1.1.6.9.2.2.b.5.1.3.9.1.1.1.1.2.1.1.1.1.a.5.a.6.1.2.1.3.1.2.1.1.8.1.1.2.2.1.6.2.1.5.1.1.1.1.9.5.7.3.1.1.4.1.1.4.1.1.4.4.2.1.5.1.1.1.20.a.1.1.5.9.1.1.b.3.1.1.c.3.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.10.c.1.1.19","time":70},{"seeds":[0,0,0,0,0],"dd":[7,7.5,7.5,7.5,7.5],"dec":8,"path":"1l.6.1.1.1.3.1.1.1.1.1.1.1.1.3.3.1.1.1.1.3.1.1.1.1.1.1.1.e.6.1.1.3.1.1.1.2.2.2.4.1.1.1.3.1.1.1.1.1.1.1.1.3.1.1.1.c.6.1.1.1.3.1.1.1.1.1.1.1.1.1.4.2.4.1.1.4.2.2.4.1.1.3k.7.1.1.1.1.1.1.3.1.1.1.3.3.1.1.3.1.1.3.1.1.1.1.1.1.1.1.1.1.7.b.1.1.1.3.1.1.3.1.1.1.1.3.2.2.1.1.1.1.a.a.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.2.2.2.1.1.1.1.1.1.1.1.1.1.1.1.26.9.1.1.1.3.1.1.1.1.1.1.1.3.2.2.2.2.b.9.1.1.1.3.1.1.3.3.1.1.1.1.1.1.1.1.2.2.2.2.1.1.1.1.1.1.1.1.1.1.1.1.y.5.1.1.4.2.1.1.k.d.1n.6.1.1.1.1.1.1.4.2.2.4.1.1.4.2.2.4.1.1.1.3.1.1.1.1.1.1.1.1.t.6.1.1.4.2.2.4.1.1.1.1.1.1.1.1.1.3.1.1.1.4.1.1.y.6.1.1.4.2.1.1.20.6.1.1.1.3.1.1.1.1.3.3.1.1.3.1.1.1.1.1.1.1.1.1.3.1.1.1.2.2.1.1.1.1.1.1.1.1.1.1.7.b.1.1.1.1.7.b.1.1.4.2.1.1.3.3.1.1.2.4.1.1.3.3.1.1.1.1.1.1.1.1.1.1.1.1.a.7.1.1.2.1.q.3.1.1.1.1.1.1.i","time":42},{"seeds":[0,0,0,0],"dd":[5,5.5,6,6],"dec":8,"path":"1t.1.7.1.d.1.q.1.7.1.d.1.n.1.7.1.d.1.1q.1.e.1.4.1.i.1.1h.1.b.1.v.1.1h.3.9.1.2.1.5.1.8.3.1.2.2.1.2.1.1.7.a.1.8.5.b.1.8.5.a.1.5.1.2.2.7.1.j.4.7.1.3.1.2.1.3.1.5.1.a.5.1.1.7.k.2.3.6.3.7.2.5.1.1.1.6.2.1.1.1.1.4.1.2.1.2.1.1.3.2.1.5.5.6.2.1.1.3.2.4.2.1.1.1.1.9.1.1.3.1.1.2.5.5.1.5.2.6.1.e.3.x.1.c.1.j.1.j.1.8.1.d.1.i.1.c.1.l.1.b.1.j.1.t.1.p.1.j.1.a.1.19.1.n.1.13.1.c.3.9.1.8.1.5.1.3.2.7.1.d.8.6.4.7.1.6.4.a.1.6.1.2.1.a.2.b.7.5.1.d.5.17.1.8.1.4.2.2.2.6.1.5.3.8.5.2.2.1.1.1.1.1.1.3.1.4.5.6.1.4.1.4.2.1.1.16","time":52},{"seeds":[0,1,0,0,0],"dd":[6,6.5,7,7,7.5],"dec":8,"path":"1s.1.1m.1.h.1.26.1.d.1.33.1.m.1.i.1.y.1.1d.1.49.1.14.1.c.1.f.1.e.1.1f.1.8.1.2u.1.m.1.1l.1.2s.1.e.1.s.1.2a.1.a.1.v","time":41},{"seeds":[0,0,0,0],"dd":[6,6.5,7,7.5],"dec":8,"path":"4.6.1.1.1.1.3.1.2.1.1.1.1.1.5.1.1.1.1.2.2.1.3.1.2.5.2.1.2.2.1.1.1.1.4.1.1.2.1.2.1.1.3.3.2.1.1.1.1.1.1.1.1.1.1.1.3.3.1.4.6.1.1.1.3.1.3.3.3.2.1.3.1.1.3.1.4.1.6.2.1.7.1.1.1.2.3.2.1.1.2.2.3.2.1.3.7.2.1.1.2.3.1.1.2.2.4.2.1.4.3.1.3.1.1.1.1.2.2.2.1.2.2.1.5.1.3.2.1.1.3.2.2.6.1.2.3.3.2.1.1.1.4.1.1.2.1.1.3.2.3.1.4.2.2.9.2.1.1.1.1.1.3.1.2.3.1.1.2.1.2.3.3.1.5.1.1.3.2.1.1.1.1.1.2.1.3.1.1.1.1.1.2.2.2.1.1.4.1.1.3.3.1.1.1.1.1.3.3.1.1.1.1.2.4.1.1.1.1.1.3.1.4.5.2.8.1.2.2.1.1.1.5.1.2.3.1.2.2.2.1.1.1.1.1.3.1.1.5.1.4.1.1.5.3.2.2.1.1.3.2.1.1.1.1.2.2.2.2.1.1.3.3.3.2.3.1.1.6.1.1.2.1.4.1.1.3.3.1.2.3.1.2.3.3.1.1.1.1.1.2.2.2.1.1.1.5.3.1.2.4.1.1.4.4.1.2.6.5.1.1.1.1.3.1.1b.4.3.5.3.2.1.2.2.6.5.1.1.2.4.1.2.2.3.5.4.1.3.5.1.1.2.4.4.3.1.2.5.1.1.2.1.4.2.3.1.4.1.3.4.1.1.1.3.2.1.6.1.3.3.3.3.3.1.2.1.1.5.3.1.2.1.1.1.1.1.6.1.1.4.3.1.2.3.1.1.4.3.2.7.3.1.1.3.7.1.2.1.3.1.2.1.1.1.3.1.2.2.1.3.3.2.1.1.2.2.1.2.5.2.2.6.1.1.2.1.3.2.1.8.1.2.1.1.3.1.4.1.1.2.3.1.2.2.2.2.1.1.5.29.1","time":37},{"seeds":[0,0,0,0],"dd":[6,6.5,7,7.5],"dec":8,"path":"1.1.3.1.5.1.3.1.1.2.9.7.1.1.1.6.1.3.2.6.1.1.7.1.1.2.2.1.1.1.1.1.1.3.1.4.4.1.3.3.1.1.1.1.1.1.2.1.1.2.4.4.2.6.1.2.1.1.1.3.1.1.1.1.1.1.2.2.6.1.3.2.1.3.1.2.3.2.1.4.1.a.1.2.1.3.1.3.1.2.2.5.1.1.2.1.2.1.5.1.2.1.1.1.a.1.3.1.2.1.3.1.5.3.3.1.1.2.4.1.2.1.2.1.1.3.1.2.2.3.1.1.1.1.3.3.a.1.1.1.2.2.7.1.1.1.1.1.3.2.4.1.2.1.2.7.2.1.1.3.1.3.2.1.2.8.2.2.1.2.1.5.1.1.1.1.3.1.5.1.2.2.4.1.2.2.1.1.3.3.1.2.2.1.5.1.2.1.1.2.5.5.1.2.3.2.1.1.1.2.2.3.1.5.1.2.2.1.1.1.1.1.6.2.1.1.1.1.1.2.2.3.1.1.1.1.3.1.7.3.2.4.2.2.2.1.1.1.2.2.2.6.1.1.1.1.3.2.5.1.2.1.1.1.3.3.1.1.1.1.2.2.1.2.6.1.4.1.3.1.3.2.2.3.t.1.3.1.1.1.2.2.1.1.2.1.5.3.1.1.1.1.3.8.1.4.2.1.2.3.1.1.1.2.1.2.6.1.7.1.1.2.3.1.7.1.1.5.1.2.4.1.1.4.2.1.1.5.2.1.9.1.9.2.1.1.2.2.1.3.1.3.5.2.1.1.2.1.1.1.1.1.3.4.3.7.1.2.4.1.5.1.3.3.3.2.1.1.1.1.2.1.1.1.1.1.1.1.3.4.2.1.1.1.4.1.3.1.2.4.2.6.2.2.1.1.2.4.1.2.2.2.1.3.2.3.1.1.1.1.4.1.1.3.2.6.3.1.1.1.1.1.2.1.1.1.1.1.2.1.2.1.1.1.1.1.1.1.1.1.4.1.2.1.1.1.2.1.2.1.2.1.5.5.4.1.1.1.t.1.1.3.1.1.1.1.3.1.1.1.3.1.1.1.6.1.1.3.1.1.1.1.8.1.1.1.2.1.1.1.2.1.1.1.n.1.1.2.2.1.1.1.p","time":38},{"seeds":[0,0,0,0],"dd":[5,5.5,6,6],"dec":8,"path":"1.1.1.1.1.i.6.2.1.c.1.1.2.1.3.1.2.c.6.1.1.5.3.1.g.1.1.2.1.1.7.1.f.e.2.4.1.8.6.3.h.1.8.1.1.e.5.1.1.c.1.3.3.1.2.1.1.1.6.1.b.1.3.1.2.1.b.6.6.1.1.1.3.1.1.1.3.g.1.1.3.9.b.1.c.2.1.e.1.2.4.1.2.6.a.1.2.1.6.3.1.4.2.1.2.b.f.1.1.1.4.2.1.1.c.1.c.2.5.1.3.1.5.i.4.1.1.1.4.g.1.6.7.1.1.1.3.1.3.e.6.3.b.1.b.5.7.1.6.1.1.1.i.1.8.6.2.3.7.1.8.1.c.1.2.1.d.b.3.2.a.1.4.1.1.2.1.1.2.1.1.7.g.1.1.1.2.2.e.1.9.4.c.8.4.2.1.1.9.1.9.1.3.h.5.3.1.a.5.1.b.7.8.7.2.3.4.3.3.2.2.1.2.1.e.1.d.1.2.f.9.1.a.1.d.1.b.1.b.1.1.1.9.a.3.8.1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.5.h.4.a.5.1.3.b.9.4.1.8.b.2.1.g.1.1.c.3.1.c.5.6.d.2.2.1.1.2.1.1.1.4.1.1.1.2.4.4.4.6.2.8.1.5.1.d.1.1.1.3.1.3.1.1.a.4.2.1.1.1.7.3.6.1.1.1.1.6.1.5","time":47},{"seeds":[0,0,1,0,1,0,0,0],"dd":[8,8,8,8,8,8,8,8],"dec":7,"path":"1y.1.o.1.e.1.i.1.c.1.h.1.c.1.f.1.4z.1.2.2.1.2.2.1.1.5.1.1.6.2.3.1.1.1.1.1.3g.1.12.1.q.1.s.1.29.b.2.5.7.1.2.3.6.1.8.1.b.1.3.1.5.1.1.1.1.4.e.1.2.1.13.1.2.1.1.6.6.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1v.3.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1u.7.1.1.4.4.1.1.2t.4.c.1.9.4.7.2.9.1.3.1.9.1.8.1.1.1.7.1.9.1.5.6.5.1.7.7.6.6.g.1.9.2.a.6.9.1.1u.1.1z.1.f.1.1x.1.1.1.5.1.1.1.1.1.3.1.4.1.4.2.6.4.4.1.1.1.2.4.2.2.2.1.1.3.3.1.3.2.1.1.1.1.2.1.1.1.1.3.1.2.3.1.4.1.1.1.2.2.8.1.4.2.1.3.1.1.1.1.3.4.2.4.1.1.2.4.4.1.3.3.2.1.1.2.1.1.3.6.w.1.1.1.3.1.1.1.6","time":52},{"seeds":[0,0,0,0],"dd":[8.5,9,9,9],"dec":7,"path":"1n.1.c.1.m.1.j.1.p.1.i.1.d.1.17.1.2b.2.8.1.2.2.3.1.2.1.n.3.f.2.7.1.1.1.2.2.a.6.8.5.e.1.9.9.4.1.5.1.h.2.7.1.e.1.d.1.29.1.h.1.e.1.c.1.c.1.o.1.m.1.f.1.8.1.3.1.b.1.17.1.z.1.a.6.1.2.6.1.3.1.1.3.1.4.1.2.1.1.3.1.3.2.3.1.1.1.1.1.1.3.4.2.1.1.3.1.1.2.3.2.1.4.8.2.3.1.1.2.1.1.2.1.1.6.1.2.7.3.1.2.2.1.6.2.1.3.2.9.7.3.2.3.2.2.6.1.6.2.3.1.1.1.2.1.1.1a.1","time":31},{"seeds":[2,0,4,0,17,0,12,0,1,1,12,0,0],"dd":[9.5,9.5,9.5,9.5,9.5,9.5,9.5,9.5,9.5,9.5,9.5,9.5,9.5],"dec":8,"path":"1h.7.1.1.1.1.4.4.1.1.1.1.6.4.1.1.1.1.o.3.1.1.1.1.2.1.1.1.1.e.1.1.7.7.9.1.1.1.1.1.6.6.1.1.1.1.x.a.3.4.1.2.3.4.3.1.1.5.2.1.1.1.4.3.2.3.2.4.1.1.12.2.1.2.4.1.1.2.1.3.5.3.1.1.3.1.5.2.1.1.1.4.1.11.r.8.1.1.a.3.1.1.1.1.2.2.1.1.2.2.1.1.13.3.1.1.2.2.1.1.1.1.2.1.1w.1.f.1.h.1.c.1.2n.8.1.1.6.3.1.1.2.9.1.1.1.1.5.5.1.1.1.1.1e.b.9.1.1.1.f.d.2g.1.1.3.1.3.3.1.a.1.g.c.6.1.1.2.1.1.1.2.1.1.1.1.2.2.3.7.1.1.1.1.4.5.1.1.1.1.8.3.5.3.1.1.7.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.14.n.1a.1.f.1.e.1.2k.8.1.1.5.5.6.6.1.1.4.4.7.5.1.1.5.b.1.1.1.1.5.2.1.1.1.1.7.3.4.a.1.1.4.5.1.1.t.6.6.1.4.4.9.1.1.1.4.4.1.1.7.1.c.6.3.1.4.1.1.1.1.2.7.7.6.1.3.1.1.1.7.1.1.1.1.1.3.1.2.b.3.4.8.3.1.1.1.2.4.7.6.4.1.1.1.1.8.4.1.3.1.2.2.1.1.1.b.1.1.1.1.1.1.1.1.1.9.2.1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.c.1.1.1.1.8.a.p.1.o.1.1o.1.5.1.1.3.1.1.2.1.2.3.3.1.3.1.1.1.1.3.3.1.1.1.1.1.1.1.1.1.1.1.1.1.q.8.5.5.1.1.8.3.6.3.1.1.3.b.5.5.1.1.4.4.1.1.9.4.1.1.1.1.m","time":71}];
+const LEVELDATA=[{"seeds":[2,0,0,0,0],"dd":[1,1,1.5,1.5,2],"dec":12,"path":"17.1.f.1.f.1.f.1.i.1.g.1.c.1.f.1.e.1.q.1.f.1.g.1.e.1.g.1.f.1.g.1.j.2.2.1.2.1.1.2.3.1.1.1.2.1.2.1.1.1.1.1.1.1.1.3.3.1.3.2.2.1.4.1.1.1.1.1.3.3.1.3.1.1.1.4.3.2.4.2.2.3.1.1.2.1.3.1.1.1.2.2.1.1.1.3.5.1.1.1.1.2.2.3.5.1.2.1.3.3.2.1.1.2.3.1.1.1.1.2.3.1.1.4.7.3.2.1.2.1.1.1.1j.1.e.1.f.1.e.1.c.1.f.1.e.1.d.1.e.1.e.1.d.1.e.1.16.1.f.1.h.1.9.1.7.2.1.5.3.3.4.1.2.1.2.2.1.3.2.1.1.1.1.1.2.1.3.1.3.3.1.3.3.2.1.1.5.3.5.4.1.1.1.2.5.3.1.1.2.4.4.1.4.2.3.2.1.1.1.3.1.4.2.1.1.1.4.1.1.1.1.1.1.1.4.1.1.1.1l.1.e.1.e.1.f.1.w.1.e.1.15.1.f.1.f.1.d.1.7.1.m","time":61},{"seeds":[2,0,1,0,0],"dd":[2,1.5,2,2,2.5],"dec":12,"path":"17.1.8.1.o.1.d.1.k.1.e.1.16.1.e.1.31.1.s.1.g.1.s.1.g.1.f.1.1f.1.j.1.1b.1.e.1.7.1.7.1.g.1.d.1.b.1.c.1.g.1.b.1.i.1.g.1.g.1.d.1.g.1.a.1.7.1.8.1.1.5.2.2.2.2.1.2.3.1.5.1.1.2.2.3.1.3.1.1.6.1.1.1.1.1.1.4.2.2.3.1.1.1.5.1.1.1.1.1.1.2.5.3.2.2.1.3.2.3.1.1.4.1.2.2.2.1.3z.1.e.1.d.1.e.1.k.1.f.1.j.1.8.1.g.1.c.1.l","time":59},{"seeds":[1,0,0,0,1],"dd":[2.5,2,3,3,3],"dec":12,"path":"16.1.b.1.1a.1.e.1.15.1.g.2.m.1.v.1.p.1.1.1.a.1.2.1.1.4.1.1.4.9.2.1.1.c.5.5.2.1.4.3.1.2.a.1.1.8.2.1.2.1.6.1.2.1.1.1.15.1.3.1.9.1.4.8.3.1.6.1.6.1.1u.1.b.1.f.1.8.1.b.1.t.1.c.1.q.1.a.1.8.1.o.1.19.1.2.1.1.1.5.1.1.1.1.1.1.2.2.3.1.1.2.1.4.3.1.1.3.3.3.3.2.3.1.1.2.1.1.1.5.2.2.1.1.4.7.9.4.1.2.2.a.4.4.1.1.1.1.2.1.2.3.1.1.3.3.1.2.1.3.1.1.3.3.3.1.2.3.3.1.3.3.1.3.2.4.2.1.1.1.1.1.3.3.8.3.2.4.1.1.1.1.1.4.1.2.1.1.2.2.1.x.1.10.1.c.1.p.1.12.1.7.1.7.1.8.1.19","time":59},{"seeds":[0,0,0,0,0],"dd":[3,3,2.5,3.5,3],"dec":12,"path":"1j.1.n.1.d.1.18.1.9.1.1i.1.q.1.e.1.a.1.c.1.6.1.c.1.9.1.g.1.7.1.m.1.k.1.1m.5.3.1.2.2.1.1.1.1.1.6.u.8.6.6.2r.1.g.1.6.1.c.1.c.1.f.1.c.1.o.1.9.1.d.1.d.1.i.1.5.1.1.1.2.6.1.1.1.a.1.1.8.1.7.1.2.8.b.1.5.6.4.2.1.8.1.1.2.2.1.1.1.1.8.1.a.4.15","time":47},{"seeds":[0,0,2,0,0],"dd":[3.5,4,4,4,4.5],"dec":8,"path":"2c.4.9.1.9.1.5.6.8.1.4.1.2.1.2.6.8.1.3.2.9.7.i.3.9.1.7.2.1.2.6.2.6.1.2.2.4.1.4.1.2.3.5.1.1.3.1.1.1.4.8.4.2.1.1.1.2.1.1.1.4.1.1.1.1.7.j.3.2.1.b.1.4.1.2.1.4.1.1.1.1.4.5.1.2.1.3.a.e.3.a.3.1.1.1.2.3.2.6.1.9.2.1.2.2.4.2.2.6.1.1.1.3.3.2.2.1.1.2.2.1.1.1.2.2.1.1.1.1.2.2.2.3.1.3.1.3.3.2.2.1.1.3.1.2.3.1.3.6.2.2.4.2.1.2.1.1.3.1.3.6.2.4.2.2.2.1.1.1.1.1.2.1.1.1.2.2.2.1.1.1.1.1.1.2.1.3.1.3.2.5.2.1.2.1.2.2.4.2.2.2.1.6.4.1.2.3.1.1.3.1.1.3.2.2.3.5.1.3.1.9.3.1.1.1.1.2.2.1.2.3.1.1.1.5.2.2.1.1.2.1.1.1.1.1.3.2.1.4.5.1.2.2.1.5.3.1.1.1.1.5.1.1.2.1.1.2.1.2f.1.b.1.g.1.10.1.t.1.b.1.o.1.m.1.m.1.m.1.k.2.z.1.p.1.1x.1.1.1.4.e.2.8.k.1.1.1.4.b.4.2.2.5.60.1.1.1.1.1.e.1.2.1.1.2.1.4.8.1.1.1.6.2.6.2.1.1.1.3.2.2.7.1.1.5.2.1.5.1.1.1.1.1.1.1.2.1.4.1.3.4.3.1.2.1.8.2.i.1.e.6.2.1.7.1.1.1.2.1.2.1.3.1.4.1.1.2.6.6.4.1.3.2.1.1.1.1.1.1.7.4.5.1.2.1.8.7.2.1.1.1.5.1.7.6.6.1.5.1.3.1.5.1.1.2.1.3.1.8.4.1.1.2.11","time":63},{"seeds":[0,1,0,1,0],"dd":[4,4.5,4,5,5],"dec":8,"path":"1t.1.v.1.1f.1.j.1.e.1.13.1.1t.1.h.1.4f.1.m.1.b.1.m.1.10.1.p.1.b.1.1e.1.q.1.j.1.j.1.h.1.m.1.3u.d.1.1.1.1.1.1.c.3.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1h.4.1.1.1.1.w.7.1.1.1.1.u.7.1.1.b.4.1.1.1.1.1.1.1z.1.s.1.o.1.14.1.g.1.j.1.h.1.1n.1.e.1.16.1.17.1.1.4.1.1.1.2.1.1.1.1.2.3.1.2.7.1.1.1.3.1.1.1.1.1.2.1.1.5.4.2.3.2.1.3.3.1.3.1.3.1.2.2.1.4.3.2.2.1.5.2.1.1.1.1.1.1.1.1.1.2.1.2.1.1.2.2.1.1.1.1.1.1.4.1.3.2.1.2.4.1.1.6.2.1.1.1.3.1.5.1.1.1.1.3.1.2.1.2.2.3.6.1.1.5.1.1.2.4.2.2.2.2.4.1.3.1.1.2.1.4.1.2.1.1.3.1.2.1.2.3.1.1.1.1.1.2.4.1.5.1.2.7.1.1.4.2.1.2.3.4.4.3.4.1.1.1.2.2.1.1.7.1.1.1.p","time":61},{"seeds":[0,0,0,0,0],"dd":[4,5,5,5,5],"dec":8,"path":"0.1.4.1.a.1.1.1.1.1.3.1.1.1.1.3.1.1.2.1.1.2.2.1.1.1.1.1.1.1.1.2.3.4.1.3.2.1.5.4.1.1.4.2.1.2.1.1.1.1.1.1.1.2.1.1.3.1.1.1.5.3.2.1.1.1.1.2.1.2.1.1.2.1.4.3.3.1.4.3.1.2.1.1.6.1.3.1.o.1.1.1.3.1.1.1.5.1.2.2.4.2.1.1.8.1.1.1.2.2.2.1.1.1.1.1.1.1.3.2.2.3.2.2.1.1.1.1.f.1.1.1.3.1.1.1.1.1.1.1.2.1.1.2.1.1.1.1.2b.1.13.1.9.1.c.1.f.1.13.1.i.1.k.1.e.1.1d.1.l.1.c.1.b.1.6.1.1.1.2.1.3.1.7.1.1.3.4.1.3.1.1.3.g.3.2.3.4.1.8.6.a.1.6.1.1.5.b.3.3.1.2.2.2.6.b.4.2.1.1.2.2.1.8.3.1.1.a.7.6.6.6.1.1.2.5.2.3.2.1.1.1.2.1.1.1.5.a.1.6.1.1.2.1a.1.2.2.3.2.2.1.1.1.6.3.1.1.1.1.5.1.2.1.4.3.2.1.2.1.2.3.1.1.1.3.4.5.1.1.1.1.1.4.1.4.1.2.6.8.1.3.5.2.2.1.1.2.1.2.3.3.1.1.1.1.3.2.3.1.1.2.1.2.1.3.1.1.1.1.2.1.7.1.3.1.1.1.3.3.1.6.2.5.3.1.1.1.1.1.1.4.1.2.3.2.2.2.1.1.1.2.3.1.3.1.3.1.2.1.2.2.2.5.4.1.2.1.3.2.1.1.2.1.1.1.1.7.1.2.3.3.2.4.2.1.1.1.1.1.1.1.1.2.1.2.1.1.1.1.1.1.1.3.b.1.1.1.1.1.1.1.1.7.1.2.1.1.1.8.1.1.4.4.1.1.4.4.4.6.1.1.1.1.2.1.1.1.1.2.2.2.2.1.3.2.1.3.1.1.4.4.5.1.2.1.1.1.1.3.3.6.1.1.1.1.4.1.2.4.1.2.3.2.7.2.3.2.w","time":49},{"seeds":[0,0,0,0,0,0],"dd":[5.5,5.5,5.5,5.5,6,6],"dec":8,"path":"1s.1.e.1.a.1.d.1.q.1.a.1.1.1.n.1.m.1.a.1.k.1.s.1.9.1.e.1.k.1.1d.1.c.1.2w.1.e.1.y.1.d.1.s.1.m.1.j.1.d.1.2n.1.g.1.1v.2.3.1.2.1.1.1.4.1.f.b.7.1.4.1.5.1.3.1.2.2.3.c.1.1.8.1.3.7.1.1.4.7.5.8.1.b.3.d.7.b.2.1.6.5.9.4.1.1.f.1.9.3.5.8.3.1.5.5.a.1.4.1.1.1.2.1.j.6.1.3.5.1.1.4.e.1.1.1.1.1.2.2.2.1.6.3.1.1.1.1.2.2.1.1.1.1.1.1.3.8.7.1.1.1.2.6.5.1.1.1.1.1.1.6.6.1.1.1.4.5.5.a.1.1.a.a.1.1.1.1.c.6.1.1.1.1.1.1.1.1.9.9.4.1.6.7.1.5.1.6.2.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.5.1.1.1.1.1.1.1.1.2.1.4.1.1.1.1.1.1.8.2.1.1.1.1.1.1.4.7.1.1.1.1.1.1.b.2.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.26.1.v.1.u.1.1f.1.e.1.1c.1.m.1.3b.1.m.1.8.1.d.1.n.1.m.1.i.1.11.1.j.1.1i.1.m.1.m.1.s","time":73},{"seeds":[0,3,0,0,0],"dd":[6,6,6.5,6.5,6.5],"dec":8,"path":"c.3.a.7.2.1.8.1.7.1.8.2.h.2.8.1.8.6.b.3.7.1.2.5.k.3.c.3.a.1.7.1.8.1.8.6.y.6.a.1.1.3.a.6.1.2.c.1.7.1.6.1.1.5.1a.1.f.1.f.1.i.1.17.1.t.1.t.1.r.1.b.1.2g.1.1.3.1.4.1.1.5.1.6.1.2.1.1.7.1.2.1.4.6.2.3.4.2.1.1.5.2.2.1.1.5.1.4.1.3.2.1.2.1.1.1.1.4.5.2.1.1.3.1.1.1.3.3.1.3.2.4.1.1.1.1.2.2.2.2.1.4.1.2.3.1.1.2.1.1.3.2.1.1.2.1.3.3.1.3.1.2.1.1.5.1.2.1.3.1.1.6.2.1.2.5.3.7.3.1.1.1.2.1.3.2.2.34.1.d.1.f.1.g.1.h.1.o.1.i.1.9.1.c.1.j.1.a.1.r.1.r.1.s.1.10.1.1.1.5.1.3.1.1.1.7.5.2.1.6.3.1.1.3.2.2.8.3.7.3.1.4.1.2.1.1.1.3.1.4.1.1.2.2.7.1.1.1.1.1.1.1.5.2.1.3.1.1.1.3.1.1.1.3.1.1.5.3.2.1.1.1.2.5.1.2.3.1.4.1.1.1.2.2.4.6.1.3.1.1.1.a.1.2.3.1.3.2.2.1.3.1.1.2.1.2.6.3.1.1.2.3.5.1.6.1.1.1.1.1.3.1.1.5.1.1.2.2.1.1.1.q","time":53},{"seeds":[0,0,0,0,0,0],"dd":[6.5,6.5,7,7,7,7],"dec":8,"path":"d.1.3.7.5.1.2.1.a.9.3.e.4.1.6.1.1.1.11.1.p.1.n.1.3.d.2.1.t.1.2.1.1.1.1.1.b.1.1.1.i.1.6.7.4.3.4.7.1x.8.1.1.8.6.1.1.1.1.r.d.1.1.8.1.1.1.q.6.1.1.1.1.3.c.1.1.1.1.v.6.1.1.13.f.1.1.8.6.1.1.17.5.4.2.d.2.f.2.7.4.8.1.3.7.e.5.a.1.8.4.9.1.6.1.1.6.l.6.a.1.1.2.b.2.f.5.f.1.39.1.p.1.11.1.1r.1.1h.1.r.1.c.1.d.1.7.2.2.a.3.1.1.1.2.3.5.1.9.1.1.3.4.5.2.3.1.2.3.2.1.2.1.1.4.1.1.5.1.3.2.1.5.4.3.1.4.1.3.4.1.1.1.2.4.1.1.1.2.2.2.1.4.3.4.1.1.3.4.1.2.1.2.3.1.7.2.2.2.3.2.2.1.1.2.1.1.1.1.2.4.2.2.2.3.3.1.1.1.1.2.5.2.3.6.1.3.7.5.1.4.2.2.2.4.1.1.1.1.3.2.2.2.1.2.1.1.1.5.2.1.1.1.1.w.1.o.1.9.1.c.1.d.1.k.1.i.2.14.1.k.1.i.1.x","time":59},{"seeds":[0,0,2,0,0,0],"dd":[7,7.5,7.5,7.5,7.5,8],"dec":7,"path":"1x.1.o.2.1f.1.k.1.a.1.e.1.f.1.q.1.15.1.l.1.33.1.7.1.1.g.1.1.j.4.2.1.1.4.2.1.1.4.4.4.3.1.7.4.1.2.1.1.1.2.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.4.1.1.4.1.1.1.1.1.5.1.1.1.1.1.1.1.1.1.1.2.1.4.1.1.4.1.1.1.1.1.1.9.1.1.x.9.y.9.1.1.1.1.6.c.1.1.f.c.1.1.4.7.1.1.7.9.1.1.1.1.26.1.k.1.k.1.d.1.1g.1.c.1.i.1.x.1.f.1.10.1.n.1.1u.1.2.1.5.2.4.1.5.4.2.1.2.2.1.2.6.1.4.2.2.1.a.1.1.1.1.3.4.4.1.1.2.1.1.1.2.1.8.3.1.1.1.1.4.1.4.1.1.1.3.1.2.2.1.2.8.1.2.1.1.2.4.1.1.7.1.2.5.1.2.1.1.1.2.2.1.2.1.1.1.1.1.1.1.1.1.3.4.1.1.3.1.1.9.1.1.3.4.1.1.1.1.3.1.1.1.1.4.2.1.3.3.1.1.1.1.1.2.1.1.2.4.1.4.1.3.1.3.1.1.1.2.1.1.1.a.3.3.1.1.2.5.2.1.1.1.2.2.5.2.3.1.1.1.1.1.1.1.1.3.1.2.1.5.1.1.1.1.1.2.1.1.2.1.3.2.1.1.1.2.1.1.2.1.1.4.1.5.2.1.a.6.1.4.1.1.1.2.5.c.3.4.1.2.1.1.7.5.1.7.1.4.1.8.3.1.2.2.1.3.1.1.1.1.1.3.1.5.3.6.1.4.1.5.1.7.1.a.5.9.1.2.1.1.3.h.2.a.4.9.3.2.1.8.4.2.1.1.1.2.1.4.1.7.7.c.1.c.6.4.2.f.1.e.1.1.1.8.3.b.2.1.1.2.1.1.2.2.1.1.2.9.7.1.2.1.4.1.2.1.1.3.2.5.2.5.1.6.3.4.2.4.2.1.5.1.1.1.2.2.1.1.2.2.1.2.1.1.3.2.1.1.2.1.1.1.1.7.1.2.1.1.1.9.2.1.1.1.1.1.2.4.2.1.4.2.1.2.1.2.1.1.2.1.1.6.1.5.5.2.2j.1","time":64},{"seeds":[0,0,0,5,0,1],"dd":[7.5,7.5,8,8,8,8],"dec":7,"path":"1.7.b.4.6.6.1.1.1.1.1.1.1.4.2.1.3.6.5.1.3.1.3.1.3.1.1.1.4.3.1.1.2.1.1.1.1.1.1.1.1.1.2.1.2.3.1.1.1.7.4.3.7.3.2.2.1.1.2.1.4.2.1.2.1.2.1.1.6.1.1.1.4.4.3.1.2.5.7.2.4.1.2.1.1.1.3.3.2.1.2.1.1.4.3.1.3.1.1.5.1.3.3.1.6.1.1.4.5.4.2.2.1.1.4.4.2.1v.u.1.h.1.e.1.g.1.b.1.e.1.e.1.n.1.o.1.a.1.2.1.c.1.1a.1.l.1.l.1.e.1.1a.1.d.7.9.5.3.3.8.1.1.d.3.2.8.1.3e.1.9.4.i.4.1.9.e.1.5.1.6.g.2.5.5.1.8.f.2.e.4.1.1.1.1.1.4.3.8.1.1.1.5.5.3.1.4.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1h.3.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.f.1.1.d.2.1.1.1.1.3.c.1.1.9.6.1.1.1.1.5.a.1.1.1.1.c.7.1.1.38.1.f.1.11.1.f.1.1u.1.14.1.2a.1.e.1.h.1.a.1.1d.1.q.1.i.1.f.1.2g","time":56},{"seeds":[2,0,0,0,0,6],"dd":[8,8.5,8.5,8.5,8.5,9],"dec":7,"path":"1p.8.1.1.a.6.1.1.4.a.1.1.5.a.1.1.f.1.1.1.1.1.1.1.1.1.1.1.1.1.1z.6.1.1.4.2.1.1.8.4.1.1.j.a.1.1.1.1.6.b.1.1.19.1.8.1.1.4.3.1.8.2.h.2.i.1.9.1.9.6.b.3.b.1.2.1.7.1.1.1.6.2.9.1.8.1.1.1.4.1.5.3.f.1.6.2.a.1.a.1.a.1.2.1.o.2.b.8.a.1.c.1.4.1.b.2.e.1.7.1.1.2.a.2.3.1.2.4.3.4.3.2.1.1.3.3.1.3.1.3.3.1.2.1.1.2.4.1.1.1.1.5.4.1.1.2.1.2.1.1.1.1.4.2.1.1.3.2.4.5.3.1.2.1.1.1.1.3.1.2.1.1.1.2.2.1.1.1.1.2.1.1.6.1.2.5.1.1.1.3.1.2.2.1.1.3.1.2.1.3.2.2.2.1.1.1.3.4.1.1.1.1.3.1.2.1.1.1.1.1.1.1.7.1.4.2.3.1.1.1.2.1.3.1.3.1.2.1.1.1.2.2.3.3.1.2.2.1.1.1.2.1.2.1.2.1.1.2.4.1.2.1.1.1.1.2.1.1.2.1.1.2.2.4.1j.1.h.1.c.1.e.1.19.1.f.1.l.1.2d.1.e.1.p.2.12.1.x.4.2.1.1.1.1.1.3.1.4.1.3.3.3.1.1.1.1.1.3.1.1.3.6.4.1.2.1.3.1.1.4.1.1.2.1.1.4.1.1.2.2.2.1.2.3.1.5.3.1.2.2.1.3.3.3.1.3.7.1.1.1.1.1.2.1.2.2.1.3.3.2.1.1.2.3.1.1.1.1.1.6.1.3.4.1.3.1.2.1.1.1.4.3.1.4.2.1.2.4.2.4.1.2.2.2.1.1.3.2.4.1.3.3.1.5.2.4.1.3.2.1.1.2.1.1.5.1.3.2.1.2.2.1.2.4.1.1.1.3.1.1.2.1.2.1.1.4.2.2.1.2.5.8.2.2.2.6.1.1.2.2.1.1.1.1.1.2.2.1.1.3.3.1.1.2.3.1.1.1.1.1.1.1.2.1.1.3.2.1.1.2.1.3.1.2.8.4.1.3.a.1.2.1.3.1.1.2.1.1.1.1.1.3.5.1.1.4.2.2.1.2.1.1.1.1.2.2.1.1.1.1.1.1.1.1.2.2.2.1.4.1.1.4.4.3.4.6.3.3.1.1.1.1.3.3.1.1.d.2.1.3.6.1.2.1.1.1.1.1.1.1.1.8.3.4.1n.1","time":59},{"seeds":[0,0,0,0,0,0,0],"dd":[9,9,9,9,9,9,9],"dec":6,"path":"25.1.k.1.h.1.1b.1.d.1.g.1.h.1.p.1.h.1.j.1.m.1.17.1.1r.1.1b.1.5.3.2.3.1.1.1.1.4.1.3.2.6.1.1.1.5.2.1.1.1.1.1.5.1.1.1.2.3.2.2.1.1.1.1.2.1.1.1.1.2.3.5.3.3.1.2.2.5.2.2.2.4.2.1.2.2.5.3.1.1.1.1.2.4.2.5.1.4l.1.2.5.3.1.2.3.4.1.3.1.3.1.2.3.1.1.1.3.3.2.1.1.3.1.3.3.1.4.2.2.3.1.6.2.4.5.1.3.1.1.1.1.2.1.9.1.29.1.g.1.i.1.i.1.8.2.1.1.5.1.h.1.4e.1.h.1.g.1.1.1.g.1.2.1.1.1.d.1.5.1.b.e.2.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.1.1.1.1.1.7.5.2.2.1.1.5.8.1.1.1.3.1.c.f.7.1.1.3.c.7.4.1.1.7.5.2s.h.1.1.d.5.1.1.7.7.1.1.1.1.3.d.1.1.1.1.1.1.8.8.1.1.1.1.1.1.z.7.5.1.3.1.2.2.9.1.2.2.3.1.3.2.e.1.1.1.1.1.1.1.a.1.2.1.7.5.3.1.2.1.1.1.4.2.3.1.1.1.1.1.4.1.4.1.5.2.2.1.7.5.3.1.1.1.1.2.f.7.2.2.4.1.4.7.e.2.3.2.5.1.1.1.2.1.l.5.3.1.2.1.5.1.1.8.6.1.9.1.3.1.3.1.1.1.3.1.8.1.2.3.4.1.1.1.1.b.9.1.4.9.f.3.6.1.1.1.2.5.3.1.1g.1.m.1.x.1.t.1.2p.1.3u.1.1.1.4.1.1.3.2.1.4.1.2.1.4.3.2.1.1.4.1.3.2.1.1.1.2.1.2.1.7.2.1.5.1.6.1.1.2.1.1.2.1.3.2.1.1.1.3.8.2.3.2.2.1.1.2.1.1.1.4.1.1.2.1.1.4.1.1.1.1.1.6.3.2.2.2.1.2.2.1.3.1.1.1.1.2.1.2.1.1.2.1.3.2.4.1.3.4.4.1.1.1.1.3.2.1.1.4.1.1.2.2.3.2.1.5.1.1.2.2.2.1.1.6.3.2.1.1.7.1.1.1.2.3.2.1.1.2.1.3.1.3.3.3.5.1.2.8.5.2.2.6.1.1.3.v.1.1.1.3.1.2.1.1.1.1","time":71},{"seeds":[0,0,1,0,0,0,0,0],"dd":[9.3,9.5,9.5,9.5,9.5,9.5,9.5,9.5],"dec":6,"path":"20.1.u.1.1c.1.w.1.22.1.e.1.50.1.n.1.l.1.i.1.a.1.g.1.g.1.f.1.u.1.k.1.i.1.h.1.i.1.k.1.h.1.m.1.2r.8.p.8.b.6.1.1.1n.e.1.1.g.3.1.1.1.1.1.1.1.1.1.1.1.1.1.1.y.5.1.1.1.1.o.a.1.1.1.1.4.a.1.1.u.h.2.1.2.3.1.9.2.1.1.2.2.1.1.1.4.1.1.3.2.1.3.1.1.1.6.1.1.1.11.2.2.1.1.3.1.1.1.1.3.2.1.4.1.1.e.3.1.3.1.2.2.1.2.1.1.4.5.3.4.1.1.1.7.5.5.3.1.2.2.1.1.1.2.4.3.2.5.3.2.4.1.2.2.2.1.4.3.1.2.3.5.1.3.1.2.4.1.1.1.2.3.1.1.1.1.1.1.1.2.1.5.1.3.1.1.1.2h.5.2.5.5.4.a.6.2f.1.5.1.3.1.1.g.17.1.l.1.4.1.15.6.a.1.1.2.8.c.b.1.9.8.6.4.1.1.1.4.d.1.5.1.8.1.2.2.b.3.c.8.h.4.d.1.3.4.7.1.7.i.7.4.3.1.9.4.d.3.c.2.a.1.d.1.g.2.3.1.8.2.2.1.a.1.10.2.d.2.8.4.c.1.8.1.2.1.b.1.2.8.e.1.1.2.3.1.2.1.5.7.8.1.2.1.1a.1.s.1.r.1.w.1.12.1.j.1.3o.1.1n.1.2.1.1.1.1.1.4.1.6.2.4.2.1.6.1.1.4.1.1.1.1.1.1.1.3.2.1.1.1.1.3.4.2.1.1.4.2.2.1.1.1.1.1.1.4.1.1.1.2.1.6.2.1.1.1.1.5.1.1.1.3.1.1.1.1.3.1.1.1.2.1.1.2.2.1.1.2.2.4.1.5.1.2.1.3.1.1.2.1.2.1.1.1.1.1.1.2.2.3.2.4.2.1.1.1.1.1.1.1.1.2.1.1.6.1.1.2.5.1.2.2.1.1.2.3.4.3.2.4.2.1.6.1.1.1.1.2.2.4.1.2.1.1.6.3.3.5.2.1.2.8.1.1.1.c.2.1.1.5.1.5.5.1.1.2.1.10","time":77},{"seeds":[0,11,0,0,0,0,0,0,8],"dd":[10,10,10,10,10,10,10,10,10],"dec":6,"path":"1w.1.h.1.g.1.h.1.s.1.k.1.m.1.h.1.i.1.u.1.g.1.1b.1.y.1.2p.1.1.1.2.7.a.1.1.1.a.c.1.1.1.1.8.4.1.1.j.4.1.1.1.1.5.3.1.1.1.1.6.4.8.6.1.1.1.1.y.4.f.4.1r.c.b.3.5.8.1t.1.o.5.4.1.m.6.2.2.c.7.g.1.5.1.1.3.1.3.2.2.4.1.7.7.h.1.1.1.5.1.4.1.1.2.c.6.e.5.7.1.4.1.1.5.2.1.2.1.1.1.5.a.n.7.h.4.5.1.2.1.b.6.1.2.1.1.1.2.1.1.3.1.1.7.2.3.1.1.2.2.1.1.3.1.1.1.2.4.1.2.2.1.1.2.1.2.2.2.1.2.3.1.2.1.3.1.1.1.1.1.1.1.6.2.1.1.2.2.3.3.4.2.1.1.j.3.1.1.1.2.6.4.3.1.r.1.1.3.7.1.5.7.2.1.3.3.1.2.2.1.1.1.6.1.3.2.1.1.1.3.1.2.4.3.4.2.1.1.1.2.3.2.2.2.2.2.2.1.2.4.6.1.1.1.c.2r.19.1.j.1.v.1.c.1.f.1.m.1.28.1.19.1.g.1.27.1.8.1.2.1.c.1.j.1.f.1.8.1.3.1.1.2.16.2.2.1.9.1.3.1.2.2.2.2.3.1.2.1.3.1.6.4.7.1.1u.1.1.1.3.1.a.1.b.1.3.1.2.1.8.1.3.2.2.2.4.1.8.1.5.1.a.1.3.2.4.2.1.1.3.1.1.3.2.1.2.7.2.1.2.2.1.3.4.1.1.3.4.3.1.4.5.5.1.2.1.3.1.1.1.1.1.1.2.1.3.1.1.1.2.1.4.1.6.3.3.1.4.1.4.6.3.1.1.2.1.4.1.1.2.4.1.5.1.1.5.1.2.4.1.1.2.2.1.2.1.1.1.2.2.4.1.1.2.2.1.2.2.1.3.1.3.1.1.1.3.2.3.1.1.2.2.1.2.1.3.2.1.1.1.1.2.1.4.1.1.1.2.1.4.1.3.2.1.1.5.1.2.1.2.1.1.1.1.5.1.1.5.1.2.2.1.1.1.2.1.1.2.1.1.1.1.1.1.1.1j.2.2.1.1.1.7.4.2.1.m.i.2.1.e.1.8.1.3.1.h.2.1.2.4.a.6.5.3.1.3.1.1.1.8.1.1a.1.2.d.5.1.3.5.3.1.4.4.k.2.1.1.2.1.9.1.2.d.1.6.f.7.7.1.3.2.1.2.1.1.1.1.2.2.1.1.1.1.1.1.2.2.4.1.1.2.3.2.2.1.6.1.1.1.2.1.1.g.5.5.7.1.1.1.a.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.e.7.3.1.1.5.1.6.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.b.6.3.2.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.2.1.1.1.1.1.1.1.1.1.1.1.1p.1","time":81},{"seeds":[1,0,0,0,0,0,0,0,0,0,0,3],"dd":[10,10,10,10,10,10,10,10,10,10,10,10],"dec":6,"path":"25.2.1m.1.j.2.18.2.o.1.1s.1.d.5.2.2.1.1.1.3.4.3.1.1.1.1.2.1.2.3.2.3.3.1.2.4.7.1.7.5.5.1.1.3.1.1.4.2.2.1.1.2.1.2.4.3.1.1.7.2.1.2.1.3.8.1.2.1.2.3.3.4.1.1.2.5.1.1.1.2.2.1.1.1.2.5.3.3.1.2.1.1.8.1.1.4.1.19.2.1.1.2.3.3.2.1.1.1.1.1.3.3.1.3.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.1.1.1.1.2.4.1.1.1.1.3.1.1.5.1.4.7.1.4.8.9.2.2.1.1.1.1.3.6.1.1.2.5.c.9.1.1.12.4.1.1.7.4.1.1.2a.1.b.6.7.1.1.1.4.2.4.1.6.2.7.1.3.1.b.1.4.1.d.1.e.1.k.8.1.7.j.1.7.1.2.6.7.1.3.2.1.2.j.1.h.1.i.1.39.1.3.1.2.6.j.1.6.8.5.1.f.1.3.d.7.5.1.6.z.1.9.1.6.4.1h.1.2.1.1m.1.20.1.b.1.12.1.1.1.7.1.2.1.1.1.2.1.2.1.1.2.1.5.2.1.1.1.3.1.1.3.1.1.1.1.2.5.3.1.3.6.3.1.4.1.1.7.1.1.5.1.2.1.2.1.6.1.1.1.6.1.1.1.3.1.1.1.1.2.1.1.2.1.3.2.a.3.5.1.4.1.3.1.1.2.1.2.1.3.2.3.1.1.3.1.2.1.6.1.2.4.1.9.3.1.1.1.1.2.2.1.1.1.2.2.1.1.2.1.1.4.2.1.1.1.3.2.1.1.1.1.1.1.1.1.1.1.1.3.s.9.1.1.7.5.5.5.1.1.5.5.1.1.1.1.9.3.1.1.1.1.1.1.1.1.1.1.1.1.1.h.1.1.1.1.1.1.29.1.i.1.m.1.2b.1.i.1.h.1.r.1.1n.1.5.3.2.3.1.1.1.1.4.1.3.2.6.1.1.1.1.1.1.1.9.8.2.5.4.1.8.b.8.2.1.1.9.2.1.2.1.3.8.2.1.2.1.3.1.1.1.3.7.1.1.2.2.1.1.1.5.1.2.1.4.2.1.1.2.1.2.3.1.1.1.7.1.2.2.2.6.5.2.3.2.1.2.3.1.2.2.1.1.5.2.1.3.3.2.1.2.2.1.4.1.1.2.1.2.3.1.b.4.4.c.3.1.1.6.2.1.1.1.1.2.6.1.1.1.1.7.1.1.1.1.1.1.1.1.9.1.1.1.1.9.1.1.2.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.b.1.4.1.1.7.3.1.1.7.5.1.1.w","time":70},{"seeds":[0,0,0,0,0],"dd":[7,7.5,7.5,7.5,7.5],"dec":8,"path":"1l.6.1.1.1.3.1.1.1.1.1.1.1.1.3.3.1.1.1.1.3.1.1.1.1.1.1.1.b.6.1.1.4.2.2.2.1.1.1.3.1.1.2.4.1.1.1.1.1.1.4.2.1.1.8.6.1.1.1.3.1.1.1.1.1.1.1.1.1.4.1.1.1.3.1.1.4.2.2.4.1.1.3p.7.1.1.1.1.1.1.3.1.1.1.3.3.1.1.3.1.1.3.1.1.1.1.1.1.1.1.1.1.6.b.1.3.1.1.3.1.1.1.1.3.1.1.1.1.1.1.1.1.1.1.8.8.2.2.2.2.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.2b.9.1.1.1.3.1.1.1.1.1.1.1.3.2.2.2.2.a.8.1.1.1.3.1.1.3.3.1.1.1.1.1.1.1.1.1.1.1.1.2.2.2.2.1.1.1.1.1.1.1.1.w.5.1.1.4.2.1.1.k.b.1.1.1r.6.1.1.1.1.1.1.4.2.2.4.1.1.4.2.2.4.1.1.1.3.1.1.1.1.1.1.1.1.r.6.1.1.3.1.1.1.2.4.1.1.1.1.1.1.1.3.1.1.1.1.1.4.x.6.1.1.5.3.25.6.1.1.1.3.1.1.1.1.3.3.1.1.3.1.1.1.1.1.1.1.1.1.3.1.1.1.2.2.1.1.1.1.1.1.1.1.1.1.7.8.1.1.1.1.5.c.1.1.3.1.1.1.4.4.1.1.1.3.1.1.1.1.3.3.1.1.1.1.1.1.1.1.1.1.1.1.8.6.3.1.o.2.1.1.1.1.v","time":42},{"seeds":[0,0,0,0],"dd":[5,5.5,6,6],"dec":8,"path":"1s.1.8.1.d.1.m.1.8.1.d.1.j.1.9.1.c.1.1m.1.l.1.m.1.1a.2.z.1.m.2.1d.1.3.1.2.1.2.1.1.1.3.1.1.2.8.1.3.1.4.6.i.5.k.2.n.5.e.5.8.2.3.3.5.1.1.1.1.1.1.3.1.1.4.2.2.1.7.1.1.1.e.2.3.1.6.5.2.2.9.4.2.2.2.5.3.2.2.4.2.1.1.1.4.1.1.2.5.2.3.2.2.1.5.1.1.1.1.5.1.1.5.3.2.2.4.1.1.1.1.1.d.3.c.2.3.1.1.1.1.1.1.2.7.1.7.9.1.1.3.1.2.1.6.1.2.1.e.1.f.1.c.1.a.1.6.1.4.1.4.1.2.1.3.1.9.1.c.1.i.1.b.1.a.1.z.1.m.1.j.2.1b.1.j.1.2u.1.6.1.c.1.f.5.6.2.d.6.b.9.8.1.a.8.i.4.a.7.9.1.3.1.9.1.c.1.1.3.2.1.2.1.2.4.5.1.4.1.1.2.g.5.1.3.4.1.y.1.1.2.1.3.1.1.3.4.j","time":52},{"seeds":[0,1,0,0,0],"dd":[6,6.5,7,7,7.5],"dec":8,"path":"1s.1.1j.1.i.1.1b.1.4d.1.m.1.i.1.w.1.1d.1.4c.1.10.1.c.1.e.1.f.1.1b.1.8.1.32.1.m.1.1k.1.2t.1.e.1.q.1.26.1.a.1.11","time":41},{"seeds":[0,0,0,0],"dd":[6,6.5,7,7.5],"dec":8,"path":"3.6.1.1.2.1.7.3.1.2.1.2.6.1.1.2.2.1.3.2.1.1.2.2.1.3.1.1.1.2.4.4.1.3.4.3.1.1.7.1.2.2.1.1.2.1.1.1.1.1.2.5.2.2.2.4.6.1.2.2.1.1.3.2.2.1.4.2.2.2.3.5.2.3.2.5.2.1.1.1.2.1.2.1.1.2.2.1.1.4.2.3.2.1.1.1.1.1.3.1.1.1.1.2.2.1.1.1.2.1.2.4.1.2.1.2.1.1.1.2.1.2.4.1.3.2.1.3.3.2.4.1.2.1.1.1.2.2.1.1.1.4.1.2.5.1.1.2.2.3.1.1.3.2.2.2.1.1.6.1.2.1.1.1.4.1.1.6.2.1.2.1.1.2.2.4.3.4.5.1.4.1.1.2.1.3.1.2.2.1.1.2.3.2.1.1.1.s.3.1.2.2.1.2.4.1.2.4.2.1.2.2.2.2.2.4.4.6.1.2.3.1.2.1.5.1.8.2.1.1.1.4.1.1.1.3.2.1.1.4.2.3.5.1.4.1.1.1.1.1.1.1.1.3.1.2.2.1.2.2.1.3.1.2.3.2.5.2.1.3.1.1.1.1.1.1.2.1.3.1.1.1.1.4.3.2.2.1.5.2.1.1.1.1.3.1.1.5.1.1.2.2.1.1.2.3.2.1.1.c.1.r.3.1.1.2.2.1.1.4.5.2.1.2.2.1.3.2.2.1.4.1.1.3.1.4.2.1.1.2.2.1.1.1.6.9.3.1.6.2.2.5.4.1.1.3.1.2.4.3.2.4.1.1.1.1.a.1.1.1.3.6.1.10.4.1.1.4.2.1.1.1.3.2.1.2.4.1.6.2.1.1.1.1.1.1.1.1.3.8.1.1.2.1.4.1.1.6.5.1.5.1.1.4.2.1.2.5.1.1.2.2.1.l.3.3.2.2.4.1.2.1.1.b.1.22.1","time":37},{"seeds":[0,0,0,0],"dd":[6,6.5,7,7.5],"dec":8,"path":"3.1.2.1.2.1.3.1.3.5.2.1.1.4.2.1.1.1.1.3.1.1.3.1.4.1.1.2.1.2.1.2.2.1.2.1.2.2.4.1.1.1.1.2.1.4.2.8.1.7.1.1.4.1.1.1.1.1.2.1.2.3.2.1.2.2.2.1.3.1.2.1.1.1.5.7.1.1.1.2.1.1.2.1.2.4.1.1.1.2.1.1.6.1.2.1.3.3.2.1.1.1.1.2.1.2.3.3.2.3.1.1.1.2.1.1.3.1.1.1.1.1.2.1.2.1.2.1.1.4.1.4.3.1.1.1.2.4.2.1.2.1.2.1.1.1.1.1.1.1.2.1.4.1.3.1.2.4.2.4.3.1.2.1.1.3.1.1.1.1.3.1.5.1.1.1.1.4.1.1.6.1.2.1.1.2.1.3.2.2.3.1.1.4.2.3.3.2.3.1.4.1.1.1.2.1.1.2.1.1.3.1.1.1.1.1.2.4.1.3.1.5.1.1.6.1.2.3.2.2.1.1.1.1.1.1.1.4.1.1.2.7.4.1.6.1.1.1.1.1.5.1.1.1.2.2.3.1.2.1.5.2.a.2.1.1.1.1.2.1.2.2.3.1.1.1.4.3.3.1.2.1.1.2.1.1.4.5.1.1.7.1.1.2.1.1.1.1.1.2.2.2.2.1.4.1.1.5.1.1.4.1.2.3.1.1.3.2.3.2.1.4.2.2.1.1.7.4.5.1.2.5.2.1.7.1.3.1.1.2.3.4.1.2.1.1.5.1.3.1.2.1.1.1.2.1.3.2.1.1.4.1.2.1.2.1.2.1.2.2.1.2.1.3.9.4.3.1.4.1.2.1.1.2.3.1.1.1.1.2.1.2.3.5.1.2.3.1.4.2.1.3.1.1.1.3.1.5.2.2.2.3.1.3.3.2.6.1.1.1.1.1.3.1.4.1.3.1.1.1.3.3.1.1.1.2.2.5.1.2.6.2.1.1.1.1.3.1.2.1.3.2.1.1.1.2.1.1.1.1.1.1.4.1.3.1.4.1.3.1.1.5.1.3.2.1.2.1.1.1.2.1.1.2.1.1.9.2.1.1.3.1.1.1.2.1.1.1.2.1.4.2.1.1.1.1.1.1.5.1.2.1.1.3.7.1.3.1.1.1.1.1.1.1.2.1.3.1.1.1.3.1.4.1.1.2.4.1.1.2.1.1.1.1.1.4.3.5.1.2.1.1.e.1.2.4.2.2.2.1.1.1.1.1.1.2.3.7.1.2.2.1.i.1.1.1.3.1.1.1.3","time":38},{"seeds":[0,0,0,0],"dd":[5,5.5,6,6],"dec":8,"path":"8.b.2.1.4.2.d.6.1.6.2.1.3.g.1.1.1.4.4.g.8.1.1.9.2.1.2.c.4.4.3.1.4.8.7.1.5.1.3.1.7.3.2.1.5.2.3.1.j.1.b.1.1.1.1.1.4.1.1.1.c.1.1.6.1.3.6.1.a.1.3.1.b.1.b.7.4.1.2.8.g.1.e.1.1.1.1.1.1.1.f.1.1.1.1.1.6.c.6.a.5.1.1.4.2.1.2.2.5.5.c.1.2.1.1.a.1.1.3.1.8.g.7.1.1.8.3.1.f.1.1.1.g.3.4.7.2.1.3.a.a.1.c.5.8.1.8.5.1.1.3.4.2.1.4.1.3.1.c.1.3.1.1.1.1.1.7.1.4.d.c.8.4.1.1.6.9.7.2.1.1.1.5.d.5.1.1.5.1.1.5.1.1.1.m.3.1.2.a.1.g.1.b.2.4.c.1.1.e.2.a.1.4.2.8.1.9.1.5.1.5.1.p.p.1.1.9.7.4.1.3.1.6.5.8.9.7.b.8.8.3.1.4.1.6.1.1.4.7.4.8.n.2.1.2.1.e.1.1.1.7.1.e.1.e.5.8.1.2.b.2.1.6.5.2.2.6.1.1.a.e.5.6.1.9.3.6.1.7.1.1.1.9.9.4.3.5.9.1.5.1.4.5.2.6.4.3.1.3","time":47},{"seeds":[0,0,1,0,1,0,0,0],"dd":[8,8,8,8,8,8,8,8],"dec":7,"path":"1x.1.j.1.e.1.f.1.c.1.n.2.n.1.1e.1.4.2.1.1.1.1.2.2.1.2.1.1.2.1.2.1.3.2.2.6.1.2.1.1.5.1.1.1.2.1.1.1.3.1.5.3.2.1.3.4.1.1.1.1.1.1.2.1.1.3.1.1.2.5.1.5.3.1.2.1.4.1.1.1.2.1.1.1.2.1.2.1.3.3.3.1.1.1.3.4.1.3.2.3.5.1.3k.1.11.1.r.1.r.1.13.1.e.1.8.3.g.9.c.2.2.c.3.6.3.8.2.6.1.1.1.b.j.1.n.1.2.1.1.9.6.1.1.1.3.1.1.2.1.1.6.4.1.8.1q.4.1.1.1.1.2.2.1.1.1.1.2.2.1.1.1.1.11.4.1.1.1.1.2.2.1.1.1.1.2.2.1.1.z.7.1.1.1e.5.4.6.1.2.3.1.4.1.1.2.8.6.e.a.f.5.c.2.a.7.a.1.a.1.1.8.m.6.c.1.2.1.6.1.9.4.6.1.1w.1.1w.1.f.1.21.1.5.1.2.1.2.3.1.1.1.7.1.2.2.3.2.2.2.1.2.1.4.1.1.2.3.2.1.1.2.2.1.1.1.1.1.2.1.2.1.1.2.1.1.1.2.2.1.3.3.2.1.4.3.1.1.2.1.3.1.1.4.1.1.1.3.3.3.8.1.7.1.1.1.1.1.1.1.1.1.4.4.1.1.1.1.1.4.1.2.4.1.3.1.2.2.1.1.4.3.3.1.3.1.1.3.1.3.1.2.1.7","time":52},{"seeds":[0,0,0,0],"dd":[8.5,9,9,9],"dec":7,"path":"1s.1.r.1.i.1.n.1.g.1.d.1.12.1.16.1.1o.3.3.1.5.1.1.2.a.1.8.6.a.2.c.2.a.7.2.1.f.1.d.7.b.1.c.2.8.1.d.1.e.1.p.1.1.2.1q.1.e.1.e.1.c.1.c.1.k.1.i.1.e.1.y.1.e.1.t.1.s.1.k.6.1.5.1.1.7.2.4.1.1.1.3.2.3.1.1.3.1.4.1.3.1.1.4.1.1.1.1.1.1.1.1.2.2.1.1.1.1.2.2.2.2.2.2.2.1.3.1.1s.3.3.3.1.4.2.4.1.1.9.1.1i.1","time":31},{"seeds":[2,0,4,0,17,0,12,0,1,1,12,0,0],"dd":[9.5,9.5,9.5,9.5,9.5,9.5,9.5,9.5,9.5,9.5,9.5,9.5,9.5],"dec":8,"path":"1h.7.1.1.1.1.4.4.1.1.1.1.5.3.1.1.1.1.k.3.1.1.1.1.1.1.1.1.1.d.1.1.1.1.5.5.7.1.1.1.1.1.5.5.1.1.1.1.1h.7.1.1.3.3.2.1.3.1.6.2.1.2.1.2.1.1.2.4.1.2.1.3.16.4.4.4.3.1.2.1.5.1.1.1.3.1.1.2.2.1.1.4.1.15.r.8.1.1.8.3.1.1.1.1.1.1.2.2.1.1.1.1.1.1.y.3.1.1.1.1.1.1.2.2.1.1.1.1.23.1.b.1.f.1.c.1.c.1.c.1.c.1.c.1.c.1.8.1.3.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.7.1.1.6.3.1.7.1.1.5.7.6.b.t.9.1.1.7.1.x.c.28.1.2.1.1.1.c.1.e.1.1.1.9.1.2.2.5.2.1.1.5.b.2.1.3.2.2.6.1.1.1.1.3.4.1.1.1.1.7.2.5.5.7.1.1.1.k.3.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.15.5.1.1.c.d.1b.1.e.1.f.1.26.1.1.1.1.1.1.1.1.1.1.1.1.1.1.7.1.1.4.4.1.1.4.4.1.1.3.3.1.1.6.5.3.3.1.7.1.1.1.1.5.2.1.1.1.1.6.1.1.1.2.7.1.1.1.1.1.4.1.1.1.1.3.3.1.1.c.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.6.5.1.7.1.1.1.2.2.2.2.8.1.5.4.3.1.2.1.l.6.6.1.2.1.5.4.3.4.u.8.4.2.1.1.1.2.1.1.1.4.4.2.3.6.1.1.5.3.1.1.7.5.1.3.2.1.1.1.b.1.1.1.1.1.1.1.1.1.7.3.1.1.1.1.2.2.1.1.1.1.2.b.1.1.1.1.4.4.1.1.9.a.p.1.p.1.p.1.8.1.1.1.9.1.5.1.b.2.2.1.1.1.1.1.1.1.1.1.1.2.2.1.3.1.1.1.8.1.1.1.1.1.1.1.1.1.1.1.1.1.l.8.5.5.1.1.6.1.1.1.6.3.1.1.2.8.1.1.3.3.1.1.3.3.1.1.1.1.8.4.1.1.2.6.1.1.s","time":71},{"seeds":[0,0,0,0,1,0,0,0,0,0,0],"dd":[9,9,9,9,9,9,9,9,9,9,9],"dec":6,"path":"29.1.h.1.g.1.h.1.i.1.p.1.s.1.1d.2.1o.1.3.1.4.4.1.2.2.1.3.2.7.2.1.3.4.1.1.5.7.1.1.3.1.1.3.1.1.2.2.2.4.3.1.1.1.1.1.2.1.1.3.3.1.2.4.1.4.1.1.1.4.3.1.3.2.1.1.1.1.5.5.1.3.1.7.5.4.2.4.1.3.1.1.2.3.6.2.1.1.1.4.3.1.1.1.1.2.8.5.1.4.1.3j.1.7.1.13.1.1m.1.h.1.2j.7.1.1.1.3.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.3.5.1.1.1.d.3.1.2.1.1.1.1.2.1.3.8.9.1.1.1.1.2.a.1.1.4.6.1.1.b.1.1.1.1.1.9.4.1.1.b.3.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.g.m.n.8.3.1.5.2.4.b.7.a.2.1.g.9.i.1.1.1.2.1.1.1.3.1.2.2.a.4.1.3.6.1.29.3.c.1.8.1.5.1.j.4.d.3.8.1.d.8.e.1.1.2.2.1.5.1.4.5.6.1.2.1.2.1.3.1.2.2.b.2.h.2.3.1.2.1.1b.1.h.1.1h.1.f.1.h.1.1f.1.4.1.3.2.4.1.1.1.1.1.2.1.1.1.3.1.1.1.3.5.1.1.1.1.1.5.1.1.6.2.4.1.5.2.2.3.1.1.4.1.4.2.2.2.1.1.6.5.2.1.1.1.2.7.5.2.1.2.4.1.1.1.1.1.1.1.1.8.7.2.2.1.5.2.1.1.2.2.3.1.5.5.8.1.1.2.1.1.1.1.3.2.3.1.1.2.1.1.1.1.1.1.1.1.1.3.1.2.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.1.1.4.2.1.2.1.2.9.1.1.1.1.1.1.7.7.1.1.4.4.1.1.8.8.1.1.1.1.1.1.11.4.1.1.37.1.k.2.15.1.h.1.s.1.m.1.h.1.26.1.3.5.2.2.1.1.2.2.7.1.6.2.1.2.1.2.2.1.2.1.5.1.2.1.2.7.1.1.3.5.2.5.4.1.2.1.1.4.2.1.1.1.2.2.1.1.2.4.2.1.1.2.4.1.6.3.3.1.3.4.1.2.1.4.1.2.4.4.4.1.4.3.1.3.2.1.5.1.1.3.2.1.4.1.1.4.1.1.u","time":68},{"seeds":[0,0,0,2,0,0,0,0,0,0,0],"dd":[9,9,9,9,9,9,9,9,9,9,9],"dec":6,"path":"18.2.2.4.3.1.5.1.4.1.4.1.b.5.4.4.n.1.2.1.1.9.7.j.2.4.1.9.7.l.1.1.5.1.l.1.2.f.3.3.4.1.8.1.5.5.2.1.2.8.3.1.16.1.h.1.l.1.g.1.h.1.h.1.h.1.l.1.i.1.h.1.i.1.h.1.r.1.1f.1.2.2.5.1.1.4.3.1.1.7.4.3.4.3.7.2.5.1.2.1.1.2.3.2.1.1.1.1.5.1.1.6.2.2.1.2.1.1.1.2.2.3.1.2.3.1.4.2.1.4.6.5.2.1.1.4.6.2.2.1.1.1.3.1.2.2.3.1.1.1.1.1.1.6.1.1.1.1.1.2.1.1.4.3.2r.9.1.1.9.3.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.h.1.1.1.1.1.1.8.3.1.1.1.1.4.9.1.1.1.1.1.1.o.7.1.1.4.7.1.1.1.1.2v.1.x.1.1d.1.i.1.1m.4.8.1.4.3.1.2.p.4.d.4.8.1.2.1.a.1.2.1.3.1.3.1.3.6.d.1.d.5.l.2.c.4.5.2.e.4.5.2.1.1.3.1.5.1.1.4.1.7.4.3.2.1.3.1.4.1.5.4.5.6.3.2.1.2.2.4.7.1.1.2.1.3.1.2.2.1.5.1.3.1.2.1.1.1.5.1.1.2.1.1.2.1.1.4.4.1.3.4.1.2.2.2.2.2.1.2.1.3.2.1.2.5.1.2.2.1.1.1.2.2.3.1.3.1.1.1.2.1.1.1.3.4.1.1.2.1.3.1.4.1.2.1.3.3.1.4.1.3.1.6.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.3.1.1.3.3.1.1.1.1.4.1.1.4.9.1.1.9.1.1.1.1.1.5.b.5.c.1.1.12.7.8.7.1.1.3j.1.u.1.h.1.1t.1.4.7.5.1.1.2.1.1.7.1.1.1.1.1.1.4.2.1.2.3.3.1.1.3.1.1.2.1.2.3.2.1.3.1.3.2.3.1.1.1.4.4.6.1.1.4.4.2.3.1.2.1.1.4.1.3.8.5.2.2.5.8.7.4.2.2.1.1.1.1.2.3.8.1.3.1.1.3.2.1.3.2.2.6.1.1.3.4.3.3.1.3.5.1.3.1.1.2.1.6.2t.1.1a.1.3d","time":68},{"seeds":[0,0,3],"dd":[1.4,2,2.6],"dec":12,"path":"17.1.e.1.e.1.o.1.c.1.d.1.e.1.g.1.7.1.3.2.4.2.3.4.1.1.7.3.3.1.2.4.2.3.3.2.2.2.1.5.4.1.1.1.3.1.1.1.1.1.2.1.2.1.1.1.1.1.1.1.g.2.2.2.2.5.2.1.2.2.4.1.2p.1.e.1.e.1.d.1.e.1.14.1.s","time":26},{"seeds":[0,0,0,0],"dd":[1.4,1.8,2.2,2.6],"dec":12,"path":"2.4.1.1.1.1.1.2.6.1.1.1.1.1.1.1.1.3.8.1.1.3.1.1.1.4.4.1.1.1.2.3.1.1.1.2.4.1.2.1.1.1.3.1.1.1.2.3.1.1.2.1.1.3.1.2.5.1.2.1.1.2.1.3.2.1.1.1.2.1.1.1.3.2.2q.1.c.1.c.1.d.1.d.1.e.1.g.1.d.1.h.1.d.1.f.1.a.1.b.1.q.1.4.1.3.1.1.2.2.2.1.2.1.2.1.2.2.2.2.1.4.2.3.1.1.1.2.1.2.4.3.1.3.4.2.2.1.1.1.1.1.1.2.1.1.2.4.1.1.2.1.1.1.1.4.1.2.1.1.2.3.2.1.3.1.1.2.2.1.2.1.1.6.1.2.1.1i.1.e.1.c.1.8.1.7.1.8.1.e.1.f.2.10.1.f.1.1v","time":41},{"seeds":[0,0,2],"dd":[1.4,2,2.6],"dec":12,"path":"16.1.f.1.8.1.7.1.h.1.e.1.e.1.d.1.e.1.c.1.w.1.1g.1.e.1.19.1.m.1.w.1.9.1.10.1.h.1.b.1.d.1.h.1.h.1.d.1.21","time":29},{"seeds":[0,0,0,0],"dd":[2.6,3,3.4,3.8],"dec":12,"path":"16.1.f.1.f.1.m.1.h.1.b.1.b.1.e.1.9.1.2.1.a.1.v.1.e.1.y.1.4.1.2.1.2.2.5.1.3.1.2.1.1.1.4.5.7.1.1.1.5.1.2.1.1.1.1.5.8.2.5.2.4.1.2.4.e.3.2.1.1.1.a.3.7.1.3.3.4.1.2.1.1.1.2.1.8.1.5.3.7.1.5.3.2.1.3.4.4.1.2.1.1.1.2.1.1.3.1.3.1.2.3.2.1.1.1.2.2.1.1.1.1.1.2.1.2.1.1.2.1.1.2.1.1.2.2.1.1.1.j.2.1.3.2.2.1.1.1.1.1.1.3.1.2.1.2.1.1.2.2.1.2.1.2.1.2.1.5.6.6.1.1.1.1.2.4.2.2.3.3.3.2.1.1.1.2.1.2.1.2.1.1.1.k.1.12.1.k.1.d.1.7.1.7.1.j.1.7.1.6.1.1.2.d.1.1.1.w","time":42},{"seeds":[1,0,2,0],"dd":[2.6,3,3.4,3.8],"dec":12,"path":"17.1.1k.1.b.1.j.1.o.1.3.1.1.1.1.1.1.1.7.2.4.1.6.1.9.d.2.1.1.a.1.1.3a.1.e.1.6.1.d.1.i.1.l.1.c.1.e.1.13.1.9.1.7.1.9.1.8.1.5.1.1.1.2.4.1.1.1.2.3.1.2.1.2.2.3.4.5.5.1.1.1.1.1.1.1.1.1.1.4.1.1.1.1.6.3.1.2.1.3.3.4.3.1.1.1.1.3.1.3.2.1.3.1.1.1.1.1.1.4.3.2.3.1.1.2.1.2.1.4.1.2.1.1.3.3.1.1.4.1.3.5.2.2.1.3.1.1.1.1.1.3.3.1.1.3.2.1.2.2.1.2.5.1.1.3.1.5.1.l","time":38},{"seeds":[0,0,2,0],"dd":[2.6,3,3.4,3.8],"dec":12,"path":"17.1.b.1.p.1.f.1.8.1.8.1.7.1.9.1.g.1.e.1.b.1.8.1.7.1.8.1.8.1.j.1.4.8.1.4.1.1.2.1.5.1.2.1.4.1.3.1.1.1.1.1.1.1.1.6.1.1.2.5.1.2.2.2.1.1.1.1.3.1.7.6.4.1.2.4.1.1.5.3.1.1.2.4.5.1.3.7.6.1.1.5.4.1.1.1.1.1.2.3.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.1.4.3.5.1.3.2.1.1.2.2.2.2.1.1.3.1.1.1.2.2.1.1.2.2.3.e.1.1.2.2.1.1.1.3.1.6.1.1.1.5.1.5.1.4.1.d.1.2.1.1.1.1.1.i.1.e.1.7.1.2.1.g.1.7.1.6.1.1.1.2.1.1.1.3.3.4.1.1.1.c.1.6.3.2.1.2.1.1.1.1.1.a.1.3.3.2.1.8.1.1.1.2.1.3.1.2.3.2.1.2.1.1.1.4.1.2.1.2.1.2.2.1.1.6.1.b.2.5.1.1.1.3.2.1.9.1.1.1.1.2.1.1.1.1.1.1.a.c.1.1.1.3.1.1.1.1.2.1.2.2.3.2.1.1.1.1.a.1.1.1b","time":45},{"seeds":[0,0,0,16,0],"dd":[4,4.3,4.6,4.9,5.2],"dec":12,"path":"y.1.7.1.h.1.c.1.6.1.9.1.8.1.8.1.c.1.d.1.e.1.1o.1.7.8.5.2.1.1.2.2.1.1.2.2.1.1.2.2.2.1.1.1.2.6.1.3.1.3.3.1.4.1.1.4.5.2.1.1.3.1.1.2.3.3.1.3.1.1.2.2.2.1.2.1.1.1.4.3.5.1.1.2.1.1.2.2.1.1.1.1.2.1.1.2.2.3.3.1.3.4.2.1.2.4.1.1.3.1.1.2.7.2.1.1.19.1.b.1.a.1.d.1.11.1.d.1.13.1.8.1.7.1.1m.1.1.1.7.1.8.1.f.1.6.1.13.1.8.1.8.1.g.1.d.1.d.1.15.1.3.1.2.9.3.7.2.5.3.3.3.1.8.1.2.1.8.2.3.3.1.1.4.6.1.2.c.5.1.2.7.a.2.1.2.1.3.1.5.1.9.1.5.4.u","time":51},{"seeds":[0,0,0,1],"dd":[4,4.4,4.8,5.2],"dec":12,"path":"16.1.4.1.d.1.4.1.d.4.e.2.3.1.8.3.5.5.8.3.2.1.3.1.2.1.2.4.2.1.1.1.16.1.1l.1.17.1.15.1.1j.1.8.1.4.1.1.1.1.1.1.4.3.4.1.1.1.1.1.1.2.1.1.2.2.1.3.1.1.1.1.1.3.1.1.2.3.2.1.1.1.1.1.1.1.2.1.2.1.1.2.1.2.1.1.1.1.2.1.2.2.1.1.1.5.3.1.2.5.2.1.5.2p.1.6.1.8.1.e.1.c.1.6.1.8.1.q.1.c.1.d.1.5.1.8.1.n","time":39},{"seeds":[0,0,1,0],"dd":[4,4.4,4.8,5.2],"dec":12,"path":"1n.1.13.1.i.1.17.1.a.1.2d.7.1.1.1.1.4.8.1.1.3.5.1.1.6.6.1.1.5.5.1.1.5.5.7.3.1.1.1.1.1.a.f.b.1.1.5.3.1.1.8.1.1.1.3.7.2.4.8.6.11.1.7.1.j.1.8.1.g.2.g.1.o.1.8.1.2.1.c.1.12.1.7.3.4.1.2.1.1.3.1.4.3.3.1.3.2.5.3.3.2.1.2.1.1.1.1.3.1.3.3.1.2.1.4.3.3.1.1.1.3.1.1.2.1.1.4.1.1.8.1.1.1.1.1.2.2.2.5.1.2.1.2.1.1.4.3.1.1.2.2.2.1.1.l","time":40},{"seeds":[0,0,0,0,0],"dd":[5.4,5.7,6,6.3,6.6],"dec":8,"path":"1n.1.g.1.i.1.i.1.b.1.3.1.b.1.c.1.i.1.c.1.c.1.7.1.1.1.2.5.1.1.1.1.4.2.1.1.1.1.1.2.3.1.2.4.3.1.3.1.1.1.3.1.1.3.3.3.1.1.1.2.1.2.3.3.2.3.5.1.3.1.2.2.2.2.1.1.1.2.2.1.1.4.4.1.1.2.6.1.3.2.1.2.3.3.3.4.1.2.2.1.1.3.1.2.4.3.1.1.1.1.2.1.2.1.1.1.3.1.2.1.1.1.2.1.3.2.1.4.2.2.1.1.1.1.2.3.1.1.2.1.1.1.5.1.1.1.6.1.e.4.k.4.7.1.1.1.b.2.c.1.3.1.1.1.5.1.5.2.1.4.1.1.2.4.4.1.2.1.1.1.2.4.2.1.1.2.1.2.4.2.1.1.1.4.3.1.5.7.b.6.3.1.2.8.1.1.1.1.1.7.1.1.1.1.3.1.8.4.7.9.1.1.3.7.5.1.1.1.1.1.2.5.6.1.1.1.7.1.3.2.2.4.1.1.4.3.1.1.2.4.6.a.1.1.6.3.1.1.2.3.2.1.3.b.3.1.4.1.1.1.1.4.1.2.5.1.1.1.1.1.4.2.6.1.6.1.1.1.1.1.1.3.3.1.1.a.3.b.1.1.3.4.1.1.1.1.5.1.3.1.d.1.i.1.k.1.c.1.b.1.d.1.a.1.12.1.m.1.i.2.j.1.22","time":40},{"seeds":[0,0,0,0,1],"dd":[5.4,5.7,6,6.3,6.6],"dec":8,"path":"6.1.1.1.1.1.1.h.1.1.2.5.2.h.9.1.2.1.1.1.1.1.9.g.4.4.2.1.5.1.9.1.3.1.1p.1.1.1.1.1.1z.1.18.1.h.1.l.1.p.1.j.1.c.1.g.1.20.1.a.1.d.1.11.1.2x.4.1.1.1.1.2.1.4.3.3.1.3.4.5.2.9.4.4.1.3.1.1.1.3.3.1.1.1.1.3.1.1.1.4.1.1.4.1.4.4.1.1.6.2.1.3.1.1.3.2.1.1.3.1.2.2.1.1.1.2.1.1.1.3.1.1.1.2.1.1.2.2.r.r.1.o.1.1n.1.1b","time":33},{"seeds":[0,0,0,0,0],"dd":[5.4,5.7,6,6.3,6.6],"dec":8,"path":"11.3.9.2.7.2.9.5.b.4.a.7.r.4.7.1.1.1.2.1.8.1.7.3.2.1.3.1.1.2.1r.1.i.1.d.1.i.1.o.2.v.1.h.1.k.1.i.1.f.2.12.2.f.1.d.1.8.1.3.2.1.4.3.1.3.1.1.1.3.2.1.4.1.5.1.2.1.4.2.2.4.3.1.2.3.2.1.4.1.2.4.3.1.2.1.1.2.2.1.1.1.1.1.2.1.1.4.1.1.1.1.1.3.1.1.3.2.1.1.2.1.1.5.3.1.2.3.4.3.1.2.1.2.1.5.1.2.1.3.4.1.2.1.2.1.2.2.3.1.1.1.3.5.2.6.1.1.2.1.2.6.5.1.1.1.2.2.1.6.6.1.1.2.2.1.2.3.1.1.1.1.1.1.1.2.2.2.3.5.1.1.2.2.2.2.1.2.2.1.2.3.1.2.3.1.3.2.1.2.3.4.2.6.2.2.1.1.5.1.2.8.2.1.1.1.1.3.1.1.5.4.1.6.1.1.2.1.6.3.1.2.2.3.3.1.1.1.3.3.1.4.3.1.1.1.1.2.1.3.2.2.4.1.4.2.1.3.1.4.1.5.2.1.4.1.1.1.2.1.1.3.1.1.1.1.2.1.3.4.1.2.1.2.1.1.1.1.1.1.1.2.2.1m.2.o.1.m.2.o.1.s.1.19.1.e.1.j.2.1p","time":44},{"seeds":[0,0,0,0,0],"dd":[6.8,7.1,7.4,7.7,8],"dec":8,"path":"1j.8.1.1.c.3.1.1.1.1.1.1.1.1.1.1.1.1.1.b.1.1.2.4.1.1.3.1.1.1.4.2.1.1.1.1.1.1.4.1.1.1.4.4.1.1.1.4.1.1.w.4.7.6.1.1.13.1.z.1.o.1.n.1.d.1.f.1.h.1.m.1.c.1.c.1.c.1.1.4.1.1.1.3.2.1.3.1.1.1.1.1.4.1.1.1.2.1.3.6.6.5.4.1.3.1.2.2.1.1.4.2.3.1.1.4.1.2.1.2.3.2.2.2.2.3.1.1.4.1.1.1.4.1.1.1.1.1.2d.9.1.3.1.1.1.1.2.2.1.1.3.3.1.1.8.3.1.1.r.5.1i.2.f.1.c.3.a.2.9.7.d.2.2.1.1.1.19","time":30},{"seeds":[0,0,0,0,1,0],"dd":[6.8,7,7.3,7.5,7.8,8],"dec":8,"path":"0.1.1.2.a.6.3.1.1.1.1.2.1.1.4.2.1.1.1.2.1.5.2.1.3.4.3.2.c.1.1.7.1.4.1.2.1.1.1.1.1.1.1.1.2.4.4.1.3.1.2.1.2.1.2.7.1.2.6.1.2.3.4.1.2.1.1.1.2.2.1.4.3.1.1.1.2.1.1.2.1.1.1.1.1.2.2.1.3.1.2.2.2.1.1.1.3.2.1.1.1.1.4.1.2.1.1.1.1.1.1.2.1.1.1.6.1.1.3.1.5.1.2.1.1.2.1.4.3.1.1.2.1.2.9.1.6.1.d.1.7.1.d.1.d.1.1.6.3.1.1.3.4.g.6.1.k.1.g.2.2.1.b.1.2h.1.t.1.m.2.l.1.1j.1.i.1.e.1.z.1.l.1.c.1.c.1.2.2.4.1.4.1.2.1.2.5.2.2.3.1.1.1.2.1.1.1.2.1.2.1.3.1.1.1.1.6.4.1.1.1.2.1.3.2.2.2.3.3.2.3.4.1.5.2.2.2.1.2.1.1.2.1.1.2.4.2.1.1.1.2.13.2.2.5.3.1.8.1.2.5.2.4.1.1.3.2.1.2.3.1.2.1.7.4.1.2.6.1.3.1.1n.1.f.1.f.1.d.1.r.1.b.1.h.1.u.1.1w.1.c.1.e.1.f.1.g.1.h.1.i.1.1t","time":48},{"seeds":[0,0,0,0,1],"dd":[6.8,7.1,7.4,7.7,8],"dec":8,"path":"2a.1.j.1.e.1.j.1.1x.1.b.1.3.1.5.2.1.1.3.5.1.1.2.4.3.1.4.1.3.1.1.1.1.2.3.3.1.1.1.1.2.1.2.1.5.2.1.1.2.2.4.1.4.3.3.1.3.1.4.2.2.4.1.2.1.1.1.2.3.3.1.1.1.1.4.1.3.2.3.2.2.1.4.1.2.5.3.1.2.2.3.3.3.5.1.1.2.1.2.2.1.1.b.3.1.4.2.2.1.1.2.1.1.1.2.1.1.2.1.3.2.2.1.3.2.3.1.2.1.1.4.1.3.1.4.1.5.1.1.1.1.1.16.1.p.1.6.1.c.k.k.1.f.1.2.1.7.1.b.2.1.1.7.1.1.1.1.1.1.1.6.1.15.1.2.1.2.1.2.4.1.1.1.2.2.1.1.4.4.3.5.1.1.2.1.1.2.1.2.3.2.2.2.5.1.6.1.1.5.1.1.1.7.1.2.1.1.7.3.1.1.1.2.4.1.1.2.4.2.5.1.1.5.1.1.2.4.1.3.1.1.1.1.1.2.1.1.2.1.1.1.1.3.2.3.1.3.2.1.1.2.1.3.1.4.1.4.2.1.1.1.2.2.2.1.1.2.3.2.1.1.3.1.1.1.4.1.2.1.1.1.4.4.2.2.1.2.1.1.3.2.3.1.1.1.4.2.1.1.1.1.1.2.1.1.1.1.1.1.1.1.1.1.1.3.3.1.1.3.1.1.2.3.1.1.1.1.1.1.1.b.b.1.1.5.9.3.4.1.4.2.7.1.1.1.4.1.2.1.1.1.1.2.1.1.1.1.1.1.1.1.2.1.1.2.1.1.1.1.2.1.3.1.1.2.y.z","time":40},{"seeds":[0,4,0,0,0,0],"dd":[7.8,8,8.3,8.5,8.8,9],"dec":7,"path":"28.1.s.1.b.1.e.1.e.1.1c.1.c.1.4.1.d.1.1g.1.p.1.l.1.x.1.4.2.1.1.1.1.1.1.2.2.1.1.1.6.2.4.9.1.4.1.1.1.1.1.1.1.1.1.1.1.1.1.1.i.1.1.1.1.5.4.1.2.1.1.3.7.j.g.1.1.2.2.1.1.2.1.1.2.1.1.a.5.1.1.3.8.1.1.1.1.6.6.1.1.1.1.6.6.1.1.1.1.1.1.h.1.1.1.1.1.2.2.1.1.1.1.2.2.1.1.1.1.w.3.3.1.6.1.2.4.3.4.b.6.b.1.9.1.2.6.d.3.8.1.6.2.6.1.d.1.4.2.j.4.c.2.4.1.2.1.a.6.5.1.5.1.1.1.2.1.9.1.1.1.1.1.2.1.5.2.a.2.2.1.1.1.5.1.3.1.2.1.2.1.2.2.2.2.6.6.3.1.7.3.f.6.15.1.2.2.3.1.1.1.1.1.1.1.1.2.2.3.2.5.1.1.6.2.1.1.2.2.4.1.2.1.1.1.2.2.2.2.2.3.7.2.1.5.4.1.1.3.1.1.4.3.1.1.1.1.2.1.1.1.2.1.1.3.1.2.1.1.2.2.1.5.1.1.1.1.1.2.3.3.3.2.1.1.1.1.7.1.4.3.1.3.1.1.1.1.5.4.1.1.1.5.1.1.1.2.1.2.1.1.2.1.2.3.7.1.4.2.1.3.1.2.1.2.1.2.5.1.3.1.1.1.1.1.1.4.1.2.4.1.2.3.1.1.1.1.6.1.1.3.2.1.2.2.1.1.2.9.3.3.1.2.1.1.3.1.4.3.1.1.1.5.1a.1.14.1.17.1.f.1.1y.1.f.k.4.1.e.1.e.1.6.1.5.1.2.2.8.1.2h.1.6.1.2t","time":55},{"seeds":[0,0,1,0,0,0],"dd":[7.8,8,8.3,8.5,8.8,9],"dec":7,"path":"1.1.9.4.1.1.1.5.1.1.1.1.2.2.1.2.1.2.2.1.1.1.4.2.5.1.4.1.1.5.1.2.2.1.4.2.1.2.1.1.3.1.2.2.1.1.1.5.1.1.2.1.1.1.5.1.1.2.2.1.2.1.4.1.1.1.1.1.1.2.2.3.3.1.5.2.2.1.1.1.3.2.3.1.2.1.2.1.1.1.2.2.g.3.2.1.1.1.1.3.2.1.1.5.3.1.2.3.6.3.4.2.17.d.1.2.j.1h.v.1.k.1.h.1.j.1.e.1.g.1.e.1.e.1.13.1.1b.1.2z.c.1.1.1.1.4.c.1.1.1.1.s.6.1.1.1.1.c.4.1.1.1.1.n.6.1.1.1.1.7.7.1.1.1.1.2.6.7.1.1.4.1.1.2.2.1.1.1.1.1.1.2.2.1.1.4.8.5.2.1.1.7.7.1.1.b.6.1.1.d.2.1.1.2.1.1.2.1.1.2.1.1.2.1.1.2.1.1.2.1.1.2.1.1k.4.3.2.1.3.1.f.4.1.2.1.3.1.d.1.d.c.3.2.8.7.2.p.1b.1.9.1.1.1.h.9.4.1.3.3.3.6.2.1.6.1.1.1.4.1.1.4.3.1.3.1.3.1.1.2.2.3.1.1.2.1.2.1.1.1.3.2.2.1.3.3.2.1.3.1.1.4.2.1.1.2.1.1.1.3.3.1.4.1.1.3.2.2.1.1.7.3.1.1.2.3.2.3.1.1.2.1.2.1.1.1.1.1.1.1.3.1.3.1.1.2.8.1.6.1.1.2.2.1.1.2.3.3.3.1.3.5.2.3.5.1.1.2.2.1.1.1.1.2.2.1.2.1.3.1.3.1.1.1.1s.1.g.1.f.1.n.1.j.1.g.1.13.1.g.1.h.1.g.1.z","time":53},{"seeds":[0,0,0,0,0,0],"dd":[7.8,8,8.3,8.5,8.8,9],"dec":7,"path":"2k.1.1u.1.q.1.28.1.d.1.34.1.q.1.q.1.m.1.k.2.k.1.x.1.k.1.n.1.a.1.f.1.e.1.1c.1.d.4.1.2.1.1.3.3.1.4.3.3.2.2.2.1.1.1.1.1.4.1.1.2.2.1.2.1.3.2.1.2.1.5.1.1.3.3.2.2.3.3.1.1.4.2.3.1.2.1.1.2.1.1.3.1.2.4.1.2.1.1.6.1.2.1.1.1.2.6.3.1.1.1.5.1.1.1.1.1.1.3.1.6.1.1.7.1.2.1.1.1.2.1.1.1.4.8.1.1.3.1.1.2.2.1.2.1.2.1.1.2.5.2.1.1.3.1.1.1.4.1.5.1.1.3.3.2.2.1.1.2.4.5.1.3.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.9.1.1.1.1.1.1.2.c.1.1.1.1.1.1.b.6.1.1.1.1.3.8.1.1.1.1.6.4.1.1.a.c.1.1.13.4.1.1.22.1.1.1.1.1.1.1.1.1.1.4.b.1.1.1.3.1.1.1.6.1.1.1.z.2.d.2.a.5.5.1.5.1.p.1.1.3.e.3.4.1.1.1.b.7.d.8.c.1.1.3.9.1.e.1.e.1.o.4.k.2.h.5.9.1.16.1.v.1.h.1.i.1.y.1.1d.1.i.1.1t.1.f.1.20","time":57},{"seeds":[19,0,0,21,0,0,31],"dd":[8.6,8.8,9,9.2,9.4,9.6,8.3],"dec":7,"path":"24.5.1.1.7.7.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.7.7.1.1.6.4.1.1.2.4.1.1.1.1.1.1.1.1.1.1.3.1.1.1.2.4.1.1.6.6.1.1.1.1.1i.2.f.1.j.1.l.1.1g.1.v.1.g.1.19.1.2.4.2.1.2.4.1.1.2.1.1.1.1.1.2.1.1.1.5.1.3.1.2.1.3.2.7.4.1.1.1.2.2.2.3.1.1.1.3.6.1.1.1.1.3.2.1.1.1.1.8.1.1.6.2.1.1.2.2.1.1.2.6.2.1.3.1.3.1.1.2.1.5.1.1.1.1.1.1p.9.3.6.1.1.a.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.b.2.7.6.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.3.3.1.1.k.a.1.1.1.5.5.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.8.3.1.2.2.a.6.1.1.b.4.k.1.6.1.e.1.e.1.e.1.i.1.e.2.b.3.b.3.b.2.7.1.2.2.5.4.5.e.4.1.1.1.1.1.i.1.3.1.8.1.i.2.o.1.2.1.4.1.1.1.1.1.3.1.1.a.1.1.3.4.1.5.1.1.2.4.c.c.2.2.1.3.12.3.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.c.3.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1r.3.23","time":43},{"seeds":[0,0,0,0,1,0,0],"dd":[8.6,8.8,9,9.2,9.4,7.6,9.8],"dec":7,"path":"1.1.9.4.1.1.1.5.1.1.1.1.2.2.1.2.1.2.2.1.1.1.4.2.5.1.4.1.1.5.1.1.1.1.3.2.2.1.1.4.6.2.5.2.1.3.2.1.1.1.3.3.1.2.8.1.2.3.2.1.2.1.2.2.2.4.3.1.5.5.1.1.3.1.2.1.1.1.4.1.1.2.2.5.6.8.1.2.7.1.4.1.5.2.1.1.1.1.1.1.1.2.1.2.2.2.1.4.1.1.1.1.8.1.1.2.1m.1.e.1.f.1.k.1.1c.1.k.1.1s.1.7.1.1.3.3.1.4.1.2.4.2.2.2.5.3.1.2.1.1.1.4.4.4.1.6.2.2.1.1.1.2.3.2.3.1.1.5.1.4.1.2.1.4.1.1.1.2.5.1.1.5.1.2.1.3.5.2.3.2.1.1.1.3.1.3.1.1.1.2.1.2.1.1.1.1.1.5.1.2.1.1.1.4.1.1.5.2.6.1.1.2.1.1.2.5.1.1.1.2.2.1.1.1.1.1.5.1.6.4.4.1.1.1.1.1.1.6.1.3.5.1.3.2.1.3.5.1.2.3.1.1.1.3.1.1.2.2.3.5.1.1.1.3.2.1.1.6.2.2.3.4.2.1.1.1.4.1.1.2.5.2.1.1.2.2.5.c.4.2.4.2.1.2.1.b.1.1.1.9.1.6.3.x.3.1.1.5.1.3.4.1.2.1.2.1.1.1.1.3.8.5.3.3.1.a.2.4.1.1.3.4.1.1.1.24.1.e.1.2.1.2.1.18.1.e.1.1t.1.w.1.m.1.1.1.9.1.2.1.1.1.2.1.9.7.1.1.1.1.1.1.1.1.1.1.2.2.1.6.2.1.1.1.1.1.3.5.1.1.1.1.1.1.1.1.1.1.1.1.5.1.1.1.5.5.1.1.6.8.1.1.9.7.1.1.8.a.1.1.8.8.1.6.1.5.a.5.1.1.7.c.8.5.1.1.8.6.1.1.4.6.1.1.3.1.1.1.c.1.1.2.2.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.3.1.d.1.4.p.1.e.1.e.1.e.1.e.1.e.1.f.1.n.1.y.1.j.1.13","time":55},{"seeds":[0,0,0,0,1,0,0],"dd":[8.6,8.8,9,9.2,9.4,9.6,9.8],"dec":7,"path":"7.1.9.1.5.1.3.1.2.1.6.3.4.1.4.1.1.3.b.4.8.1.e.1.c.1.h.4.9.4.8.1.d.3.l.1.h.1.1.3.7.1.h.4.d.e.1o.1.b.1.e.1.e.1.l.1.b.1.e.1.e.1.j.1.a.1.2.1.c.1.2x.1.e.1.f.1.14.1.j.1.e.1.q.1.b.1.1s.1.1.5.2.1.5.3.2.2.1.1.2.1.1.1.1.1.1.1.1.1.1.1.2.2.6.1.2.1.3.4.2.1.1.3.5.2.1.2.4.1.1.1.1.2.1.1.6.2.3.1.5.4.1.4.3.1.2.1.2.3.2.1.3.1.6.1.2.1.1.1.5.6.2.1.2.1.4.1.1.1.4.1.4.3.2.2.2.1.1.8.2.1.1.1.1.1.3.1.1.2.2.2.2.1.3.1.1.1.1.1.1.2.1.1.1.2.1.3.1.1.1.2.4.1.1.2.2.1.8.5.1.1.1.1.5.1.1.1.2.c.2.1.7.1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.1.1.1.1.3.8.1.1.1.1.8.3.1.1.1.1.1.8.1.1.1.1.b.2.1.1.1.1.3.7.1.1.a.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.d.1.f.7.1.1.1.1.e.i.3.1.8.1.1.2.9.1.1.1.2.2.3.1.2.1.4.1.a.2.9.1.1.1.3.3.4.1.4.9.4.1.b.3.5.1.5.1.1.1.2.1.1.6.6.1.1.1.1.3.2.1.1.1.6.1.1.3.1.1.9.3.8.1.2.2.1.1.5.5.1.1.a.1.1.4.9.1.2.1.e.3.b.8.1t.1.f.1.f.1.h.1.e.1.e.1.e.1.z.1.e.1.g.1.h.1.i.1.w.1.x","time":55},{"seeds":[0,0,0,0,0,0,2,0,0],"dd":[9.4,9.6,9.7,9.9,10,10,10,10,10],"dec":6,"path":"25.1.d.1.g.1.h.1.h.1.r.1.g.1.h.1.g.1.h.1.g.1.3r.2.a.5.1.1.1.1.a.5.1.1.7.5.7.1.1.1.1.1.1.1.1.1.3.1.1.1.1.6.1.1.6.1.1.1.1.3.1.1.1.1.2.8.1.1.1.1.9.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.3.1.1.2.2.1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.2.1.1.3.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.6.1.4.1.1.2.1.2.2.1.5.1.3.3.1.1.1.2.2.5.3.1.1.2.7.1.1.2.6.7.3.n.7.6.1.1.1.9.4.1.5.i.9.c.3.6.2.1.3.2.2.2.1.1.5.3.2.4.2.2.1.3.4.1.x.y.3.f.1.b.i.7.2.9.i.e.1.7.1.1.1.5.1.4.1.9.1.1.2.7.1.3.1.3.1.3.3.3.1.c.1.7.6.5.1.e.1.d.6.e.4.h.1.2p.1.o.1.16.1.u.1.u.1.x.1.2h.1.x.1.m.8.4.f.3.1.7.1.1.1.7.1.2.1.1.1.2.2.1.3.8.1.a.1.4.1.s.1.p.1.1a.1.g.1.6.1.2.1.1.1.1.1.j.1.k.1.4.1.11.1.h.1.e.1.y.1.3.1.e.1.1.1.a.1.2.1.2.1.19.1.1a.1.o.1.h.1.u.1.l.1.1m.1.35.1.2.1.6.1.1.1.2.2.5.2.3.2.2.3.2.3.3.1.1.1.2.1.1.1.6.1.3.1.2.1.6.1.2.1.1.d.1.1.7.4.3.2.k.1.8.1.1.1.3.1.1.1.2.1.4.1.3.1.4.1.1.4.2.3.1.1.1.8.3.1.5.1.1.1.2.1.2.2.4.4.1.3.1.4.2.1.1.1.1.1.5.1.1.1.7.1.4.1.4.1.4.5.5.1.1.1.1.1.20.b.1.1.19.1.2.c.1.1.1.1.g.5.1.1.2.b.1.1.8.2.1.1.3m.e.1.1.1.1.1.1.13.8.1.1.5.2.1.1.2.8.1.1.8.2.1.1.x","time":78},{"seeds":[0,0,1,0,1,0,0,0],"dd":[9.4,9.6,9.7,9.9,10,10,10,10],"dec":6,"path":"4.2.1.5.9.3.6.b.1.2.1.1.1.2.1.1.2.2.1.2.1.1.3.4.1.3.3.3.4.1.6.1.5.1.4.2.1.2.1.1.1.2.1.1.3.4.1.2.1.2.4.3.2.1.1.8.2.1.1.2.1.1.1.1.3.2.2.2.d.4.1.1.51.1.r.1.g.1.k.1.k.1.e.1.k.1.h.1.j.1.1n.1.5.2.1.2.2.2.2.6.5.1.2.1.1.1.1.1.1.1.1.1.1.4.4.2.1.1.1.1.1.c.1.1.1.1.9.4.1.1.1.1.5.5.1.1.1.1.a.7.1.1.1.1.1f.c.1.1.o.4.1.1.1.1.1.1.3.8.1.1.1.1.1.1.3.8.1.1.9.4.1.1.c.7.1.1.1.1.o.9.1.3.1.a.2.1.5.1.2.5.1.1.3.1.2.1.2.3.1.1.1.1.2.5.1.2.4.3.3.3.2.3.1.7.1.3.2.1.1.1.2.1.1.2.1.3.5.1.1.1.2.6.4.1.1.1.l.1.2.5.t.1.1.1.1.7.1.5.3.5.1.1.1.8.1.5.1.2.1.2.4.1.2.1.1.1.1.2.1.8.1.1.2.1.2.1.3.1.2.1.3.2.1.3.1.1.1.1.2.1.3.1.1.2.1.2.9.1.1.1.1.2.f.1.7.2.3.2.1.2.4.2.1.1.1.1.5.1.2.1.2.5.2.1.1.4.6.1.1.1.3.6.1.2.1.1.g.1.6.6.4.2.1.2.1.5.1.1.3.1.4.8.7.1.e.9.8.1.j.6.d.1.1.8.3.1.g.2.1.1.2.2.3.1.5.1.l.1.l.1.4.1.6.8.2.1.4.1.d.2.n.1.5.1.j.7.b.2.7.1.9.1.a.1.1.1.2.5.7.1.1.1.1.4.o.5.5.1.1.1.1.1.1.2.1.1.1.5.7.1.5.1.2.1.1.3.1.4.1.1.2.1.1.1.1.1.2.1.2.1.2.2.1.2.3.1.1.1.3.3.1.1.1.1.2.1.1.7.3.1.2.2.1.2.9.6.2.4.2.1.1.1.1.1.4.1.3.1.3.2.3.4.3.1.2.1.4.1.3.1.3.5.3.1.1.1.1.1.2.7.2.2.1.2.4.3.5.2.1.7.2.1.6.3.4.1.4.1.1.8.1.2.1.1.2.1.3.2.3.1.1.2.1.3.3.2.1.4.8.1.7.1.25.1.h.1.1b.1.h.1.h.1.i.2.w.1.9.1.h.1.8.1.8.1.1.1.3.1.2.1.8.1.6.2.2.1.1.1.2.2.2.1.1.1.1.2.2.1.1.1.1.5.1.3.1.1.1.1.2.1.1.1.2.2.1.1.1.b.3.2.1.1.6.6.1.1.1.1.d.1.1.1.1.1.11.5.1.1.1.1.9.5.1.1.4.7.1.a.1.1.1.1.3.9.1.1.11.8.1.1.1a.8.1.1.j.2.1.1.1.1.5.w.1","time":68},{"seeds":[0,0,0,33,0,0,0,0,5],"dd":[7.9,9.6,9.7,9.9,10,10,7.5,10,10],"dec":6,"path":"21.9.1.1.2.2.1.1.4.4.1.1.4.4.1.1.1.1.1.1.1.1.2.a.1.1.1.1.1.1.6.6.1.1.2.2.1.1.1.1.1.1.4.4.1.1.2.2.1.1.4.1.1.1.1.1.b.4.1.1.1.1.e.3.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.4.b.3.1.6.6.1s.2.1.1.3.1.2.2.2.3.1.2.1.1.1.1.1.3.1.6.1.2.14.2.5.3.1k.3.3.2.1.1.1.2.1.3.1.3.1.1.4.1.4.1.2z.1.g.1.m.1.k.1.z.1.1u.2.q.1.o.1.y.1.2.4.1.1.1.1.2.1.2.1.1.8.1.5.2.1.1.2.2.1.6.1.1.1.4.1.4.1.3.1.1.8.5.2.1.b.1.1.1.1.1.1.1.1.1.1.1.1.2.1.1.2.1.1.1.1.1.1.1.3.1.1.1.1.1.1.1.1.2.1.1.1.1.1.3.2.1.1.1.1.1.1.1.1.2.2.1.1.1.2.1.1.8.1.1.1.1.5.2.2.1.1.1.1.1.3.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1q.5.1.4.k.1.3.3.7.3.n.1.3.e.15.1.3.1.b.1.1.1.1.1.1.8.4.1.1.1.1.5.a.1.2.1.f.1.4.1.2.4.4.2.1.1.1.1.2.1.n.9.4.1.g.6.e.8.g.6.4.1.5.1.2.1.1.2.c.2.b.1.5.5.6.1.2.1.2.5.2.2.9.2.5.3.1.1.7.3.1.2.2.1.2.2.2.2.8.1.6.1.5.2.1.1.4.1.6.1.3.2.2.1.1.2.3.4.1.1.1.4.1.3.2.1.1.1.3.2.1.1.1.1.1.1.2.1.3.4.1.3.1.4.1.3.7.2.1.1.1.1.5.1.5.9.1.1.4.1.4.1.1.1.1.1.2.4.2.4.1.1.1.3.1.1.3.1.1.1.3.1.1.1.1.a.1.3.4.1.1.1.1.1.3.1.7.1.1.1.1.3.1.1.1.1.1.1.1.1.1.1.3.1.1.1.3.1.1.1.1.1.1.3.2.4.1.a.3.3.1.2.2.1.1.2.2.1.1.3.4.3.4.1.2.1.3.1.1.1.2.1.1.1.1.5.x.1.1o.1.f.1.g.1.u.1.g.1.2k.1.5.5.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.2.1.1.8.6.5.1.1.1.1.5.d.1.3.1.1.1.1.1.1.7.1.1.1.1.5.2.1.1.4.1.1.e.1.1.3.1.5.1.8.4.4.4.4.3.1y","time":61},{"seeds":[0,0,0],"dd":[2.6,3.2,3.8],"dec":12,"path":"17.1.q.1.s.1.c.1.b.1.r.1.e.1.7.1.h.1.1s.1.f.1.h.1.c.1.8.1.a.1.9.1.2.1.c.1.y.1.7.1.8.1.8.1.3.1.3.1.1.1.1.5.2.1.2.3.2.2.2.1.3.1.2.2.3.2.1.1.1.3.1.1.2.1.7.2.1.1.1.3.1.1.1.1.1.1.1.1.3.1.3.3.1.3.4.1.2.2.1.1.2.1.1.1.2.2.1.8.2.1.6.1.1.1.2.2.1.2.1.1.1.1.1.1.2.3.1.1.1.2.2.1.2.1.1.2.2.1.3.2.1.3.6.1.2.2.o","time":31},{"seeds":[1,0,2,0],"dd":[4,4.4,4.8,5.2],"dec":12,"path":"1o.1.5.1.e.1.f.1.x.1.e.1.14.1.i.1.1i.1.1.1.2.1.3.1.2a.1.f.1.k.1.8.1.8.1.6.1.1.3.6.2.5.1.2.1.2.1.3.1.1.1.3.1.4.1.6.4.7.1.8.1.a.1.6.1.8.1.c.1.5.1.8.1.f.1.e.1.f.1.j.1.7.1.m.1.4.1.2.1.3.1.3.1.5.2.1.1.2.2.4.2.4.1.1.7.2.1.4.7.5.1.2.2.5.2.3.1.3.1.4.1.2.1.1.1.4.4.7.4.5.2.5.1.1.1.4.1.1.1.3.1.1.1.5.3.3.1.1.3.2.1.4.2.3.1.1.3.11","time":42},{"seeds":[0,0,0,0],"dd":[5.4,5.8,6.2,6.6],"dec":8,"path":"e.5.1.1.3.1.4.1.6.1.8.1.6.1.1.6.a.1.a.1.f.1.8.1.5.5.b.1.8.8.8.5.6.1.4.1.2.4.f.3.3.1.1.1.1.1.2.1.8.2.8.1.8.2.7.1.c.1.1b.3.a.1.9.5.5.1.8.1.5.1.2.4.d.5.b.1.1.1.6.6.a.2.i.1.8.6.2.2.6.1.8.1.3.1.1.1.9.1.8.4.j.1.9.1.8.8.2.1.h.3.a.2.8.4.1.1.1.1.1.6.2.1.1.1.1.5.4.1.3.2.1.1.1.1.3.2.3.1.3.2.1.3.2.1.1.2.1.2.3.7.1.1.3.1.1.1.2.2.1.1.7.2.1.2.1.1.3.3.8.1.1.1.2.1.c.4.3.8.1.2.1.1.4.1.6.1.1m.4.1.1.5.1.q.4.a.8.b.1.7.1.1.1.1.1.3.1.8.2.a.1.5.4.i.1.1.1.5.3.9.1.2.2.p","time":33},{"seeds":[0,0,0,0],"dd":[5.4,5.8,6.2,6.6],"dec":8,"path":"1b.1.1.2.3.1.3.1.8.4.3.2.e.j.c.1.2.b.3.b.2.1.d.1.1.1.1.1.3.1.1p.1.i.1.m.2.u.1.1a.1.1n.1.1.1.1.1.1.2.3.1.3.2.5.1.4.6.e.1.d.2.1.4.2.6.4.a.b.1.3.4.7.1.1.1.1.2.h.1.4.2.5.7.b.1.2.8.2.1.7.b.2.1.2.1.1.2.3.1.2.a.3.2.1.1.m.1.2.1.a.1.h.7.n.1.7.d.4.1.4.a.4.1.2.1.1.1.4.1.1e","time":28},{"seeds":[0,0,0,0],"dd":[6.8,7.2,7.6,7.5],"dec":8,"path":"1l.6.1.1.1.1.1.1.2.2.1.1.1.3.1.1.1.1.1.1.1.1.1.4.2.2.1.1.m.b.1.1.1.1.1.1.1.3.1.1.1.1.1.3.1.1.1.1.1.1.1.1.3.3.1.1.3.1.1.1.1.1.1g.4.v.d.1.1.3.3.1.1.2.2.1.1.3.3.1.1.4.4.1.1.c.5.1.1.1.a.1.3.8.6.1.1.1.1.1.1.1.1.3.1.1.1.2.2.1.1.3.1.1.1.2.4.1.1.3.3.1.1.4.2.1.1.6.g.5.1.1.4.7.3.1.4.3.4.2.1.i.2.2.1.1.2.2.1.2.2.1.1.2.2.1.1.1.2.1.1.5.1.2.1.1.3.1.1.2.1.1.1.2.1.3.2.1.1.2.1.1.3.4.1.5.1.1.4.1.2.1.1.2.4.3.2.1.6.4.3.3.1.1.1.2.4.4.1.1.1.4.1.1.2.2.2.1.1.2.2.1.2.1.1.1.1.3.1.5.2.1.3.3.3.1.1.3.1.4.2.1.1.1b.b.2.2.1.1.1.1.1.1.4.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.3.1.1.1.b.4.1.1.1.1.1.1.1.1.1.1.2.4.1.1.1.3.1.1.1.1.1.1.1.1.3.3.1.1.9.6.1.1.3.3.1.1.1.1.1.3.1.1.1.1.1.1.1.4.1.1.2.4.1.1.1.3.1.1.w.6.1.1.6.6.1.1.1b","time":33},{"seeds":[0,0,0,0],"dd":[6.8,7.2,7.6,8],"dec":8,"path":"3.1.1.1.6.1.1.1.1.7.1.3.5.1.1.1.3.5.2.3.3.2.3.1.1.2.1.1.9.3.1.4.2.1.4.2.3.3.1.1.2.5.1.1.1.1.4.2.8.1.3.2.2.2.2.2.4.3.1.2.4.2.1.1.4.1.2.1.2.2.1.1.1.2.2.2.1.1.1.1.5.2.1.1.1.1.2.1.2.2.2.2.1.3.2.1.2.1.2.2.4.5.6.6.2.1.2.10.1.1.4.3.2.4.2.1.3.1.4.7.7.1.5.4.b.1.f.1.2.2.c.1.8.b.5.2.1.1.1.7.1.1.1.1.3.3.c.2.3.1.f.1.2.1.1.1.1.1.e.1.5.1.7.1.3.b.6.1.1.1.4.1.g.1.1.5.3.1.1.1.5.1.3.b.3.2.1.1.4.2.2.1.3.1.3.1.2.1.1.1.1.1.4.3.2.1.1.7.1.1.1.1.5.2.1.2.1.1.1.1.3.2.1.1.5.2.1.1.7.9.4.2.2.1.4.1.2.4.2.1.3.1.1.3.1.2.2.1.1.1.2.2.4.2.3.1.3.4.4.4.2.2.1.2.1.2.2.2.7.1.1.2.5.1.17.2.1.1.1.2.6.5.3.2.1.1.3.1.1.2.3.1.1.2.1.2.1.1.1.1.3.3.2.1.1.1.2.2.8.1.5.2.2.3.1.1.1.3.1.3.1.3.3.1.1.2.1.3.1.2.1.2.1.1.1.8.1.1.6.1.2.3.1.2.1.1.l.3.3.2.1.5.1.2.1.3.1.1.1.1.2.1.1.3.2.6.6.1.1.a.1.1.2.1.3.1.1.1.3.2.3.3.1.1.1.1.i","time":36},{"seeds":[0,0,0,0,0],"dd":[6.8,7.1,7.4,7.7,8],"dec":8,"path":"1p.1.m.1.d.1.17.1.i.1.10.1.g.1.d.2.3.2.1.1.1.1.1.2.1.1.1.2.2.1.1.2.3.1.2.3.1.1.a.2.2.4.3.1.1.3.1.8.6.2.1.2.1.3.3.1.2.3.2.1.1.2.1.3.1.1.1.1.3.1.3.3.1.1.1.1.1.1.2.1.6.5.1.3.2.1.5.1.1.1.4.4.2.1.1.1.1f.1.10.1.h.1.l.1.i.1.1b.1.d.1.2g.6.2.1.1.1.1.1.5.2.b.1.4.1.9.1.z.i.5.1.e.1.j.1.1.1.x.1.4.2.4.1.1.1.2.3.1.3.1g.1.4.1.4.c.1o.1.b.1.x.1.1b.1.j.2.j.1.1e.1.g.1.f.2.14","time":43},{"seeds":[0,0,0,0,0],"dd":[7.8,8.1,8.4,8.7,9],"dec":7,"path":"2h.1.f.1.y.1.n.1.k.1.i.1.1o.1.3z.1.6z.1.s.1.16.1.h.1.y.1.1j.1.e.1.11.1.h.1.3i.1.l.1.s.1.k.1.1r.1.s.1.4a.1.h.1.1h.1.n.1.1o.1.c.1.a.1.1k","time":47},{"seeds":[0,0,23,0,0],"dd":[7.8,8.1,8.4,8.7,9],"dec":7,"path":"4.4.6.1.1.3.3.1.1.1.1.3.1.2.3.2.1.1.2.5.1.1.2.2.1.1.1.1.2.3.1.1.4.2.3.1.4.5.5.1.2.2.4.1.4.1.2.6.2.2.2.3.5.2.1.3.1.1.1.2.5.1.1.1.2.1.1.2.1.3.1.1.5.1.1.1.2.1.1.2.3.1.4.1.2.3.1.2.1.2.3.2.5.5.1.3.9.1.1.1.1.1.1.3.1.1.1.1.2.3.2.5.2.2.2.1.3.1.2.1.3.3.2.1.4.2.3.3.2.7.2.3.1.1.4.1.1.3.2.3.1.1.1.2.2.1.4.4.2.2.2.1.6.2.2.1.2.1.1.3.2.3.1.2.1.1.2.3.1.3.7.1.4.3.1.4.5.1.h.1.6.2.1.1.2.6.2.1.1.1.2.1.2.1.8.1.2.2.1.3.1.5.2.1.1.2.1.1.3.1.4.5.1.1.4.1.3.2.1.1.1.1.1.2.3.1.1.1.4.3.6.1.1.1.2.1.1.5.5.2.1.1.2.1.2.2.1.1.2.2.9.2.2.8.2.1.3.1.1.2.1.1.9.6.4.3.4.1.o.3.3.3.3.2.3.1.1.1.9.1.3w.b.1.1.1.1.4.4.1.1.1.f.1.1.1.1.1.1.8.4.1.1.1.1.c.9.1.1.h.7.1.1.5.2.1.1.1.1.2.5.1.1.b.4.2.2.1.1.1.1.1.1.1.1.1.1.1.1.1.1.c.b.1.1.1.1.8.2.1.1.2.2.1.1.1.1.2.c.1.1.d.g.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.c.m.2.1.1.6.9.1.1.9.2.1.1.1.1.1.5.1.1.10.3.1.3.1.2.1.1.2.2.4.1.1.2.4.1.4.2.1.1.4.1.1.3.3.2.3.3.1.4.2.1.3.1.2.2.b.4.1.1.1.5.1.2.1.1.2.1.1.1.2.2.1.3.3.1.2.2.3.7.2.1.3.1.2.1.4.2.1.1.2.4.2.3.1.4.b.8.2.1.1.2.3.1.2.1.h.c.1.2.3.2.1.1.2.1.1.2.1.2.2.2.4.1.3.2.1.1.3.1.2.1.1.3.1.2.1.2.3.1.2.2.1.2.2.1.1.1.2.2.1.1.1.4.6.1.1.1.4.1.1.6.b.9.1.1.2.1.1.1.4.1.3.1.6.1.3.2.2.3.1.3.2.2.7.1.1.9.1.2.2.1.1.1.4.3.5.2.1.4.1.2.1.1.3.1.1.2.1.2.1.1.2.3.7.2.3.1.1.1.2.1.2.3.9.2.1.8.2.1.4.2.5.2.2.1.2.1.1.1.1.1.1.1.1.1.1.1.1.1.5.1.5.2.2.3.e.3v.3.3.2.2.1.1.6.1.1.3.1.1.1.4.1.3.3.1.2.1.1.1.1.1.1.2.3.1.1.1.2.1.3.3.2.1.1.1.1.5.1.18.1","time":60},{"seeds":[0,0,0,0,1,0,0,0],"dd":[8.6,8.8,8.9,9.1,9.3,9.5,9.6,9.8],"dec":7,"path":"1s.1.e.2.14.1.j.1.e.2.t.1.l.1.h.1.e.1.e.1.w.7.1.1.1.2.2.1.2.2.1.4.9.1.4.3.1.2.4.6.4.1.3.2.1.3.1.2.1.1.1.2.1.1.5.1.3.2.2.1.2.1.2.1.2.3.1.2.2.5.1.2.2.2.1.1.2.1.3.3.1.1.1.1.3.1.2.1.2.1.1.2.2.1.2.1.2.1.1.1.1.2.2.4.2.1.1.1.1.3.2.1.2.1.3.1.1.1.2.1.1.1.1.4.3.1.2.1.1.1.1.1.1.1.2.2.1.1.4.3.2.2.2.1.2.1.4.1.2.2.2.2.1.7.1.1.1.1.2.1.9.1.1m.1.n.1.15.1.n.1.q.1.k.1.18.1.h.1.m.1.9.e.b.4.3.2.1.4.5.6.o.1.1.1.1.1.1.1.h.6.1.2.2.1.6.1.1.1.1.1.1.1.1.1.1.3.10.1.2.1.1.1.1.1.t.1.3.1.a.1.1.1.10.1.2.1.1.1.j.1.x.1.2.1.b.1.1.1.1.1.3.1.1.1.1o.a.1.1.1.1.a.3.1.1.1.1.1.1.1.1.1.1.1.1.1.1.9.3.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.f.1.1.f.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.z.4.5.4.7.6.21.1.6.1.1.1.1.7.3.1.a.4.q.7.e.3.f.1.e.5.h.1.a.1.g.1.8.1.1.1.9.1.8.1.9.1.9.1.9.1.9.1.3.1.16.1.f.1.g.1.d.1.14.1.d.1.l.1.g.1.n.1.c.1.a.1.a.1.1v.1.3.1.2.1.2.1.3.1.2.1.1.2.1.1.2.5.3.1.2.1.5.2.1.1.1.1.4.3.2.1.1.1.1.1.2.2.1.1.1.1.3.1.w.3.1.2.1.1.1.1.1.1.2.2.1.1.2.2.3.1.2.4.2.2.1.1.1.4.3.1.2.1.2.2.3.1.2.1.1.2.3.1.7.1.3.2.2.2.2.1.3.1.1.2.2.1.1.1.e.1.2.3.3.1.2.1.6","time":67},{"seeds":[7,0,0,0,0,12],"dd":[8.6,7.8,9.1,7.8,7.6,9.8],"dec":7,"path":"9.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.a.a.3.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.3.1.1.1.1.1.1.3.1.1.1.3.1.1.3.1.1.1.1.1.1.1.2.2.1.1.1.3.1.1.3.1.1.1.1.1.1.1.2.2.1.1.y.4.2c.8.1.1.1.1.b.3.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.q.3.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.6.6.1.1.1.3.1.1.1.3.1.1.1.3.1.1.1.1.1.4.2.2.d.2.1.1.6.8.1.1.1.1.a.4.2.2.2.2.1.1.1.3.1.1.1.3.1.1.4.4.1.1.1.1.1.1.1h.6.1.2.2.1.2.2.2.1.2.2.4.1.3.1.3.1.2.4.1.1.6.7.2.1.1.1.2.1.1.1.2.1.3.2.5.1.3.2.3.6.2.1.1.5.2.1.9.5.1.1.1.1.1.2.1.1.3.1.3.1.3.7.6.1.6.1.2.2.3.3.1.3.1.1.3.1.1.2.2.2.4.2.3.1.2.1.2.2.3.1.3.2.3.1.1.2.1.2.3.1.1.4.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.a.2.2.1.1.1.3.1.1.4.4.2.4.1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.2.1.1.e.1.9.4.1.1.1.1.1.1.2.2.4.2.3.1.1.3.1.1.1.1.1.1.4.2.2.8.1.1.e.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.i.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.a.1.1.3.3.1.1.2.2.4.4.1.1.3.3.1.1.4.1.1.1.7.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.3.1.1.2.4.1.1.1.3.1.1.3.3.1.1.1.4.1.1.2.2.a.1.1.3.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.3.1.1.5.1.1.1.1.1.1.1.1.5.1.1.1.3.1.1.3.3.1.1.1.1.1.4.4.1.1.1.5.9.1.1.b.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.7.1.1.1.a.1.1.1.1.1.1.7.7.1.1.3.1.1.1.1.1.1.3.1.1.1.1.1.1.3.1.1.1.4.4.1.1.1.1.1.1.1g.4.7.4.d.c.1.1.4.9.1.1.1.1.y","time":48},{"seeds":[0,0,0,1,0,0],"dd":[9.4,9.6,9.9,10,10,10],"dec":6,"path":"25.1.g.1.h.1.h.1.g.1.h.1.g.1.h.1.a.1.3b.1.f.1.c.2.8.9.m.4.b.1.g.1.g.1.h.1.n.5.n.5.l.2.d.3.j.1.d.1.c.1.b.c.6.2.1.2.3.1.1.3.1.2.4.1.2.1.2.6.1.2.1.2.1.1.2.2.l.4.1.1.4.1.8.1.6.1.r.2.4.5.1.3.4.2.3.1.1.1.3.2.1.1.6.3.1.4.5.2.1.1.6.1.1.2.3.1.1.1.1.1.1.1.1.1.6.c.2.2.1.2.1.1.3.2.1.1.u.5.1.1.8.1.3.4.3.3.2.1.1.2.1.1.1.2.2.1.2.1.4.1.3.4.1.2.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.3.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.4.1.8.1.1.9.9.1.1.43.1.14.1.m.1.h.1.d.1.f.1.1.1.g.3.1.1.5.2.5.1.k.1.h.1.m.1.3d.1.2.2.3.c.1.1.d.1.q.9.1.c.a.1.2.4.2.1.1.1.1.3.2.9.a.4.1k.1.5.1.1.4.16","time":46}];
 /* ===== Icons: procedural designs for all 8 modes ===== */
 const PI=Math.PI,TAU=PI*2;
 const COLORS=['#36f25c','#2fe6ff','#ffe23b','#ff8a1f','#ff3b3b','#ff3be6','#9b4dff','#3b6bff','#ffffff','#a6ff2f',
@@ -796,6 +929,42 @@ function drawIcon(g,mode,id,u,a,b,o){o=o||{};const t=o.t||0,cube=o.cube||0;
     case 'ufo':drawUfo(g,id,u,a,b,cube,t);break;case 'wave':drawWave(g,id,u,a,b);break;case 'robot':drawRobot(g,id,u,a,b,cube,t,o.run);break;
     case 'spider':drawSpider(g,id,u,a,b,cube,t,o.run);break;case 'swing':drawSwing(g,id,u,a,b,cube,t,o.dir);break}}
 
+/* ===== Textures: loaded from tex/*.png (optional: everything still draws without them) ===== */
+const TEX={img:{},ok:{},tint:{},pat:{},base:(window.SD_TEX_BASE||'tex/')};
+(function(){const n=[];['brick','tech','crystal','stone','panel','glass'].forEach(k=>n.push('blk_'+k));['tiles','grass','metal','rock','sand'].forEach(k=>n.push('gnd_'+k));
+  ['city','mount','forest','space','ruins','crystal','ocean','grid'].forEach(k=>n.push('bg_'+k+'_far','bg_'+k+'_near'));
+  for(const k of n){const im=new Image();im.onload=()=>{TEX.ok[k]=1};im.onerror=()=>{};im.src=TEX.base+k+'.png';TEX.img[k]=im}})();
+function texTint(k,col){const key=k+'|'+col;let c=TEX.tint[key];if(c)return c;const im=TEX.img[k];if(!TEX.ok[k])return null;
+  c=document.createElement('canvas');c.width=im.width;c.height=im.height;const x=c.getContext('2d');x.drawImage(im,0,0);
+  x.globalCompositeOperation='multiply';x.fillStyle=col;x.fillRect(0,0,c.width,c.height);x.globalCompositeOperation='destination-in';x.drawImage(im,0,0);
+  const ks=Object.keys(TEX.tint);if(ks.length>160){for(const q of ks.slice(0,40)){delete TEX.tint[q];delete TEX.pat[q]}}
+  TEX.tint[key]=c;return c}
+function texPat(k,col,scale,ox,oy){const key=k+'|'+col;let p=TEX.pat[key];if(!p){const c=texTint(k,col);if(!c)return null;p=TEX.pat[key]=g.createPattern(c,'repeat')}
+  try{p.setTransform(new DOMMatrix([scale,0,0,scale,ox,oy]))}catch(e){}return p}
+const hb=h=>Math.round(h/6)*6;
+/* textured parallax background layers */
+function drawBGLayers(T,beat){const th=RS.th;if(!th)return false;const kf='bg_'+th.bg+'_far',kn='bg_'+th.bg+'_near';if(!TEX.ok[kf]||!TEX.ok[kn])return false;const h=hb(T.h);
+  const dk=T.dk;const lays=[[kf,`hsl(${h},${dk?45:55}%,${dk===2?40:dk?20:46}%)`,.08,.78],[kn,`hsl(${h},${dk?40:60}%,${dk===2?16:dk?9:20}%)`,.2,.6]];
+  for(const [k,col,par,hf] of lays){const c=texTint(k,col);if(!c)continue;const hh=GY*hf,ww=c.width*hh/c.height,off=((RS.camX*S*par)%ww+ww)%ww;
+    for(let x=-off;x<W;x+=ww)g.drawImage(c,x,GY-hh,ww+1,hh)}
+  return true}
+/* ambient weather effects */
+function drawFX(kind,beat,h){if(!kind||kind==='none')return;const n=RS.low?14:40;
+  for(let i=0;i<n;i++){const a=hash(i*31+7),b=hash(i*17+3),c=hash(i*5+11);
+    if(kind==='snow'){const y=((RS.vt*S*(.8+a)+b*H*2)%(H+20))-10,x=((a*W*1.5-RS.vt*S*.6-RS.camX*S*.3+Math.sin(RS.vt+i)*S*.3)%(W*1.2)+W*1.2)%(W*1.2)-W*.1;
+      g.fillStyle=`rgba(255,255,255,${.5+c*.4})`;g.beginPath();g.arc(x,y,1.5+c*2.5,0,TAU);g.fill()}
+    else if(kind==='embers'){const ph=(RS.vt*(.15+a*.2)+b)%1,x=((a*W*1.4-RS.camX*S*.35+Math.sin(ph*8+i)*S*.4)%(W*1.4)+W*1.4)%(W*1.4)-W*.2,y=H-ph*H*1.1;
+      g.fillStyle=`rgba(255,${120+c*100|0},40,${(1-ph)*.85})`;g.fillRect(x,y,2+c*2,2+c*2)}
+    else if(kind==='stars'){const x=((a*W*2-RS.camX*S*.04)%W+W)%W,y=b*GY*.7,tw=Math.abs(Math.sin(RS.vt*(1+c*2)+i));g.fillStyle=`rgba(255,255,255,${tw*.8})`;const s=1+c*2;g.fillRect(x-s/2,y-s/2,s,s);
+      if(c>.8){g.fillRect(x-s*2,y-.5,s*4,1);g.fillRect(x-.5,y-s*2,1,s*4)}}
+    else if(kind==='bubbles'){const ph=(RS.vt*(.08+a*.12)+b)%1,x=((a*W*1.3-RS.camX*S*.25+Math.sin(ph*10+i)*S*.3)%(W*1.3)+W*1.3)%(W*1.3)-W*.15,y=GY-ph*GY;
+      g.strokeStyle=`rgba(200,240,255,${(1-ph)*.6})`;g.lineWidth=1.5;g.beginPath();g.arc(x,y,3+c*7,0,TAU);g.stroke()}
+    else if(kind==='sparks'){const ph=(RS.vt*(.6+a)+b)%1,x=((a*W*1.6-RS.camX*S*.6)%(W*1.4)+W*1.4)%(W*1.4)-W*.2,y=b*GY;g.strokeStyle=`hsla(${(h+180)%360},100%,75%,${(1-ph)*.7})`;g.lineWidth=2;
+      g.beginPath();g.moveTo(x-ph*S*3,y);g.lineTo(x-ph*S*3-S*.6,y);g.stroke()}
+  }
+  if(kind==='fog'&&!RS.low){for(let k=0;k<3;k++){const y=GY-S*(1+k*1.6),off=((RS.vt*S*(.4+k*.2)+RS.camX*S*(.3+k*.1))%(W*1.5));const gr=g.createLinearGradient(0,y-S*2,0,y+S*2);
+    gr.addColorStop(0,'rgba(230,235,255,0)');gr.addColorStop(.5,`rgba(230,235,255,${.1+beat*.04})`);gr.addColorStop(1,'rgba(230,235,255,0)');g.fillStyle=gr;g.fillRect(0,y-S*2,W,S*4)}}}
+
 /* ===== Audio: procedural music + sound effects ===== */
 const AU={C:null,mus:null,sfx:null,duck:null,dly:null,noise:null,ok:false};
 function auInit(){
@@ -827,22 +996,23 @@ function snare(t,v){noiseHit(t,.17,v*.55,'bandpass',1900,AU.mus,.7);vox(t,190,.0
 function clap(t,v){for(let i=0;i<3;i++)noiseHit(t+i*.011,.09+i*.03,v*.32,'bandpass',1400,AU.mus,1.2)}
 function hat(t,v,open){noiseHit(t,open?.2:.035,v*.24,'highpass',8200,AU.mus)}
 /* song design: each level gets its own key, groove and melody */
-const SCALES={minor:[0,2,3,5,7,8,10],dorian:[0,2,3,5,7,9,10],phryg:[0,1,3,5,7,8,10],major:[0,2,4,5,7,9,11],harm:[0,2,3,5,7,8,11]};
-const PROGS=[[0,5,2,6],[0,3,4,4],[0,6,5,6],[0,4,5,3],[5,3,0,4],[0,2,5,4],[0,5,3,4],[0,1,0,6]];
+const SCALES={minor:[0,2,3,5,7,8,10],dorian:[0,2,3,5,7,9,10],phryg:[0,1,3,5,7,8,10],major:[0,2,4,5,7,9,11],harm:[0,2,3,5,7,8,11],lydian:[0,2,4,6,7,9,11]};
+const PROGS=[[0,5,2,6],[0,3,4,4],[0,6,5,6],[0,4,5,3],[5,3,0,4],[0,2,5,4],[0,5,3,4],[0,1,0,6],[0,6,3,4],[3,4,0,0]];
+const SW1=['Neon','Velvet','Crystal','Midnight','Solar','Echo','Pixel','Turbo','Lunar','Static','Cobalt','Ember','Hyper','Glass','Prism','Thunder','Silver','Nova','Shadow','Cyber'];
+const SW2=['Drift','Pulse','Run','Bloom','Rush','Circuit','Dreams','Motion','Skyline','Heart','Fever','Theory','Horizon','Voltage','Signal','Tide','Rain','Engine','Parade','Groove'];
+function songName(id){const r=SD.rng(id*3571+9);return SW1[Math.floor(r()*SW1.length)]+' '+SW2[Math.floor(r()*SW2.length)]}
 function songFor(id,style){
   const r=SD.rng(id*977+31);const ri=n=>Math.floor(r()*n);
-  const sty=style||['house','break','dnb','synth','electro','dub'][ri(6)];
-  const sc=style==='gloom'?'harm':Object.keys(SCALES)[ri(5)];
-  const bpm={house:126,break:134,dnb:172,synth:118,electro:140,dub:150,gloom:138,chill:96,menu:112}[sty]+ri(6);
-  const s={id,sty,bpm,root:45+ri(12),scale:SCALES[sc],prog:PROGS[ri(PROGS.length)],lead:['square','sawtooth','triangle'][ri(3)],
-    bass:Array.from({length:16},(_,i)=>i%4===2||(i%2===0&&r()<.35)||(i===0)?1:(r()<.14?1:0)),
-    arp:r()<.6,arpDir:ri(3),mel:[],hatd:r()<.5?16:8};
-  // two-bar motif built from chord tones, then answered
-  for(let i=0;i<32;i++){const strong=i%4===0;s.mel.push(r()<(strong?.75:.32)?(ri(5)-1)+(i>=16&&r()<.4?2:0):null)}
-  if(sty==='gloom'){s.sty='dub';s.lead='triangle';s.arp=true}
-  if(sty==='chill'||sty==='menu'){s.arp=true;s.bass=s.bass.map((v,i)=>i%8===0?1:0)}
-  return s;
-}
+  let sty=style||['house','break','dnb','synth','electro','dub'][ri(6)];const gloom=sty==='gloom';if(gloom)sty='dub';
+  const sc=gloom?'harm':Object.keys(SCALES)[ri(6)];
+  const bpm=({house:126,break:134,dnb:172,synth:118,electro:140,dub:150,chill:96,menu:112}[sty]||128)+ri(6)-(gloom?12:0);
+  const s={id,sty,bpm,root:45+ri(12),scale:SCALES[sc],prog:PROGS[ri(PROGS.length)],lead:gloom?'triangle':['sawtooth','square','sawtooth'][ri(3)],
+    bass:Array.from({length:16},(_,i)=>i===0||i%4===2||(i%2===0&&r()<.35)||r()<.1?1:0),arp:r()<.75,arpPat:ri(4),mel:[],mel2:[],hatd:r()<.5?16:8,
+    soft:sty==='chill'||sty==='menu',sw:r()<.5,name:songName(id)};
+  const motif=()=>{const m=[];for(let i=0;i<16;i++){const strong=i%4===0;m.push(r()<(strong?.8:.35)?ri(6)-1:null)}return m};
+  const A=motif(),B=motif();s.mel=[...A,...B];s.mel2=[...A,...A.map((v,i)=>v==null?null:v+(i>8?2:0))];
+  if(s.soft){s.bass=s.bass.map((v,i)=>i%8===0?1:0)}
+  return s}
 const MUS={on:false,s:null,step:0,nt:0,t0:0,timer:null,paused:false};
 function deg(s,d,oct){const L=s.scale.length;const o=Math.floor(d/L),k=((d%L)+L)%L;return s.root+s.scale[k]+12*(o+(oct||0))}
 function musicPlay(s){if(!AU.ok)return;musicStop();MUS.s=s;MUS.step=0;MUS.nt=AU.C.currentTime+.05;MUS.t0=MUS.nt;MUS.on=true;MUS.paused=false;auVol();
@@ -852,33 +1022,52 @@ function musicPause(p){MUS.paused=p;if(AU.ok){if(p)AU.mus.gain.setTargetAtTime(0
 function beatInfo(){if(!MUS.on||!AU.ok)return{b:0,ph:.999,bar:0};const sec=60/MUS.s.bpm;const t=(AU.C.currentTime-MUS.t0)/sec;return{b:t,ph:t-Math.floor(t),bar:Math.floor(t/4)}}
 function sched(){if(!MUS.on||!AU.ok)return;const s=MUS.s,C=AU.C,sx=60/s.bpm/4;
   while(MUS.nt<C.currentTime+.14){const st=MUS.step,t=MUS.nt,bar=Math.floor(st/16),i=st%16;
-    if(!MUS.paused)playStep(s,st,bar,i,t);MUS.nt+=sx;MUS.step++}}
+    const sw=(s.sw&&i%2===1)?sx*.12:0;if(!MUS.paused)playStep(s,st,bar,i,t+sw);MUS.nt+=sx;MUS.step++}}
+/* reverb send (built once) */
+function auRev(){if(AU.rev||!AU.ok)return AU.rev;const C=AU.C,len=C.sampleRate*2.2,b=C.createBuffer(2,len,C.sampleRate);
+  for(let c=0;c<2;c++){const d=b.getChannelData(c);for(let i=0;i<len;i++)d[i]=(Math.random()*2-1)*Math.pow(1-i/len,2.6)}
+  const cv=C.createConvolver();cv.buffer=b;const g=C.createGain();g.gain.value=.32;cv.connect(g);g.connect(AU.mus);AU.rev=cv;return cv}
+function sendRev(node,amt){const r=auRev();if(!r)return;const g=AU.C.createGain();g.gain.value=amt;node.connect(g);g.connect(r)}
+/* instruments */
+function supersaw(t,f,dur,vol,cut,dest){const C=AU.C,g=C.createGain(),fl=C.createBiquadFilter();fl.type='lowpass';fl.frequency.setValueAtTime(cut*1.8,t);fl.frequency.exponentialRampToValueAtTime(cut,t+dur*.6);fl.Q.value=2;
+  g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(vol,t+.008);g.gain.setTargetAtTime(0,t+dur*.55,dur*.3+.02);fl.connect(g);g.connect(dest);sendRev(g,.35);
+  for(const det of[-14,-5,5,14]){const o=C.createOscillator();o.type='sawtooth';o.frequency.value=f;o.detune.value=det;o.connect(fl);o.start(t);o.stop(t+dur*2+.1)}}
+function pluck(t,f,dur,vol,dest){const C=AU.C,o=C.createOscillator(),g=C.createGain(),fl=C.createBiquadFilter();o.type='square';o.frequency.value=f;fl.type='lowpass';fl.frequency.setValueAtTime(5200,t);fl.frequency.exponentialRampToValueAtTime(500,t+dur*.8);
+  g.gain.setValueAtTime(vol,t);g.gain.exponentialRampToValueAtTime(.0008,t+dur*1.4);o.connect(fl);fl.connect(g);g.connect(dest);sendRev(g,.25);if(AU.dly){const d=C.createGain();d.gain.value=.3;g.connect(d);d.connect(AU.dly)}o.start(t);o.stop(t+dur*1.5)}
+function sub(t,f,dur,vol){const C=AU.C,o=C.createOscillator(),g=C.createGain();o.type='sine';o.frequency.value=f;g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(vol,t+.01);g.gain.setTargetAtTime(0,t+dur*.7,.04);o.connect(g);g.connect(AU.duck);o.start(t);o.stop(t+dur+.2)}
+function riser(t,dur,vol){const C=AU.C,s=C.createBufferSource();s.buffer=AU.noise;s.loop=true;const fl=C.createBiquadFilter();fl.type='bandpass';fl.Q.value=4;fl.frequency.setValueAtTime(400,t);fl.frequency.exponentialRampToValueAtTime(9000,t+dur);
+  const g=C.createGain();g.gain.setValueAtTime(.001,t);g.gain.exponentialRampToValueAtTime(vol,t+dur);g.gain.linearRampToValueAtTime(0,t+dur+.05);s.connect(fl);fl.connect(g);g.connect(AU.mus);sendRev(g,.3);s.start(t);s.stop(t+dur+.1)}
+function crash(t,v){noiseHit(t,1.4,v*.35,'highpass',5000,AU.mus,.5);const C=AU.C,g=C.createGain();g.gain.value=1;sendRev(g,.0)}
+/* song sections over a 32-bar loop */
+const SECT=b=>{const k=b%32;return k<4?'intro':k<8?'build':k<16?'drop':k<20?'break':k<24?'build':'drop'};
 function playStep(s,st,bar,i,t){
-  const sty=s.sty,intro=bar<2,soft=sty==='chill'||sty==='menu',fill=bar%8===7&&i>=12;
-  const ch=s.prog[bar%4],sx=60/s.bpm/4;
+  const soft=s.soft,sect=soft?'soft':SECT(bar),ch=s.prog[bar%4],sx=60/s.bpm/4,sty=s.sty;
+  const drop=sect==='drop',build=sect==='build',brk=sect==='break',intro=sect==='intro';
+  const lastBuildBar=build&&(bar%32===7||bar%32===23);
   // drums
-  if(!intro||soft){
-    if(sty==='house'||sty==='electro'||sty==='synth'){if(i%4===0)kick(t,.9)}
-    else if(sty==='break'){if(i===0||i===6||i===10)kick(t,.9)}
-    else if(sty==='dnb'){if(i===0||i===10)kick(t,.9)}
-    else if(sty==='dub'){if(i===0)kick(t,1);if(i===10&&bar%2)kick(t,.7)}
-    else if(soft){if(i===0||(i===8&&sty==='menu'))kick(t,.5)}
-    if(!soft){
-      if(sty==='dnb'||sty==='break'){if(i===4||i===12)snare(t,.8)}else if(sty==='dub'){if(i===8)snare(t,.9)}else{if(i===4||i===12)clap(t,.8)}
-      if(fill&&i%2===1)snare(t,.35+.1*(i-12));
-      if(s.hatd===16||i%2===0)hat(t,i%4===2?.9:.45,(sty==='house'||sty==='electro')&&i%4===2)}
-    else if(i%4===2)hat(t,.3);
-  }
+  if(!brk){
+    const kOn=sty==='house'||sty==='electro'||sty==='synth'?i%4===0:sty==='break'?(i===0||i===6||i===10):sty==='dnb'?(i===0||i===10):sty==='dub'?(i===0||(i===10&&bar%2)):(i===0||i===8);
+    if(kOn&&!(intro&&i!==0)&&!(lastBuildBar&&i>=8))kick(t,soft?.5:drop?1:.8);
+    if(build&&lastBuildBar&&i>=8&&i%(i>=12?1:2)===0)snare(t,.3+.05*(i-8));
+    if(!soft&&!intro){if(sty==='dnb'||sty==='break'){if(i===4||i===12)snare(t,.85)}else if(sty==='dub'){if(i===8)snare(t,.9)}else{if(i===4||i===12)clap(t,.85)}}
+    if(!intro||i%4===2){if(s.hatd===16||i%2===0)hat(t,i%4===2?.9:.4,drop&&(sty==='house'||sty==='electro')&&i%4===2)}
+    if(drop&&i===0&&bar%32===8||drop&&i===0&&bar%32===24)crash(t,1);
+  }else if(i%8===4)hat(t,.25);
+  if(lastBuildBar&&i===0)riser(t,sx*16,.18);
   // bass
-  if(s.bass[i]&&!(intro&&!soft)){const n=deg(s,ch,-1)+(i%8===6&&!soft?12:0);vox(t,mtof(n),sx*(sty==='dub'?3.5:1.6),'sawtooth',.26,soft?500:900,AU.duck,{env:2.2,q:5})}
-  // pad
-  if(i===0){for(const k of[0,2,4,6]){const n=deg(s,ch+k,0);vox(t,mtof(n),sx*15,'sawtooth',soft?.045:.032,1500,AU.duck,{at:.12,hold:.8,det:k*4-6})}}
-  // arp
-  if(s.arp&&(i%2===0||!soft)&&!(intro&&!soft&&bar<1)){const tones=[0,2,4,7,4,2];const k=s.arpDir===0?i%4:s.arpDir===1?3-i%4:tones[i%6];const n=deg(s,ch+[0,2,4,7][k%4]||0,1);
-    vox(t,mtof(n),sx*.9,'square',soft?.03:.028,2400,AU.mus,{send:.35})}
-  // lead
-  if(bar>=4&&!soft||soft&&bar>=2){const m=s.mel[(bar%2)*16+i];if(m!=null){const n=deg(s,ch+m*2-2+(bar%8>=4?7:0),1);
-    vox(t,mtof(n),sx*(s.mel[(bar%2)*16+i+1]==null?2.2:1.1),s.lead,soft?.05:.07,3200,AU.mus,{send:.4,env:1.6})}}
+  if(s.bass[i]&&!intro&&!brk){const n=deg(s,ch,-1);
+    if(drop){sub(t,mtof(n-12),sx*1.6,.4);vox(t,mtof(n+(i%8===6?12:0)),sx*1.4,'sawtooth',.18,800,AU.duck,{env:3,q:6})}
+    else vox(t,mtof(n),sx*1.6,'sawtooth',.16,soft?400:600,AU.duck,{env:2,q:4})}
+  if(soft&&s.bass[i])vox(t,mtof(deg(s,ch,-1)),sx*2,'triangle',.22,500,AU.duck,{});
+  // pad (always, swells in breaks)
+  if(i===0){for(const k of[0,2,4,6]){const n=deg(s,ch+k,0);vox(t,mtof(n),sx*15,'sawtooth',brk?.05:soft?.045:.026,brk?2200:1400,AU.duck,{at:.25,hold:.85,det:k*5-8})}}
+  // arpeggio
+  if(s.arp&&!intro&&(i%2===0||drop)){const pats=[[0,2,4,7],[7,4,2,0],[0,4,2,7,4,2],[0,7,4,9]],pa=pats[s.arpPat];const k=pa[(st)%pa.length];
+    pluck(t,mtof(deg(s,ch,1)+[0,3,7,12,4,10,14,16,19][k]%24),sx*.9,soft?.035:brk?.05:.04,AU.mus)}
+  // melody: lead in drops, softer pluck melody in builds/breaks
+  const mel=(bar%32>=24?s.mel2:s.mel)[(bar%2)*16+i];
+  if(mel!=null&&(drop||brk||soft||build&&bar%2===1)){const n=deg(s,ch+mel*2-2+(drop&&bar%8>=4?7:0),1),len=sx*((s.mel[(bar%2)*16+i+1]==null)?2.4:1.1);
+    if(drop&&!soft)supersaw(t,mtof(n),len,.05,3400,AU.mus);else pluck(t,mtof(n+12),len,soft?.05:.055,AU.mus)}
 }
 /* sound effects */
 function sfx(k){if(!AU.ok)return;const C=AU.C,t=C.currentTime,o=AU.sfx;
@@ -907,6 +1096,8 @@ const PCOL={cube:'#3bff6b',ship:'#ff5ed1',ball:'#ff5a3b',ufo:'#ffb21f',wave:'#3b
 const OCOL={y:'#ffe23b',p:'#ff5ed1',b:'#3bc8ff',g:'#3bff6b',k:'#3a3a3a'};
 const VCOL=['#ff9a2f','#3bb4ff','#3bff6b','#ff5ed1','#ff3b3b'];
 function lerpHue(a,b,k){let d=((b-a+540)%360)-180;return(a+d*k+360)%360}
+function themeMono(h){return{h,dk:2,top:hsl(h,8,16),bot:hsl(h,10,3),gnd:hsl(h,6,9),gnd2:'#020203',line:hsl(h,10,88),
+  blk:'#08080a',hi:hsl(h,8,86),mid:hsl(h,6,26),glow:hsl(h,10,90,.22),grid:hsl(h,10,80,.07),sil1:hsl(h,8,6,.85),sil2:hsl(h,8,3,.95)}}
 function themeDark(h){return{h,dk:1,top:hsl(h,70,9),bot:hsl(h,50,2),gnd:hsl(h,60,6),gnd2:'#000',line:hsl(h,100,58),
   blk:'#060203',hi:hsl(h,100,52),mid:hsl(h,70,16),glow:hsl(h,100,45,.3),grid:hsl(h,100,55,.07),sil1:hsl(h,70,5,.85),sil2:hsl(h,60,2,.95)}}
 function theme(h){return{h,top:hsl(h,62,30),bot:hsl(h,72,11),gnd:hsl(h,66,19),gnd2:hsl(h,70,7),line:hsl(h,100,80),
@@ -914,7 +1105,7 @@ function theme(h){return{h,top:hsl(h,62,30),bot:hsl(h,72,11),gnd:hsl(h,66,19),gn
 
 function drawBG(T,beat){
   const h=T.h;
-  const bk=Math.round(h)+(T.dk?1000:0);if(RS.bgHue!==bk){RS.bgHue=bk;const gr=g.createLinearGradient(0,0,0,H);gr.addColorStop(0,T.top);gr.addColorStop(1,T.bot);RS.bg=gr}
+  const bk=Math.round(h)+(T.dk||0)*1000;if(RS.bgHue!==bk){RS.bgHue=bk;const gr=g.createLinearGradient(0,0,0,H);gr.addColorStop(0,T.top);gr.addColorStop(1,T.bot);RS.bg=gr}
   g.fillStyle=RS.bg;g.fillRect(0,0,W,H);
   // big squares parallax
   const q=S*2.6,ox=-(RS.camX*S*.1)%q,c0=Math.floor(RS.camX*S*.1/q);
@@ -924,8 +1115,8 @@ function drawBG(T,beat){
   if(!RS.low){g.save();g.globalCompositeOperation='lighter';for(let i=0;i<4;i++){const bx=((i*W*.37-RS.camX*S*.05)%(W*1.4)+W*1.4)%(W*1.4)-W*.2;
     const gr=g.createLinearGradient(0,0,0,GY);gr.addColorStop(0,hsl(h,100,80,.07+beat*.05));gr.addColorStop(1,hsl(h,100,80,0));g.fillStyle=gr;
     g.beginPath();g.moveTo(bx,0);g.lineTo(bx+S*1.4,0);g.lineTo(bx+S*4,GY);g.lineTo(bx+S*1.2,GY);g.fill()}g.restore()}
-  // silhouettes
-  for(let l=0;l<2;l++){const f=l?.42:.22,cw=S*(l?1.5:2.3),off=RS.camX*S*f,i0=Math.floor(off/cw)-1;g.fillStyle=l?T.sil2:T.sil1;
+  // silhouettes (textured layers when available)
+  if(!drawBGLayers(T,beat))for(let l=0;l<2;l++){const f=l?.42:.22,cw=S*(l?1.5:2.3),off=RS.camX*S*f,i0=Math.floor(off/cw)-1;g.fillStyle=l?T.sil2:T.sil1;
     for(let i=i0;i<i0+W/cw+3;i++){const v=hash(i*17+l*999),hh=S*(l?1+v*2.6:1.6+v*4.4),x=i*cw-off;
       const bs=RS.bgs|0;
       if(bs===1){g.beginPath();g.moveTo(x-cw*.6,GY);g.lineTo(x+cw/2,GY-hh*1.25);g.lineTo(x+cw*1.6,GY);g.fill();continue}
@@ -978,6 +1169,19 @@ function drawDecoItem(d,T,beat){const X=wx(d.x),Y=wy(d.y);g.lineWidth=Math.max(1
       case 'mandala':{const s=d.s*S;g.save();g.translate(X,Y);g.rotate(RS.vt*.25*(d.x%2?1:-1));g.strokeStyle=hsl(T.h,100,48,.3+beat*.25);g.lineWidth=Math.max(1,S*.04);
         for(let k=0;k<8;k++){g.rotate(TAU/8);g.beginPath();g.moveTo(0,s*.2);g.quadraticCurveTo(s*.28,s*.6,0,s);g.quadraticCurveTo(-s*.28,s*.6,0,s*.2);g.stroke();g.beginPath();g.moveTo(0,s*1.05);g.lineTo(0,s*1.25);g.stroke()}
         g.beginPath();g.arc(0,0,s*.18,0,TAU);g.stroke();g.fillStyle=hsl(T.h,100,55,.35+beat*.3);g.beginPath();g.arc(0,0,s*.07,0,TAU);g.fill();g.restore();break}
+      case 'snowstar':{const s=d.s*S;g.save();g.translate(X,Y);g.rotate(RS.vt*.3+d.x);g.strokeStyle=hsl(T.h+20,100,82,.4+beat*.3);g.lineWidth=Math.max(1,S*.05);
+        for(let k=0;k<6;k++){g.rotate(TAU/6);g.beginPath();g.moveTo(0,0);g.lineTo(0,s);g.moveTo(0,s*.55);g.lineTo(s*.22,s*.75);g.moveTo(0,s*.55);g.lineTo(-s*.22,s*.75);g.stroke()}
+        g.fillStyle=hsl(T.h+20,100,90,.6);g.beginPath();g.arc(0,0,s*.12,0,TAU);g.fill();g.restore();break}
+      case 'bigcrystal':{const s=d.s*S;const cs=[[-.45,.9,.2,-.25],[-.1,1.5,.26,.05],[.3,1.15,.22,.2],[.6,.7,.16,.35]];
+        if(!RS.low){const gr=g.createRadialGradient(X,Y-s*.6,0,X,Y-s*.6,s*1.6);gr.addColorStop(0,hsl(T.h+10,100,70,.25+beat*.2));gr.addColorStop(1,hsl(T.h,100,60,0));g.fillStyle=gr;g.fillRect(X-s*1.6,Y-s*2.2,s*3.2,s*2.4)}
+        for(const [ox,h,w,lean] of cs){g.save();g.translate(X+ox*s,Y);g.rotate(lean*.5);g.fillStyle=hsl(T.h+(ox*40|0),85,55,.55);g.strokeStyle=hsl(T.h+20,100,85,.85);g.lineWidth=Math.max(1,S*.04);
+          g.beginPath();g.moveTo(-w*s,0);g.lineTo(-w*s,-h*s*.75);g.lineTo(0,-h*s);g.lineTo(w*s,-h*s*.75);g.lineTo(w*s,0);g.closePath();g.fill();g.stroke();
+          g.fillStyle='rgba(255,255,255,.25)';g.beginPath();g.moveTo(-w*s*.6,-h*s*.1);g.lineTo(-w*s*.6,-h*s*.7);g.lineTo(-w*s*.1,-h*s*.85);g.lineTo(-w*s*.1,-h*s*.1);g.fill();g.restore()}break}
+      case 'hangcrystal':{const top=wy(d.y),len=d.h*S,w=S*.22;g.fillStyle=hsl(T.h+15,85,55,.5);g.strokeStyle=hsl(T.h+20,100,85,.8);g.lineWidth=Math.max(1,S*.04);
+        g.beginPath();g.moveTo(X-w,top);g.lineTo(X-w,top+len*.7);g.lineTo(X,top+len);g.lineTo(X+w,top+len*.7);g.lineTo(X+w,top);g.fill();g.stroke();break}
+      case 'vine':{const top=wy(d.y),len=d.h*S;g.strokeStyle='rgba(0,0,0,.85)';g.lineWidth=Math.max(2,S*.09);g.beginPath();g.moveTo(X,top);
+        for(let k=1;k<=8;k++){const yy=top+len*k/8;g.lineTo(X+Math.sin(k*1.3+d.x+RS.vt*.8)*S*.12,yy)}g.stroke();
+        g.fillStyle='rgba(0,0,0,.85)';for(let k=2;k<8;k+=2){const yy=top+len*k/8,xx=X+Math.sin(k*1.3+d.x+RS.vt*.8)*S*.12;g.beginPath();g.ellipse(xx+S*.1,yy,S*.12,S*.05,.5,0,TAU);g.fill()}break}
       case 'moon':{const r=d.s*S;if(!RS.low){const gr=g.createRadialGradient(X,Y,0,X,Y,r*3);gr.addColorStop(0,'rgba(255,230,230,.18)');gr.addColorStop(1,'rgba(255,200,200,0)');g.fillStyle=gr;g.fillRect(X-r*3,Y-r*3,r*6,r*6)}
         g.fillStyle='rgba(255,240,235,.85)';g.beginPath();g.arc(X,Y,r,0,TAU);g.fill();g.fillStyle=T.top;g.beginPath();g.arc(X+r*.42,Y-r*.18,r*.9,0,TAU);g.fill();break}
       case 'chain':g.strokeStyle=hsl(T.h,60,70,.35);for(let k=0;k<d.h*3;k++){g.beginPath();g.ellipse(X,wy(d.y)+S*(.17+k*.33),S*.07,S*.15,0,0,TAU);g.stroke()}break;
@@ -985,13 +1189,16 @@ function drawDecoItem(d,T,beat){const X=wx(d.x),Y=wy(d.y);g.lineWidth=Math.max(1
 }
 function bands(L,T,beat,x0,x1){
   // floor
+  const gt=RS.th&&texPat('gnd_'+RS.th.gnd,`hsl(${hb(T.h)},${T.dk?40:55}%,${T.dk===2?30:T.dk?18:34}%)`,S*2/128,wx(0),GY);
   const gr=g.createLinearGradient(0,GY,0,H);gr.addColorStop(0,T.gnd);gr.addColorStop(1,T.gnd2);g.fillStyle=gr;g.fillRect(0,GY,W,H-GY);
-  g.strokeStyle=hsl(T.h,90,60,.16);g.lineWidth=1;const fx=Math.floor(x0);
-  for(let x=fx;x<=x1+1;x++){const X=wx(x);g.strokeRect(X+S*.1,GY+S*.1,S*.8,S*.8);if(x%2===0)g.strokeRect(X+S*.3,GY+S*.3,S*.4,S*.4)}
+  if(gt){g.fillStyle=gt;g.fillRect(0,GY,W,H-GY);const sh=g.createLinearGradient(0,GY,0,H);sh.addColorStop(0,'rgba(0,0,0,0)');sh.addColorStop(1,'rgba(0,0,0,.75)');g.fillStyle=sh;g.fillRect(0,GY,W,H-GY)}
+  else{g.strokeStyle=hsl(T.h,90,60,.16);g.lineWidth=1;const fx=Math.floor(x0);
+  for(let x=fx;x<=x1+1;x++){const X=wx(x);g.strokeRect(X+S*.1,GY+S*.1,S*.8,S*.8);if(x%2===0)g.strokeRect(X+S*.3,GY+S*.3,S*.4,S*.4)}}
   // ceilings for flying sections
   const cy=wy(SD.CEIL);
   for(const s of L.secs){if(!SD.FLY[s.m])continue;if(s.x1<x0||s.x0>x1)continue;const a=Math.max(0,wx(s.x0)),b=Math.min(W,wx(s.x1));
     const gc=g.createLinearGradient(0,cy,0,0);gc.addColorStop(0,T.gnd);gc.addColorStop(1,T.gnd2);g.fillStyle=gc;g.fillRect(a,0,b-a,cy);
+    if(gt){g.save();g.translate(0,cy);g.scale(1,-1);const p2=texPat('gnd_'+RS.th.gnd,`hsl(${hb(T.h)},${T.dk?40:55}%,${T.dk===2?30:T.dk?18:34}%)`,S*2/128,wx(0),0);if(p2){g.fillStyle=p2;g.fillRect(a,0,b-a,cy)}g.restore();g.fillStyle='rgba(0,0,0,.45)';g.fillRect(a,0,b-a,cy)}
     g.strokeStyle=hsl(T.h,90,60,.16);for(let x=Math.ceil(Math.max(s.x0,x0));x<Math.min(s.x1,x1+1);x++){const X=wx(x);g.strokeRect(X+S*.1,cy-S*.9,S*.8,S*.8)}
     line(a,b,cy,T,beat)}
   line(0,W,GY,T,beat);
@@ -1003,9 +1210,11 @@ function line(a,b,y,T,beat){const gr=g.createLinearGradient(a,0,b,0);const al=.8
 function drawBlock(o,T,beat,ent){
   const X=wx(o.x0),Y=wy(o.y1),w=(o.x1-o.x0)*S,h=(o.y1-o.y0)*S;
   g.fillStyle=T.blk;g.fillRect(X,Y,w,h);
-  g.strokeStyle=T.grid;g.lineWidth=1;g.beginPath();
+  const bt=RS.th&&!o.fk&&texPat('blk_'+RS.th.blk,`hsl(${hb(T.h)},${T.dk?45:50}%,${T.dk===2?34:T.dk?20:30}%)`,S/64,wx(0),GY);
+  if(bt){g.fillStyle=bt;g.fillRect(X,Y,w,h);g.fillStyle='rgba(0,0,0,.25)';g.fillRect(X,Y,w,h)}
+  else{g.strokeStyle=T.grid;g.lineWidth=1;g.beginPath();
   for(let i=1;i<o.x1-o.x0;i++){g.moveTo(X+i*S,Y);g.lineTo(X+i*S,Y+h)}for(let j=1;j<o.y1-o.y0-.01;j++){g.moveTo(X,Y+j*S);g.lineTo(X+w,Y+j*S)}g.stroke();
-  if(w>S*.5&&h>S*.45){g.strokeStyle=T.mid;g.lineWidth=S*.045;g.strokeRect(X+S*.17,Y+S*.17,w-S*.34,Math.max(1,h-S*.34))}
+  if(w>S*.5&&h>S*.45){g.strokeStyle=T.mid;g.lineWidth=S*.045;g.strokeRect(X+S*.17,Y+S*.17,w-S*.34,Math.max(1,h-S*.34))}}
   const hi=beat>.05?hsl(T.h,100,70+beat*22):T.hi;
   if(!RS.low){g.strokeStyle=T.glow;g.lineWidth=S*.2;g.strokeRect(X,Y,w,h)}
   g.strokeStyle=hi;g.lineWidth=S*.065;g.strokeRect(X,Y,w,h);
@@ -1040,7 +1249,7 @@ function drawPad(o){const X=wx(o.x),c=OCOL[o.c],f=o.f,B=f?wy(o.y+1):wy(o.y),dir=
   if(!RS.low){for(let k=0;k<4;k++){const ph=(RS.vt*1.6+k*.25+o.x*.13)%1;g.fillStyle=c;g.globalAlpha=(1-ph)*.7;g.fillRect(X+S*(.2+k*.18),B+dir*S*(.2+ph*1.3),S*.07,S*.07)}g.globalAlpha=1}}
 function drawPortal(o,T){
   const X=wx(o.x+.5),cy=o.y+o.h/2,Y=wy(cy),ry=o.h/2*S,rx=S*.42;
-  const col=o.t==='M'?PCOL[o.m]:o.t==='G'?(o.g<0?'#ffe23b':'#3b9bff'):VCOL[o.v];
+  const col=o.t==='M'?PCOL[o.m]:o.t==='G'?(o.g<0?'#ffe23b':'#3b9bff'):o.t==='N'?(o.mini?'#ff5ed1':'#3bff6b'):o.t==='R'?(o.mir?'#ff9a2f':'#3bc8ff'):o.t==='Y'?'#3b8bff':o.t==='Z'?'#ff8a1f':VCOL[o.v];
   if(o.t==='V'){const n=o.v+1;g.lineWidth=S*.13;g.strokeStyle=col;g.lineJoin='round';
     const ys=o.h>4?[2,4.5,7]:[cy];for(const yy of ys){for(let k=0;k<n;k++){const ax=X+(k-(n-1)/2)*S*.28-S*.1,ay=wy(yy);g.beginPath();g.moveTo(ax,ay-S*.42);g.lineTo(ax+S*.3,ay);g.lineTo(ax,ay+S*.42);g.stroke()}}return}
   g.save();if(!RS.low){g.strokeStyle=col;g.globalAlpha*=.3;g.lineWidth=S*.42;g.beginPath();g.ellipse(X,Y,rx,ry,0,0,TAU);g.stroke();g.globalAlpha/=.3}
@@ -1049,6 +1258,9 @@ function drawPortal(o,T){
   for(let k=0;k<6;k++){const ph=(RS.vt*.7+k/6)%1;g.fillStyle=col;g.globalAlpha=1-ph;g.fillRect(X-S*(.2+ph*.9),wy(o.y+hash(k*9+o.x)*o.h),S*.08,S*.08)}g.globalAlpha=1;
   const iy=o.h>4?[1.5,4.5,7.5]:[cy];
   for(const yy of iy){g.save();g.translate(X,wy(yy));if(o.t==='M'){drawIcon(g,o.m,0,S*.5,'#fff',col,{t:RS.vt})}
+    else if(o.t==='N'){const s=S*(o.mini?.18:.34);g.fillStyle='#fff';g.fillRect(-s/2,-s/2,s,s);g.strokeStyle=col;g.lineWidth=2;g.strokeRect(-s/2,-s/2,s,s)}
+    else if(o.t==='R'){g.strokeStyle='#fff';g.lineWidth=S*.07;g.beginPath();g.moveTo(-S*.22,0);g.lineTo(S*.22,0);g.moveTo(-S*.1,-S*.12);g.lineTo(-S*.22,0);g.lineTo(-S*.1,S*.12);g.moveTo(S*.1,-S*.12);g.lineTo(S*.22,0);g.lineTo(S*.1,S*.12);g.stroke()}
+    else if(o.t==='Y'||o.t==='Z'){g.strokeStyle='#fff';g.lineWidth=S*.06;g.beginPath();g.arc(0,0,S*.16,0,TAU);g.stroke();g.fillStyle=col;g.beginPath();g.arc(0,0,S*.07+Math.sin(RS.vt*6)*S*.02,0,TAU);g.fill()}
     else{g.fillStyle=col;g.beginPath();const d=o.g<0?-1:1;g.moveTo(-S*.2,-d*S*.1);g.lineTo(0,d*S*.2);g.lineTo(S*.2,-d*S*.1);g.fill()}g.restore()}
   g.restore()}
 function drawCoin(o,got,ghost){
@@ -1067,7 +1279,7 @@ function drawObjects(L,p,T,beat,x0,x1,o){
   o=o||{};const st=++RS.vt2|0;RS.vt2=st;const cols=L.cols,re=x1-.5,ent=!o.edit;
   const used=p?p.used:[];const pass=[[],[],[]];
   for(let c=Math.max(0,Math.floor(x0)-2);c<=x1+2;c++){const a=cols[c];if(!a)continue;for(const ob of a){if(ob._r===st)continue;ob._r=st;
-    const k=ob.t;if(k==='M'||k==='G'||k==='V')pass[0].push(ob);else if(k==='B'||k==='H'||k==='T')pass[1].push(ob);else pass[2].push(ob)}}
+    const k=ob.t;if(k==='M'||k==='G'||k==='V'||k==='N'||k==='R'||k==='Y'||k==='Z')pass[0].push(ob);else if(k==='B'||k==='H'||k==='T')pass[1].push(ob);else pass[2].push(ob)}}
   for(let ps=0;ps<3;ps++)for(const ob of pass[ps]){
     let al=1,yo=0;if(ent){const k=Math.max(0,Math.min(1,(re-ob.bx0)/3.2));if(k<1){al=k;yo=(1-k)*(1-k)*2.6}}
     if(al<=0)continue;g.save();g.globalAlpha=al;if(yo)g.translate(0,yo*S);
@@ -1077,17 +1289,20 @@ function drawObjects(L,p,T,beat,x0,x1,o){
       case 'W':drawSaw(ob,T);break;
       case 'O':drawOrb(ob,used.indexOf(ob.id)>=0);break;
       case 'P':drawPad(ob);break;
-      case 'M':case 'G':case 'V':drawPortal(ob,T);break;
+      case 'M':case 'G':case 'V':case 'N':case 'R':case 'Y':case 'Z':drawPortal(ob,T);break;
       case 'C':drawCoin(ob,p&&(p.coins>>ob.k&1),o.ghost&&o.ghost[ob.k]);break;
     }g.restore();
-    if(o.hit&&(ob.hz||ob.sol||ob.t==='W')){g.strokeStyle=ob.sol?'#3bf':'#f33';g.lineWidth=2;
-      if(ob.t==='W'){g.beginPath();g.arc(wx(ob.cx),wy(ob.cy),ob.r*.72*S,0,TAU);g.stroke()}else g.strokeRect(wx(ob.x0),wy(ob.y1),(ob.x1-ob.x0)*S,(ob.y1-ob.y0)*S)}
+    if(o.hit){const it=ob.t==='O'||ob.t==='P'||ob.t==='M'||ob.t==='G'||ob.t==='V'||ob.t==='C';
+      if(ob.hz||ob.sol||(ob.t==='W'&&!ob.fk)||it){g.lineWidth=2;g.strokeStyle=ob.sol?'#2f6bff':it?'#3bff6b':'#ff3030';
+        if(ob.t==='W'){g.beginPath();g.arc(wx(ob.cx),wy(ob.cy),ob.r*.72*S,0,TAU);g.stroke()}
+        else if(ob.t==='O'||ob.t==='C'){g.beginPath();g.arc(wx(ob.cx),wy(ob.cy),S*.5,0,TAU);g.stroke()}
+        else g.strokeRect(wx(ob.x0),wy(ob.y1),(ob.x1-ob.x0)*S,(ob.y1-ob.y0)*S)}}
   }
 }
 /* ---- player ---- */
 const VIS={rot:0,last:null,tilt:0};
 function drawPlayer(p,dt,hit){
-  const m=p.m,X=wx(p.x),Y=wy(p.y),u=S,a=COLORS[SV.col[0]],b=COLORS[SV.col[1]];
+  const m=p.m,X=wx(p.x),Y=wy(p.y),u=S*(p.mini?.6:1),a=COLORS[SV.col[0]],b=COLORS[SV.col[1]];
   if(m!==VIS.last){VIS.last=m;VIS.rot=0}
   if(m==='cube'){if(!p.g)VIS.rot+=p.d*7.1*dt;else{const tg=Math.round(VIS.rot/(PI/2))*(PI/2);VIS.rot+=(tg-VIS.rot)*Math.min(1,dt*22)}}
   else if(m==='ball')VIS.rot+=p.d*p.sp*dt/.43;
@@ -1103,16 +1318,17 @@ function drawPlayer(p,dt,hit){
     if(m==='ship')g.translate(0,-.05*u);
     drawIcon(g,m,SV.ic[m],m==='wave'?u*.75:u,a,b,o)}
   g.restore();
-  if(hit){const sz=SD.SIZE[m];g.strokeStyle='#ff0';g.lineWidth=2;g.strokeRect(X-sz[0]/2*S,Y-sz[1]/2*S,sz[0]*S,sz[1]*S)}
+  if(hit){const sz=SD.psz(p);g.lineWidth=2;g.strokeStyle='#ff3030';g.strokeRect(X-sz[0]/2*S,Y-sz[1]/2*S,sz[0]*S,sz[1]*S);
+    if(m!=='wave'){const i=SD.INNER*S;g.strokeStyle='#2f6bff';g.strokeRect(X-i/2,Y-i/2,i,i)}}
 }
 function emitTrail(p,dt){
   const m=p.m,a=COLORS[SV.col[0]],b=COLORS[SV.col[1]],tr=SV.trail;
   const ribbon=m==='wave'||tr===1||tr===5;
   if(ribbon){RS.trail.push({x:p.x,y:p.y,h:RS.vt});if(RS.trail.length>(m==='wave'?70:26))RS.trail.shift()}else if(RS.trail.length)RS.trail.shift();
-  const back=p.x-SD.SIZE[m][0]/2;
+  const back=p.x-SD.psz(p)[0]/2;
   if(RS.low&&Math.random()<.6)return;
   if(m==='ship'||m==='ufo'||m==='swing'){if(Math.random()<.8)RS.parts.push(pt(back,p.y-(m==='ship'?.12*p.d:0),-2-Math.random()*3,(Math.random()-.5)*2,.35,tr===4?'#ffb21f':tr===3?'rgba(200,240,255,.8)':b,tr===3?'o':tr===2?'*':'s'))}
-  else if(p.g&&m!=='wave'){if(Math.random()<.5)RS.parts.push(pt(back,p.y-SD.SIZE[m][1]/2*p.d,-1-Math.random()*2,(Math.random()*2)*p.d,.3,tr===2?'#fff':b,tr===2?'*':tr===3?'o':'s'))}
+  else if(p.g&&m!=='wave'){if(Math.random()<.5)RS.parts.push(pt(back,p.y-SD.psz(p)[1]/2*p.d,-1-Math.random()*2,(Math.random()*2)*p.d,.3,tr===2?'#fff':b,tr===2?'*':tr===3?'o':'s'))}
   if(tr===2&&Math.random()<.3)RS.parts.push(pt(p.x-.3,p.y+(Math.random()-.5)*.8,-1,0,.5,'#fff','*'));
 }
 function pt(x,y,vx,vy,l,c,k,s){return{x,y,vx,vy,l,m:l,c,k:k||'s',s:s||.12,r:Math.random()*TAU}}
@@ -1195,7 +1411,7 @@ let RUN=null,GS='menu',PAUSED=false,ATT=null;
 const INPUT={hold:false};
 function songFor2(kind,id){if(kind==='custom'||kind==='test')return songFor(1000+(id||0),['house','break','dnb','synth','electro','dub'][(id||0)%6]);return songFor(id+1,DEFS[id]&&DEFS[id].sty)}
 function startRun(kind,o){
-  auInit();const r={kind,id:o.id,prac:!!o.prac,cps:[],att:1,dead:0,won:0,deadT:0,winT:0,acc:0,jumps:0,t0:performance.now(),cust:o.cust,path:null,dec:8,newBest:0,ghost:null};
+  auInit();const r={kind,nc:!!SV.opt.nc&&kind!=='watch',spi:-1,id:o.id,prac:!!o.prac,cps:[],att:1,dead:0,won:0,deadT:0,winT:0,acc:0,jumps:0,t0:performance.now(),cust:o.cust,path:null,dec:8,newBest:0,ghost:null};
   if(kind==='level'||kind==='watch'){r.def=DEFS[o.id];r.L=levelL(o.id);const ls=LVS(o.id);r.ghost=ls.c.map(v=>!!v);
     if(kind==='watch'){r.path=decodePath(LEVELDATA[o.id].path);r.dec=LEVELDATA[o.id].dec}
     if(kind==='level'&&!r.prac){ls.att++;SV.st.att++;save()}}
@@ -1204,15 +1420,19 @@ function startRun(kind,o){
   RS.hue=r.hue!=null?r.hue:SD.secAt(r.L,0).hue;
   r.from=o.from||null;
   try{document.activeElement&&document.activeElement.blur&&document.activeElement.blur()}catch(_){}
+  if(kind!=='test'){$('edUI').classList.remove('on');document.body.classList.remove('ed')}
   RUN=r;GS='play';PAUSED=false;MHINT=null;spawn(r,true);if(kind!=='watch')modeHint(r.L.start.m);showScreen(null);$('hud').classList.add('on');hudSync();
 }
 function spawn(r,fresh){
   RS.parts.length=0;RS.trail.length=0;VIS.rot=0;
   if(r.prac&&r.cps.length){r.p=SD.clone(r.cps[r.cps.length-1]);r.p.ev=0}
-  else{r.p=SD.newPlayer(r.L);if(r.from){const p=r.p;p.x=r.from.x;p.m=r.from.m;p.sp=SD.SPEEDS[r.from.sp];p.d=1;p.y=SD.FLY[p.m]?4.5:SD.SIZE[p.m][1]/2;p.g=!SD.FLY[p.m]}}
+  else{r.p=SD.newPlayer(r.L);if(r.from){const p=r.p,f=r.from;p.x=f.x;p.m=f.m;p.sp=SD.SPEEDS[f.sp];p.mini=f.mini||0;p.d=f.d||1;const hh=SD.psz(p)[1]/2;
+    p.y=f.y!=null?Math.max(hh,f.y+hh):(SD.FLY[p.m]?4.5:hh);p.g=!SD.FLY[p.m]&&p.y<=hh+1e-6}}
+  r.ti=0;r.hueOv=null;r.nct=0;r.ncb=0;RS.mirT=r.p.mir?1:0;
+  if(r.L.trig)while(r.ti<r.L.trig.length&&r.L.trig[r.ti].x<=r.p.x){const t=r.L.trig[r.ti++];if(t.t==='K'){r.hueOv=t.hue;RS.hue=t.hue}}
   if(r.trace)r.trace=[];r.lastCp=r.p.x;r.dead=0;r.won=0;r.deadT=0;r.winT=0;r.acc=0;r.newBest=0;
   const mus=r.prac?songFor(r.id+300,'chill'):songFor2(r.kind,r.id);
-  if(!(r.prac&&!fresh&&MUS.on))musicPlay(mus);
+  if(!(r.prac&&!fresh&&MUS.on)){musicPlay(mus);if(fresh&&mus.name&&(r.kind==='level'||r.kind==='watch'))WTOAST={s:'♪ '+mus.name,t:2.2}}
 }
 function pathHold(r){const k=Math.floor(r.p.tick/r.dec);return k<r.path.length?r.path[k]===1:false}
 function simulate(r,dt){
@@ -1229,8 +1449,13 @@ function simulate(r,dt){
       if(e&8){RS.flash=.25;RS.flashC=p.d<0?'#ffe23b':'#3b9bff'}
       if(e&16){sfx('coin');burst(p.x,p.y,'#ffd23b',14)}
       if(e&32){RS.flash=.3;RS.flashC=PCOL[p.m];RS.trail.length=0;if(r.kind!=='watch')modeHint(p.m)}
+      if(e&128){RS.flash=.2;RS.flashC=p.mini?'#ff5ed1':'#3bff6b';burst(p.x,p.y,'#fff',10)}
+      if(e&512){RS.trail.length=0;burst(p.x,p.tpy,'#3b8bff',12);burst(p.x,p.y,'#ff8a1f',12)}
     }
+    if(r.nc){r.nct++;if(p.dead){p.dead=0;r.ncb++;RS.ncf=.12}}
     if(p.dead){die(r);return}
+    if(r.L.trig)while(r.ti<r.L.trig.length&&r.L.trig[r.ti].x<=p.x){const t=r.L.trig[r.ti++];
+      if(t.t==='K')r.hueOv=t.hue;else if(t.t==='U'){RS.flash=.35;RS.flashC=['#fff','#fff','#ff3b3b','#3bd6ff','#ffe23b'][t.c]||'#fff'}else if(t.t==='J')RS.shake=.18+.14*t.s}
     if(p.won){win(r);return}
     if(r.prac&&p.x-r.lastCp>p.sp*3.2){const air=p.m==='ship'||p.m==='wave'||p.m==='ufo'||p.m==='swing';if(air||p.g)addCp(r,true)}
   }
@@ -1247,7 +1472,7 @@ function die(r){r.dead=1;sfx('die');boom(r.p);if(!r.prac)musicPause(true);
   if(r.kind==='custom'&&!r.prac){const c=SV.custom[r.cust.idx];if(c&&pc>(c.best||0)){c.best=pc;save()}}
   if(r.kind==='test'&&typeof ED!=='undefined'){ED.deaths.push([r.p.x,r.p.y]);if(ED.deaths.length>60)ED.deaths.shift();ED.path=r.trace?r.trace.slice():null}
 }
-function win(r){r.won=1;sfx('win');burst(r.p.x,r.p.y,'#fff',30);r.rew=null;
+function win(r){r.won=1;sfx('win');burst(r.p.x,r.p.y,'#fff',30);r.rew=null;r.verified=false;if(r.nc)return;
   if(r.kind==='level'){const ls=LVS(r.id),d=r.def;
     if(r.prac){ls.pb=100}
     else{const first=!ls.done;let orbs=first?d.st*25:d.st*5;if(ls.b<100)orbs+=Math.floor((100-ls.b)*d.st*.8);let nc=0;
@@ -1263,7 +1488,7 @@ function win(r){r.won=1;sfx('win');burst(r.p.x,r.p.y,'#fff',30);r.rew=null;
 }
 function exitRun(){if(!RUN)return;const r=RUN;RUN=null;PAUSED=false;$('hud').classList.remove('on');hideModal('pause');hideModal('win');
   if(r.kind==='test'){GS='edit';edResume();return}
-  GS='menu';musicPlay(songFor(99,'menu'));if(r.def){LTAB=r.def.feat?'feat':'main';CUR=Math.max(0,LIST().indexOf(r.id))}showScreen(r.kind==='custom'?'create':'levels');refreshMenus()}
+  GS='menu';musicPlay(songFor(99,'menu'));if(r.def&&!r.def.feat){LTAB='main';CUR=CURS.main=Math.max(0,LIST('main').indexOf(r.id))}showScreen(r.kind==='custom'?'create':r.def&&r.def.feat?'explore':'levels');refreshMenus()}
 function restartRun(){if(!RUN)return;const r=RUN;r.cps=[];r.att++;hideModal('pause');hideModal('win');PAUSED=false;r.shown=0;if(r.kind==='level'&&!r.prac){LVS(r.id).att++;SV.st.att++;save()}spawn(r,true)}
 function togglePause(on){if(GS!=='play'||!RUN)return;if(RUN.won&&RUN.shown)return;PAUSED=on==null?!PAUSED:on;INPUT.hold=false;
   if(PAUSED){showModal('pause');musicPause(true);syncPause()}else{hideModal('pause');if(!RUN.dead)musicPause(false)}}
@@ -1281,6 +1506,7 @@ function showWin(r){const d=r.def;$('wTitle').textContent=r.prac?'Practice Compl
   else if(r.kind==='test'&&r.from)h+='<div class="hint">You started from the flag. Playtest from the start to verify the level.</div>';
   else if((r.kind==='test'||r.kind==='custom')&&r.prac)h+='<div class="hint">Beat it without practice mode to verify it.</div>';
   else if(r.prac)h+='<div class="hint">Now beat it in normal mode to earn rewards!</div>';
+  if(r.nc)h+=`<div class="hint">Noclip run · accuracy ${(r.nct?100*(1-r.ncb/r.nct):100).toFixed(1)}%. Progress isn’t saved with noclip on.</div>`;
   $('wBody').innerHTML=h;const nl=LIST(r.def&&r.def.feat?'feat':'main');$('wNext').style.display=(r.kind==='level'&&nl.indexOf(r.id)<nl.length-1&&!r.prac)?'':'none';
   $('wMenu').textContent=r.kind==='test'?'Editor':'Menu';showModal('win')}
 /* ---------- main loop ---------- */
@@ -1295,12 +1521,14 @@ function frame(ts){const dt=Math.min(.05,(ts-last)/1000);last=ts;RS.vt+=dt;
   requestAnimationFrame(frame)}
 function camFor(r){const px=Math.max(3.2*S,Math.min(7*S,W*.3));if(r.won){const lim=r.L.end-(W/S)*.62;return Math.min(r.p.x-px/S,Math.max(lim,RS.camX))}return r.p.x-px/S}
 function renderRun(r,dt){
-  RS.camX=camFor(r);RS.bgs=r.L.bg||0;const L=r.L,p=r.p;
+  RS.camX=camFor(r);RS.bgs=r.L.bg||0;RS.th=r.L.th||null;const L=r.L,p=r.p;
   const x0=RS.camX,x1=RS.camX+W/S;
-  const sec=SD.secAt(L,x0+(W/S)*.35);const tgt=r.hue!=null?r.hue:sec.hue;RS.hue=lerpHue(RS.hue,tgt,Math.min(1,dt*2.2));const T=L.dark?themeDark(RS.hue):theme(RS.hue);
+  const sec=SD.secAt(L,x0+(W/S)*.35);const tgt=r.hueOv!=null?r.hueOv:r.hue!=null?r.hue:sec.hue;RS.hue=lerpHue(RS.hue,tgt,Math.min(1,dt*2.2));const T=L.mono?themeMono(RS.hue):L.dark?themeDark(RS.hue):theme(RS.hue);
   const bi=beatInfo(),beat=MUS.paused?0:Math.pow(1-bi.ph,3)*.9;
   g.save();if(RS.shake>0){RS.shake-=dt;const k=RS.shake*S*.5;g.translate((Math.random()-.5)*k,(Math.random()-.5)*k)}
+  RS.mirT=(RS.mirT||0)+((p.mir?1:0)-(RS.mirT||0))*Math.min(1,dt*7);if(RS.mirT>.001){const k=1-2*RS.mirT;g.translate(W/2,0);g.scale(Math.abs(k)<.02?.02*Math.sign(k||1):k,1);g.translate(-W/2,0)}
   drawBG(T,beat);drawDeco(L,T,beat,x0,x1);bands(L,T,beat,x0,x1);drawFinish(L,T);
+  if(L.mono&&!RS.low){g.globalCompositeOperation='saturation';g.fillStyle='rgba(128,128,128,.92)';g.fillRect(0,0,W,H);g.globalCompositeOperation='source-over'}
   // attempt label
   const ax=(r.from?r.from.x:0)+4;if(wx(ax)>-W){g.font=`${Math.round(S*.75)}px ${FONT}`;g.textAlign='left';g.lineWidth=S*.12;g.strokeStyle='rgba(0,0,0,.6)';g.fillStyle='#fff';
     const s=r.kind==='watch'?'Bot replay':'Attempt '+r.att;g.strokeText(s,wx(ax),wy(6.2));g.fillText(s,wx(ax),wy(6.2))}
@@ -1310,6 +1538,23 @@ function renderRun(r,dt){
   if(!r.dead)drawPlayer(p,dt,SV.opt.hit&&(r.prac||r.kind==='test'));
   drawParts(dt);
   g.restore();
+  if(L.th&&!L.fx)drawFX(L.th.fx,beat,T.h);
+  if(L.fx==='mono'||L.fx==='geode'){const geo=L.fx==='geode';
+    // falling light streaks
+    for(let i=0;i<(RS.low?10:24);i++){const sp=.6+hash(i*3)*.8,lx=((hash(i*13)*W*1.5-RS.camX*S*(.2+hash(i)*.3))%(W*1.5)+W*1.5)%(W*1.5)-W*.25,len=S*(1.5+hash(i*7)*3),ly=((RS.vt*S*6*sp+hash(i*5)*H*2)%(H+len*2))-len;
+      const col=geo?(i%3?`hsla(${(RS.hue+30+i*12)%360},100%,75%,.35)`:'rgba(120,220,255,.35)'):(i%4?'rgba(230,235,255,.22)':'rgba(120,230,220,.35)');
+      const lg=g.createLinearGradient(0,ly,0,ly+len);lg.addColorStop(0,'rgba(255,255,255,0)');lg.addColorStop(1,col);g.fillStyle=lg;g.fillRect(lx,ly,Math.max(1.5,S*.05),len)}
+    // floating sparkles / dust
+    for(let i=0;i<(RS.low?10:26);i++){const ph=(RS.vt*(.05+hash(i*9)*.06)+hash(i*2))%1,sx=((hash(i*17)*W*1.3-RS.camX*S*.12)%(W*1.3)+W*1.3)%(W*1.3)-W*.15,sy=H*(1-ph)-S;
+      const tw=.4+.6*Math.abs(Math.sin(RS.vt*3+i));g.fillStyle=geo?`hsla(${(RS.hue+i*20)%360},100%,85%,${tw*.7})`:`rgba(255,255,255,${tw*.45})`;const z=geo?2.5:2;g.fillRect(sx,sy,z,z)}
+    if(geo){// crystal stalactites along the top edge
+      const cw=S*1.3,off=RS.camX*S*.55,i0=Math.floor(off/cw)-1;for(let i=i0;i<i0+W/cw+3;i++){const v=hash(i*29),hh=S*(.5+v*1.8),cx=i*cw-off;
+        g.fillStyle=`hsla(${(RS.hue+v*40)|0},70%,${18+v*14}%,.85)`;g.beginPath();g.moveTo(cx,0);g.lineTo(cx+cw*.5,hh);g.lineTo(cx+cw,0);g.fill();
+        g.strokeStyle=`hsla(${(RS.hue+20)|0},100%,80%,.35)`;g.lineWidth=1;g.stroke()}
+      const vg=g.createRadialGradient(W/2,H/2,Math.min(W,H)*.35,W/2,H/2,Math.max(W,H)*.75);vg.addColorStop(0,'rgba(20,0,40,0)');vg.addColorStop(1,`rgba(25,0,50,${.55-beat*.1})`);g.fillStyle=vg;g.fillRect(0,0,W,H)}
+    else{// soft white bloom + dark vignette
+      if(!RS.low){const bx=W*.62+Math.sin(RS.vt*.3)*W*.08,bl=g.createRadialGradient(bx,H*.35,0,bx,H*.35,Math.min(W,H)*.6);bl.addColorStop(0,`rgba(255,255,255,${.12+beat*.06})`);bl.addColorStop(1,'rgba(255,255,255,0)');g.fillStyle=bl;g.fillRect(0,0,W,H)}
+      const vg=g.createRadialGradient(W/2,H/2,Math.min(W,H)*.3,W/2,H/2,Math.max(W,H)*.72);vg.addColorStop(0,'rgba(0,0,0,0)');vg.addColorStop(1,'rgba(0,0,0,.72)');g.fillStyle=vg;g.fillRect(0,0,W,H)}}
   if(L.fx==='dark'){
     if(sec.grey&&!RS.low){g.globalCompositeOperation='saturation';g.fillStyle='rgb(128,128,128)';g.fillRect(0,0,W,H);g.globalCompositeOperation='source-over'}
     for(let i=0;i<(RS.low?12:30);i++){const ph=(RS.vt*(.12+hash(i*5)*.1)+hash(i))%1,ex=((hash(i*11)*W*1.4-RS.camX*S*.3)%(W*1.4)+W*1.4)%(W*1.4)-W*.2;
@@ -1330,8 +1575,11 @@ function renderRun(r,dt){
   if(MHINT&&MHINT.t>0&&!r.dead){MHINT.t-=dt;const al=Math.min(1,MHINT.t*2,(2.6-MHINT.t)*4);g.globalAlpha=al;g.font=`${Math.round(Math.max(15,S*.42))}px ${FONT}`;g.textAlign='center';
     const tw=g.measureText(MHINT.s).width+28,ty=by+30;g.fillStyle='rgba(0,0,0,.6)';g.fillRect(W/2-tw/2,ty,tw,S*.42+16);g.fillStyle=MHINT.c;g.fillRect(W/2-tw/2,ty,4,S*.42+16);
     g.fillStyle='#fff';g.fillText(MHINT.s,W/2,ty+S*.42+6);g.globalAlpha=1}
+  if(r.nc){if(RS.ncf>0){RS.ncf-=dt;g.fillStyle=`rgba(255,0,0,${RS.ncf*1.6})`;g.fillRect(0,0,W,H)}
+    const acc=r.nct?Math.max(0,100*(1-r.ncb/r.nct)):100;g.font=`${Math.round(Math.max(13,S*.36))}px ${FONT}`;g.textAlign='center';g.fillStyle=acc>95?'#8dffa3':acc>80?'#ffe23b':'#ff6b6b';g.strokeStyle='rgba(0,0,0,.6)';g.lineWidth=3;
+    const t='Noclip '+acc.toFixed(1)+'%';g.textAlign='left';const nx=bx+bw+(SV.opt.pct?S*1.6:10);g.strokeText(t,nx,by+9);g.fillText(t,nx,by+9)}
   if(WTOAST&&WTOAST.t>0){WTOAST.t-=dt;g.globalAlpha=Math.min(1,WTOAST.t*2);g.font=`${Math.round(S*.7)}px ${FONT}`;g.textAlign='center';g.fillStyle='#ffe23b';g.strokeStyle='#000';g.lineWidth=4;
-    const y=H*.3-(1.6-WTOAST.t)*S*.4;g.strokeText(WTOAST.s,W/2,y);g.fillText(WTOAST.s,W/2,y);g.globalAlpha=1}
+    const y=H*.2-(1.6-WTOAST.t)*S*.3;g.strokeText(WTOAST.s,W/2,y);g.fillText(WTOAST.s,W/2,y);g.globalAlpha=1}
 }
 function toastWorld(s){WTOAST={s,t:1.6}}
 const HINTS={cube:'Cube: tap or hold to jump',ship:'Ship: hold to fly up, let go to fall',ball:'Ball: tap to flip gravity',ufo:'UFO: tap to flap upward',
@@ -1343,7 +1591,7 @@ function renderAttract(dt){
   if(!ATT){const L=levelL(0);ATT={kind:'watch',id:0,L,p:SD.newPlayer(L),path:decodePath(LEVELDATA[0].path),dec:LEVELDATA[0].dec,acc:0,cps:[],att:1,dead:0,won:0}}
   const a=ATT;a.acc+=dt;let n=0;while(a.acc>=SD.DT&&n<40){n++;a.acc-=SD.DT;SD.step(a.p,a.L,pathHold(a),0);a.p.ev=0;if(a.p.dead||a.p.won||a.p.x>a.L.end-30){a.p=SD.newPlayer(a.L);RS.trail.length=0;break}}
   emitTrail(a.p,dt);
-  RS.bgs=0;RS.camX=a.p.x-Math.max(3.2*S,Math.min(7*S,W*.3))/S;const L=a.L,x0=RS.camX,x1=x0+W/S;
+  RS.bgs=0;RS.th=a.L.th||null;RS.camX=a.p.x-Math.max(3.2*S,Math.min(7*S,W*.3))/S;const L=a.L,x0=RS.camX,x1=x0+W/S;
   RS.hue=lerpHue(RS.hue,SD.secAt(L,x0+8).hue,Math.min(1,dt*2));const T=theme(RS.hue),bi=beatInfo(),beat=Math.pow(1-bi.ph,3)*.8;
   drawBG(T,beat);drawDeco(L,T,beat,x0,x1);bands(L,T,beat,x0,x1);drawObjects(L,a.p,T,beat,x0,x1);drawRibbon(a.p);drawPlayer(a.p,dt);drawParts(dt);
   g.fillStyle='rgba(5,5,20,.42)';g.fillRect(0,0,W,H);
@@ -1362,12 +1610,14 @@ window.addEventListener('keydown',e=>{auInit();const k=e.code;
     if(k==='Escape'||k==='KeyP'){e.preventDefault();togglePause();return}
     if(k==='KeyR'&&!PAUSED){restartRun();return}
     if(k==='KeyZ'&&RUN.prac){addCp(RUN,false);return}
+    if((k==='ArrowLeft'||k==='ArrowRight')&&RUN.L.starts&&RUN.L.starts.length&&!PAUSED){e.preventDefault();cycleStart(k==='ArrowRight'?1:-1);return}
     if(k==='KeyX'&&RUN.prac){RUN.cps.pop();RUN.lastCp=RUN.p.x;return}
     if(k==='Enter'&&RUN.won&&RUN.shown){$('wReplay').click();return}
     return}
   if(GS==='edit'){edKey(e);return}
   if(k==='Escape'){if(MODAL)return hideModal(MODAL);if(SCREEN&&SCREEN!=='title')showScreen('title')}
-  if(SCREEN==='levels'){if(k==='ArrowLeft')goCard(CUR-1);if(k==='ArrowRight')goCard(CUR+1);if(k==='Enter'||k==='Space'){e.preventDefault();startRun('level',{id:LIST()[CUR]})}}
+  if(MODAL==='lvl'&&(k==='Enter'||k==='Space')){e.preventDefault();$('lPlay').click();return}
+  if(SCREEN==='levels'&&!MODAL){if(k==='ArrowLeft')goCard(CUR-1);if(k==='ArrowRight')goCard(CUR+1);if(k==='Enter'||k==='Space'){e.preventDefault();startRun('level',{id:LIST('main')[CUR]})}}
   if(SCREEN==='title'&&(k==='Enter'||k==='Space')){e.preventDefault();showScreen('levels')}
 });
 window.addEventListener('keyup',e=>{if(HOLDKEYS[e.code]){INPUT.hold=false;if(GS==='play'&&!PAUSED)e.preventDefault()}});
@@ -1379,7 +1629,7 @@ function hideModal(n){$('m_'+n).classList.remove('on');if(MODAL===n)MODAL=null}
 function toast(s){const t=$('toast');t.textContent=s;t.classList.add('on');clearTimeout(t._t);t._t=setTimeout(()=>t.classList.remove('on'),2200)}
 function wallet(){return`<span class="w-orb" title="Orbs">◆ ${SV.orbs}</span><span class="w-coin" title="Secret coins">● ${coinAvail()}</span><span class="w-star" title="Stars">★ ${starTotal()}</span>`}
 function refreshMenus(){document.querySelectorAll('.wallet').forEach(w=>w.innerHTML=wallet());
-  if(SCREEN==='levels')buildCards();if(SCREEN==='garage')buildGarage();if(SCREEN==='create')buildCreate();if(SCREEN==='settings')buildSettings()}
+  if(SCREEN==='title')titleQuick();if(SCREEN==='explore')buildFeatured();if(SCREEN==='levels')buildCards();if(SCREEN==='garage')buildGarage();if(SCREEN==='create')buildCreate();if(SCREEN==='settings')buildSettings()}
 /* difficulty faces */
 const DCOL=['#3bc8ff','#3bff6b','#ffd23b','#ff8a1f','#ff5ed1','#c04dff','#ff3b3b','#8a0f0f'];
 function drawFace(c,df){const x=c.getContext('2d'),s=c.width;x.clearRect(0,0,s,s);x.save();x.translate(s/2,s/2+s*.04);const u=s*.36,col=DCOL[df],dm=df>=5;
@@ -1393,23 +1643,57 @@ function drawFace(c,df){const x=c.getContext('2d'),s=c.width;x.clearRect(0,0,s,s
   else{x.moveTo(-u*.45,u*.35);x.lineTo(u*.45,u*.35);x.lineTo(u*.3,u*.6);x.lineTo(-u*.3,u*.6);x.closePath();x.fillStyle='#000';x.fill();if(dm){x.fillStyle='#fff';for(const sg of[-1,1]){x.beginPath();x.moveTo(sg*u*.32,u*.36);x.lineTo(sg*u*.2,u*.52);x.lineTo(sg*u*.1,u*.36);x.fill()}}}
   x.stroke();x.restore()}
 let LTAB='main';const CURS={main:0,feat:0};
-const LIST=t=>DEFS.filter(d=>!!d.feat===((t||LTAB)==='feat')).map(d=>d.id);
-function setLTab(t){CURS[LTAB]=CUR;LTAB=t;CUR=CURS[t]||0;document.querySelectorAll('#ltabs button').forEach(b=>b.classList.toggle('on',b.dataset.lt===t));buildCards();setTimeout(()=>goCard(CUR,true),20)}
-function buildCards(){const box=$('cards');if(!box)return;const ids=LIST();
-  document.querySelectorAll('#ltabs button').forEach(b=>b.classList.toggle('on',b.dataset.lt===LTAB));
-  box.innerHTML=ids.map((i,k)=>{const d=DEFS[i];const ls=LVS(i);const t=LEVELDATA[i].time;return`<div class="card${d.feat?' feat':''}" data-i="${k}" data-id="${i}" style="--h:${d.hue}">
-    ${d.feat?'<div class="fbadge">★ FEATURED</div>':''}<div class="ctop"><canvas class="face" width="96" height="96"></canvas><div class="cname"><div class="lvn">${d.n}</div>${d.by?`<div class="by">by ${d.by}</div>`:''}<div class="diff" style="color:${d.df===7?'#ffb3b3':DCOL[d.df]}">${SD.DIFF[d.df]} · <span class="st">★${d.st}</span></div></div></div>
+const LIST=t=>DEFS.filter(d=>!!d.feat===((t||LTAB)==='feat')).sort((a,b)=>a.df-b.df||a.st-b.st||a.id-b.id).map(d=>d.id);
+function setLTab(t){CURS[LTAB]=CUR;LTAB=t;CUR=CURS[t]||0;buildCards()}
+let LFIL='all',LHIDE=false,THQ=[];
+const FILS=[['all','All'],['0','Easy'],['1','Normal'],['2','Hard'],['3','Harder'],['4','Insane'],['5','Demon']];
+const fmatch=d=>LFIL==='all'||(LFIL==='5'?d.df>=5:String(d.df)===LFIL);
+/* level preview thumbnails: render with the game renderer into a small canvas */
+function renderThumb(cv2,id,frac){const r=cv2.getBoundingClientRect(),dp=Math.min(2,window.devicePixelRatio||1),w=Math.max(160,Math.round((r.width||240)*dp)),h=Math.round(w*9/16);
+  if(cv2.width!==w){cv2.width=w;cv2.height=h}
+  const sv={g,W,H,S,GY,cam:RS.camX,th:RS.th,bgs:RS.bgs,bgh:RS.bgHue,bg:RS.bg,hue:RS.hue};
+  try{g=cv2.getContext('2d');g.setTransform(1,0,0,1,0,0);W=w;H=h;S=H/11.6;GY=H-1.5*S;const L=levelL(id);
+    const sec=L.secs[Math.min(L.secs.length-1,Math.floor(L.secs.length*(frac==null?.35:frac)))];RS.camX=sec.x0+3;RS.th=L.th||null;RS.bgs=L.bg||0;RS.bgHue=-1;
+    const T=L.mono?themeMono(sec.hue):L.dark?themeDark(sec.hue):theme(sec.hue);const x1=RS.camX+W/S;
+    drawBG(T,.3);drawDeco(L,T,.3,RS.camX,x1);bands(L,T,.3,RS.camX,x1);
+    if(L.mono){g.globalCompositeOperation='saturation';g.fillStyle='rgba(128,128,128,.9)';g.fillRect(0,0,W,H);g.globalCompositeOperation='source-over'}
+    drawObjects(L,null,T,.3,RS.camX,x1,{edit:1});
+    const pl=SD.newPlayer(L);pl.x=RS.camX+4;pl.m=sec.m;pl.y=SD.FLY[sec.m]?4.5:.5;g.save();g.translate(wx(pl.x),wy(pl.y));drawIcon(g,sec.m,SV.ic[sec.m],S*(sec.m==='wave'?.75:1),COLORS[SV.col[0]],COLORS[SV.col[1]],{cube:SV.ic.cube});g.restore();
+  }catch(e){console.error(e)}
+  g=sv.g;W=sv.W;H=sv.H;S=sv.S;GY=sv.GY;RS.camX=sv.cam;RS.th=sv.th;RS.bgs=sv.bgs;RS.bgHue=-1;RS.bg=sv.bg;RS.hue=sv.hue}
+function thumbQueue(list){THQ=list;const tick=()=>{if(!THQ.length)return;const t0=performance.now();while(THQ.length&&performance.now()-t0<14){const [c,id,f]=THQ.shift();if(c.isConnected)renderThumb(c,id,f)}if(THQ.length)setTimeout(tick,16)};setTimeout(tick,30)}
+function buildCards(){const box=$('cards');if(!box)return;LTAB='main';const ids=LIST('main');
+  box.innerHTML=ids.map((i,k)=>{const d=DEFS[i],ls=LVS(i);return`<div class="card mpan" data-i="${k}" data-id="${i}" style="--h:${d.hue}">
+    <div class="mban"><canvas></canvas><span class="mnum">${k+1}</span><div class="lvn">${esc(d.n)}</div></div>
+    <div class="mbody"><div class="mrow"><canvas width="96" height="96"></canvas><div class="md"><b style="color:${d.df===7?'#ffb3b3':DCOL[d.df]}">${SD.DIFF[d.df]}</b><span>★${d.st} · ♪ ${songName(i+1)} · ${LEVELDATA[i].time}s</span></div>
+      <div class="coins">${ls.c.map(v=>`<span class="cn ${v?'on':''}">●</span>`).join('')}</div></div>
     <div class="bars"><div class="bar"><i style="width:${ls.b}%"></i><span>Normal ${ls.b}%</span></div><div class="bar pr"><i style="width:${ls.pb}%"></i><span>Practice ${ls.pb}%</span></div></div>
-    <div class="cfoot"><div class="coins">${ls.c.map(v=>`<span class="cn ${v?'on':''}">●</span>`).join('')}</div><div class="meta">${d.secs.length} parts · ${t}s</div></div>
-    <div class="btns"><button class="b-play" data-a="play">▶ Play</button><button class="b-prac" data-a="prac">Practice</button><button class="b-watch" data-a="watch" title="Watch the bot beat this level">Watch</button></div></div>`}).join('');
-  box.querySelectorAll('.face').forEach((c,k)=>drawFace(c,DEFS[ids[k]].df));
-  $('dots').innerHTML=ids.map((i,k)=>`<b data-i="${k}" style="--c:${DCOL[DEFS[i].df]}"></b>`).join('');
-  syncCards()}
+    <div class="btns"><button class="b-play" data-a="play">▶ Play</button><button class="b-prac" data-a="prac">Practice</button><button class="b-watch" data-a="watch" title="Watch the bot beat this level">Watch</button></div></div></div>`}).join('');
+  const q=[];box.querySelectorAll('.card').forEach(c=>{const id=+c.dataset.id;drawFace(c.querySelector('.mrow canvas'),DEFS[id].df);q.push([c.querySelector('.mban canvas'),id,.3])});
+  const k0=Math.max(0,Math.min(ids.length-1,CUR));q.sort((x,y)=>Math.abs(ids.indexOf(x[1])-k0)-Math.abs(ids.indexOf(y[1])-k0));thumbQueue(q);
+  $('dots').innerHTML=ids.map((i,k)=>`<b data-i="${k}" style="--c:${DCOL[DEFS[i].df]}"></b>`).join('');syncCards()}
 function syncCards(){const box=$('cards');if(!box||!box.children.length)return;const mid=box.scrollLeft+box.clientWidth/2;let b=0,bd=1e9;
   [...box.children].forEach((c,i)=>{const d=Math.abs(c.offsetLeft+c.offsetWidth/2-mid);if(d<bd){bd=d;b=i}});
-  [...box.children].forEach((c,i)=>c.classList.toggle('act',i===b));[...$('dots').children].forEach((c,i)=>c.classList.toggle('on',i===b));CUR=b}
-function goCard(i,instant){const box=$('cards');i=Math.max(0,Math.min(LIST().length-1,i));const c=box.children[i];if(!c)return;
+  [...box.children].forEach((c,i)=>c.classList.toggle('act',i===b));[...$('dots').children].forEach((c,i)=>c.classList.toggle('on',i===b));CUR=CURS.main=b}
+function goCard(i,instant){const box=$('cards');if(!box)return;i=Math.max(0,Math.min(LIST('main').length-1,i));const c=box.children[i];if(!c)return;
   box.scrollTo({left:c.offsetLeft+c.offsetWidth/2-box.clientWidth/2,behavior:instant?'auto':'smooth'});CUR=i;if(instant)syncCards()}
+let EFIL='all';
+function buildFeatured(){const box=$('tFeat');if(!box)return;const all=LIST('feat'),ids=all.filter(i=>EFIL==='all'||(EFIL==='5'?DEFS[i].df>=5:String(DEFS[i].df)===EFIL));$('tFeatN').textContent=all.length+' levels';
+  $('eFil').innerHTML=FILS.map(([k,n])=>`<button data-f="${k}" class="${EFIL===k?'on':''}">${n}</button>`).join('');
+  box.innerHTML=ids.map(i=>{const d=DEFS[i],ls=LVS(i);return`<button class="frow" data-id="${i}" style="--h:${d.hue}">
+    <div class="fdiff"><canvas width="92" height="92"></canvas><span>★${d.st}</span></div>
+    <div class="finfo"><b>${esc(d.n)}</b><span class="by">By ${esc(d.by||'Shape Dash')}</span><span class="fm">♪ ${songName(i+1)} · ${LEVELDATA[i].time}s · <span style="color:${d.df===7?'#ffb3b3':DCOL[d.df]}">${SD.DIFF[d.df]}</span>${ls.b?` · best ${ls.b}%`:''}</span></div>
+    <div class="fcoins">${ls.c.map(v=>`<span class="cn ${v?'on':''}">●</span>`).join('')}</div>
+    <span class="fgo"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>${ls.done?'<span class="fdone">✔ Complete</span>':''}<span class="fprog" style="width:${ls.b}%"></span></button>`}).join('');
+  box.querySelectorAll('.frow').forEach(r=>drawFace(r.querySelector('canvas'),DEFS[+r.dataset.id].df));
+  const done=DEFS.filter(d=>LVS(d.id).done).length;$('tProg').innerHTML=`<b>${done}</b> / ${DEFS.length} levels beaten`;$('tCount').textContent=DEFS.length}
+let LDET=null;
+function lvlDetail(id){LDET=id;const d=DEFS[id],ls=LVS(id),L=levelL(id);
+  $('lName').textContent=d.n;$('lSub').innerHTML=`${d.by?'by '+esc(d.by)+' · ':''}<span style="color:${d.df===7?'#ffb3b3':DCOL[d.df]}">${SD.DIFF[d.df]}</span> · ★${d.st} · ♪ ${songName(id+1)}`;drawFace($('lFace'),d.df);
+  const modes=[...new Set(d.secs.map(s=>NAMES[s[0]]))].join(', ');
+  $('lStats').innerHTML=`<div><b>${ls.b}%</b>Best</div><div><b>${ls.pb}%</b>Practice</div><div><b>${ls.c.reduce((a,b)=>a+b,0)}/3</b>Coins</div><div><b>${LEVELDATA[id].time}s</b>Length</div><div><b>${ls.att}</b>Attempts</div><div style="grid-column:1/-1"><b style="font-size:14px">${modes}</b>Game modes</div>`;
+  showModal('lvl');setTimeout(()=>renderThumb($('lPrev'),id,.45),30)}
+function titleQuick(){const done=DEFS.filter(d=>LVS(d.id).done).length;$('tProg').innerHTML=`<b>${done}</b> / ${DEFS.length} levels beaten`;$('tCount').textContent=DEFS.length}
 /* garage */
 let GTAB='cube';
 const GTABS=['cube','ship','ball','ufo','wave','robot','spider','swing','colors','trails','effects'];
@@ -1450,6 +1734,7 @@ function buildSettings(){const o=SV.opt;$('setBody').innerHTML=`
   <div class="row"><label>Music</label><input type="range" min="0" max="1" step=".05" value="${o.mus}" data-o="mus"></div>
   <div class="row"><label>Sound effects</label><input type="range" min="0" max="1" step=".05" value="${o.sfx}" data-o="sfx"></div>
   <div class="row"><label>Show percentage</label><button class="tog ${o.pct?'on':''}" data-t="pct">${o.pct?'On':'Off'}</button></div>
+  <div class="row"><label>Noclip (you can’t die, progress isn’t saved)</label><button class="tog ${o.nc?'on':''}" data-t="nc">${o.nc?'On':'Off'}</button></div>
   <div class="row"><label>Show hitboxes (practice &amp; testing)</label><button class="tog ${o.hit?'on':''}" data-t="hit">${o.hit?'On':'Off'}</button></div>
   <div class="row"><label>Low detail (faster on slow computers)</label><button class="tog ${o.low?'on':''}" data-t="low">${o.low?'On':'Off'}</button></div>
   <h3>Save data</h3><p id="saveSt" class="hint">${STO.status}</p><p id="saveWhere" class="hint"></p>
@@ -1476,18 +1761,23 @@ function copyText(t,el){let ok=false;try{if(el){el.value=t;el.focus();el.select(
   try{navigator.clipboard.writeText(t).then(()=>toast('Copied!'),()=>{if(!ok)toast('Select the text and copy it')})}catch(e){}if(ok)toast('Copied!')}
 /* ---------- wiring ---------- */
 function wire(){
-  $('bPlay').onclick=()=>{sfx('click');showScreen('levels')};
+  $('bPlay').onclick=()=>{sfx('click');LTAB='main';CUR=CURS.main||0;showScreen('levels')};
   $('bGarage').onclick=()=>{sfx('click');showScreen('garage')};
   $('bCreate').onclick=()=>{sfx('click');showScreen('create')};
   $('bSettings').onclick=()=>{sfx('click');showScreen('settings')};
   document.querySelectorAll('[data-back]').forEach(b=>b.onclick=()=>{sfx('click');showScreen('title')});
   const box=$('cards');box.addEventListener('scroll',()=>requestAnimationFrame(syncCards),{passive:true});
-  box.addEventListener('click',e=>{const card=e.target.closest('.card');if(!card)return;const i=+card.dataset.i,b=e.target.closest('button');
-    if(i!==CUR&&!b){goCard(i);return}if(!b){return}const a=b.dataset.a;
-    const id=+card.dataset.id;if(a==='play')startRun('level',{id});else if(a==='prac')startRun('level',{id,prac:true});else if(a==='watch')startRun('watch',{id})});
-  $('ltabs').onclick=e=>{const b=e.target.closest('button');if(b&&b.dataset.lt!==LTAB){sfx('click');setLTab(b.dataset.lt)}};
+  box.addEventListener('click',e=>{const card=e.target.closest('.card');if(!card)return;const k=+card.dataset.i,b=e.target.closest('button');
+    if(k!==CUR&&!b){goCard(k);return}const id=+card.dataset.id;const a=b?b.dataset.a:'play';sfx('click');
+    if(a==='play')startRun('level',{id});else if(a==='prac')startRun('level',{id,prac:true});else if(a==='watch')startRun('watch',{id})});
   $('lp').onclick=()=>goCard(CUR-1);$('ln').onclick=()=>goCard(CUR+1);
   $('dots').onclick=e=>{const b=e.target.closest('b');if(b)goCard(+b.dataset.i)};
+  $('bExplore').onclick=()=>{sfx('click');showScreen('explore')};
+  $('eFil').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;sfx('click');EFIL=b.dataset.f;buildFeatured()});
+  $('tFeat').addEventListener('click',e=>{const r=e.target.closest('.frow');if(r){sfx('click');lvlDetail(+r.dataset.id)}});
+  $('lPlay').onclick=()=>{hideModal('lvl');startRun('level',{id:LDET})};$('lPrac').onclick=()=>{hideModal('lvl');startRun('level',{id:LDET,prac:true})};
+  $('lWatch').onclick=()=>{hideModal('lvl');startRun('watch',{id:LDET})};$('lClose').onclick=()=>hideModal('lvl');
+
   $('gtabs').onclick=e=>{const b=e.target.closest('button');if(!b)return;GTAB=b.dataset.t;sfx('click');buildGarage()};
   $('ggrid').onclick=e=>{const b=e.target.closest('button');if(b)garageClick(b.dataset.k)};
   $('setBody').addEventListener('input',e=>{const o=e.target.dataset.o;if(o){SV.opt[o]=+e.target.value;auVol();save()}});
@@ -1504,6 +1794,7 @@ function wire(){
   $('wReplay').onclick=()=>restartRun();$('wMenu').onclick=()=>exitRun();
   $('wNext').onclick=()=>{const t=RUN.def&&RUN.def.feat?'feat':'main',nl=LIST(t),k=nl.indexOf(RUN.id)+1,i=nl[k];hideModal('win');RUN=null;LTAB=t;CUR=k;startRun('level',{id:i})};
   $('hPause').onclick=()=>togglePause(true);
+  $('hSpP').onclick=()=>cycleStart(-1);$('hSpN').onclick=()=>cycleStart(1);
   $('hCp').onclick=()=>addCp(RUN,false);$('hUn').onclick=()=>{if(RUN){RUN.cps.pop();RUN.lastCp=RUN.p.x}};
   $('cNew').onclick=()=>edOpen(-1);
   $('cImport').onclick=async()=>{const r=await ask('Import a level','<p class="hint">Paste a level code a friend shared with you.</p><textarea id="impCode" rows="4"></textarea>',['Import','Cancel']);
@@ -1519,7 +1810,11 @@ function wire(){
   if(document.fullscreenEnabled){$('bFull').style.display='';$('bFull').onclick=()=>{if(document.fullscreenElement)document.exitFullscreen();else document.documentElement.requestFullscreen().catch(()=>{})}}
   window.addEventListener('resize',()=>{resize();if(SCREEN==='levels')goCard(CUR,true)});
 }
-function hudSync(){const r=RUN;$('hPrac').style.display=r&&r.prac?'flex':'none';$('hTag').textContent=r?(r.kind==='watch'?'BOT':r.prac?'PRACTICE':r.kind==='test'?'TEST':''):'';$('hTag').style.display=$('hTag').textContent?'':'none'}
+function cycleStart(dir){const r=RUN,n=r.L.starts.length;r.spi=((r.spi+1+dir)%(n+1)+n+1)%(n+1)-1;r.from=r.spi<0?null:r.L.starts[r.spi];r.cps=[];r.att++;r.shown=0;hideModal('win');spawn(r,true);
+  toastWorld(r.spi<0?'Start of level':`Start position ${r.spi+1} of ${n}`);hudSync()}
+function hudSync(){const r=RUN;$('hPrac').style.display=r&&r.prac?'flex':'none';const sp=r&&r.L.starts&&r.L.starts.length;$('hStart').style.display=sp?'flex':'none';
+  if(sp)$('hSpL').textContent=r.spi<0?'Start':`Pos ${r.spi+1}/${r.L.starts.length}`;
+  $('hTag').textContent=r?([r.kind==='watch'?'BOT':r.prac?'PRACTICE':r.kind==='test'?'TEST':'',r.nc?'NOCLIP':''].filter(Boolean).join(' · ')):'';$('hTag').style.display=$('hTag').textContent?'':'none'}
 /* ---------- boot ---------- */
 const FONT='"Lilita One","Arial Rounded MT Bold","Trebuchet MS",sans-serif';
 loadSave();wire();resize();showScreen('title');
@@ -1551,12 +1846,21 @@ const PAL=[
   {n:'Coins & Deco',it:[['C',0,'Secret coin'],['X','lamp','Lamp'],['X','torch','Torch'],['X','glow','Glow'],['X','bar','Light bar'],['X','pillar','Pillar'],['X','gear','Gear'],['X','ring','Ring'],['X','orbit','Orbit'],
     ['X','pulse','Beat square'],['X','star','Star'],['X','diamond','Gem'],['X','arrow','Arrows'],['X','zig','Wiggle'],['X','checker','Checker'],['X','cross','Sparkle'],['X','chain','Chain'],['X','eyes','Glowing eyes'],['X','mandala','Mandala'],['X','moon','Moon']]},
   {n:'Nature',it:[['X','grass','Grass'],['X','thorn','Thorns'],['X','flame','Fire'],['X','crystal','Crystals'],['X','cloud','Cloud'],['X','bubble','Bubbles'],['X','drip','Drip']]},
+  {n:'Special portals',it:[['N',1,'Mini portal'],['N',0,'Normal size'],['R',1,'Mirror on'],['R',0,'Mirror off'],['Y',0,'Teleport in'],['Z',0,'Teleport out']]},
+  {n:'Triggers',it:[['Q',0,'Start position'],['K',358,'Color: red'],['K',28,'Color: orange'],['K',52,'Color: yellow'],['K',130,'Color: green'],['K',190,'Color: cyan'],['K',225,'Color: blue'],['K',275,'Color: purple'],['K',320,'Color: pink'],
+    ['U',1,'Pulse: white'],['U',2,'Pulse: red'],['U',3,'Pulse: blue'],['J',1,'Shake: small'],['J',2,'Shake: big']]},
   {n:'Stamps',it:STAMPS.map((s,i)=>['stamp',i,s.n])}];
+function drawTrig(a,X,Y,s){const t=a[0];
+  if(t==='Q'){g.strokeStyle='#fff';g.lineWidth=Math.max(1.5,s*.06);g.beginPath();g.moveTo(X-s*.25,Y+s*.42);g.lineTo(X-s*.25,Y-s*.42);g.stroke();
+    g.fillStyle='#3bff6b';g.beginPath();g.moveTo(X-s*.25,Y-s*.42);g.lineTo(X+s*.35,Y-s*.25);g.lineTo(X-s*.25,Y-s*.08);g.closePath();g.fill();g.strokeStyle='#000';g.lineWidth=1;g.stroke();return}
+  const col=t==='K'?`hsl(${a[3]||0},100%,55%)`:t==='U'?['#fff','#fff','#ff3b3b','#3bd6ff'][a[3]||1]:'#ffb21f';
+  g.fillStyle='rgba(0,0,0,.55)';g.beginPath();g.arc(X,Y,s*.42,0,TAU);g.fill();g.strokeStyle=col;g.lineWidth=Math.max(2,s*.08);g.stroke();
+  g.fillStyle=col;g.font=`${Math.round(s*.42)}px ${FONT}`;g.textAlign='center';g.textBaseline='middle';g.fillText(t==='K'?'C':t==='U'?'P':'S',X,Y+s*.03);g.textBaseline='alphabetic'}
 const MODES=[['build','✚ Build'],['select','⬚ Select'],['erase','⌫ Erase'],['pan','✋ Pan']];
 const ED={idx:-1,lvl:null,o:[],camX:-3,zoom:1,mode:'build',cat:0,it:0,undo:[],redo:[],L:null,dirty:1,paint:false,pan:null,pinch:null,hover:null,sol:null,
   ptr:new Map(),sel:new Set(),box:null,drag:null,clip:null,deaths:[],path:null,asT:0,stT:0,isNew:false};
 const PAINT={B:1,H:1,T:1,S:1,D:1,s:1,d:1};
-const isPortal=a=>a[0]==='M'||a[0]==='G'||a[0]==='V';
+const isPortal=a=>'MGVNRYZ'.indexOf(a[0])>=0&&a[0].length===1;
 const spanOf=a=>isPortal(a)?3:1;
 const maxY=a=>isPortal(a)?6:9;
 function edTool(){return PAL[ED.cat].it[ED.it]}
@@ -1602,14 +1906,15 @@ function edThumb(c,t){const x=c.getContext('2d');x.clearRect(0,0,56,56);
     else if(t[0]==='X'){S=17;RS.camX=-1.1;GY=44;const d=SD.decoFor({x:0,y:0,k:t[1]});if(d.k==='chain'||d.k==='drip'){d.y=2.4;d.h=1.8}if(d.k==='bar'||d.k==='pillar'){d.h=2.1}if(d.y===.5){d.y=1.1}if(d.k==='gear')d.s=.9
       const T=theme(ED.lvl?ED.lvl.h:200);for(let k=0;k<3;k++)drawDecoItem(d,T,.6)}
     else{S=24;RS.camX=0;x.save();x.translate(16,44);GY=0;const o=mkObj(t,0,0);
-      if(o.t==='M'||o.t==='G'||o.t==='V'){S=10;x.translate(2,0)}if(o.t==='W'){S=o.r>1?13:22;x.translate(12,-20)}if(o.t==='O'){x.translate(0,-10)}if(o.t==='C')x.translate(0,-8);
+      if('MGVNRYZ'.indexOf(o.t)>=0){S=10;x.translate(2,0)}if(o.t==='W'){S=o.r>1?13:22;x.translate(12,-20)}if(o.t==='O'){x.translate(0,-10)}if(o.t==='C')x.translate(0,-8);
       SD.derive(o);drawObjT(o,theme(ED.lvl?ED.lvl.h:200));x.restore()}
   }catch(e){console.error(e)}
   g=gg;S=S0;GY=GY0;RS.camX=cam}
 function mkArr(t,x,y){const a=[t[0],x,y];if(t[0]==='B'||t[0]==='H'||t[0]==='T'){if(t[1])a.push(1)}else if(t[1]!==0||t[0]==='V')a.push(t[1]);return a}
 function mkObj(t,x,y){return SD.decObj(mkArr(t,x,y))}
 function drawObjT(o,T){switch(o.t){case 'B':case 'H':case 'T':drawBlock(o,T,0);break;case 'S':case 'D':case 's':case 'd':drawSpike(o,T,0);break;case 'W':drawSaw(o,T);break;
-  case 'O':drawOrb(o,false);break;case 'P':drawPad(o);break;case 'M':case 'G':case 'V':drawPortal(o,T);break;case 'C':drawCoin(o,false,false);break}}
+  case 'O':drawOrb(o,false);break;case 'P':drawPad(o);break;case 'M':case 'G':case 'V':case 'N':case 'R':case 'Y':case 'Z':drawPortal(o,T);break;case 'C':drawCoin(o,false,false);break;
+  case 'K':case 'U':case 'J':case 'Q':drawTrig([o.t,o.x,o.y,o.t==='K'?o.hue:o.t==='U'?o.c:o.s],wx(o.x+.5),wy(o.y+.5),S);break}}
 /* ---------- editing core ---------- */
 function edSnap(){ED.undo.push(JSON.stringify(ED.o));if(ED.undo.length>120)ED.undo.shift();ED.redo=[]}
 function edChanged(){ED.dirty=1;ED.sol=null;if(ED.lvl.v){ED.lvl.v=0;ED.lvl.va=0;edVerSync();edStatus('Level changed. Beat it again from the start to verify it.')}edAutosave()}
@@ -1658,7 +1963,7 @@ function flipSel(){const arr=selArr();if(!arr.length)return;const b=selBounds(ar
 function selectAll(){ED.sel=new Set(ED.o);setMode('select');edStatus(`Selected all ${ED.o.length} objects.`)}
 function setMode(m){ED.mode=m;if(m!=='select'){ED.box=null}edPalette()}
 /* ---------- render ---------- */
-function edRender(dt){
+function edRender(dt){RS.th=null;
   if(ED.dirty){ED.lvl.o=ED.o;ED.L=SD.buildCustom(ED.lvl);ED.dirty=0}
   const L=ED.L;const S0=S,GY0=GY,MT=edMet();S=MT.S;GY=MT.GY;RS.camX=ED.camX;RS.bgs=0;
   const T=theme(ED.lvl.h),x0=ED.camX,x1=ED.camX+W/S;
@@ -1673,6 +1978,12 @@ function edRender(dt){
   for(const a of ED.o){if(a[1]<x0-1||a[1]>x1+1)continue;if(a[0]==='X')g.strokeRect(wx(a[1])+2,wy(a[2]+1)+2,S-4,S-4)}
   g.setLineDash([]);g.font=`${Math.max(10,S*.3)}px ${FONT}`;g.textAlign='center';
   for(const a of ED.o){if(a[0]!=='C'||a[1]<x0-1||a[1]>x1+1)continue;g.fillStyle='#000';g.fillText(((a[3]|0)+1),wx(a[1]+.5),wy(a[2]+.5)+S*.11)}
+  // triggers, start positions and teleport links
+  for(const a of ED.o){if('KUJQ'.indexOf(a[0])<0||a[1]<x0-1||a[1]>x1+1)continue;
+    if(a[0]!=='Q'){g.strokeStyle='rgba(255,226,59,.35)';g.lineWidth=1;g.setLineDash([3,4]);g.beginPath();g.moveTo(wx(a[1]+.5),wy(0));g.lineTo(wx(a[1]+.5),wy(10));g.stroke();g.setLineDash([])}
+    drawTrig(a,wx(a[1]+.5),wy(a[2]+.5),S)}
+  for(const o of L.objs){if(o.t!=='Y'||!o.link||o.x>x1+1||o.link.x<x0-1)continue;g.strokeStyle='rgba(255,170,60,.6)';g.lineWidth=2;g.setLineDash([6,5]);g.beginPath();
+    g.moveTo(wx(o.x+.5),wy(o.y+1.5));g.lineTo(wx(o.link.x+.5),wy(o.link.y+1.5));g.stroke();g.setLineDash([])}
   // start icon
   g.save();g.translate(wx(.5),wy(SD.FLY[ED.lvl.m]?4.5:.5));g.globalAlpha=.8;drawIcon(g,ED.lvl.m,SV.ic[ED.lvl.m],S*.9,COLORS[SV.col[0]],COLORS[SV.col[1]],{cube:SV.ic.cube});g.restore();
   // green flag for "From flag"
@@ -1777,6 +2088,8 @@ function edHelp(){ask('How to use the editor',`<ul class="helpl">
   <li><b>Playtest</b> plays from the start. <b>From flag</b> starts at the green flag on the left of the view.</li>
   <li><b>Verify</b>: beat your level from the start without practice mode. Only verified levels can be shared.</li>
   <li><b>Coins</b>: hide up to 3 secret coins in your level.</li>
+  <li><b>Special portals</b>: mini size, mirror view, and teleports (a Teleport in sends you to the height of the next Teleport out).</li>
+  <li><b>Triggers</b> fire when you pass them: Color changes the level color, Pulse flashes the screen, Shake shakes the camera. <b>Start positions</b> let you start partway in; switch between them with ‹ › or the arrow keys while testing.</li>
   <li><b>Keys</b>: B build, V select, X erase, H pan · Ctrl+Z undo · Ctrl+C / V / D copy, paste, duplicate · Delete · R flip · arrows move the selection · [ ] change object · Q / E change category · T playtest · F from flag</li></ul>`,['Got it'])}
 async function edMore(){const r=await ask('Editor',`<p class="hint">Everything saves automatically.</p>`,['Level settings','Bot check','Clear test marks','Help & shortcuts','Close']);
   if(r===0)edSettings();
