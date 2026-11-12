@@ -2317,11 +2317,12 @@ function edHelp(){ask('How to use the editor',`<ul class="helpl">
   <li><b>Special portals</b>: mini size, mirror view, and teleports (a Teleport in sends you to the height of the next Teleport out).</li>
   <li><b>Triggers</b> fire when you pass them: Color changes the level color, Pulse flashes the screen, Shake shakes the camera. <b>Start positions</b> let you start partway in; switch between them with ‹ › or the arrow keys while testing.</li>
   <li><b>Keys</b>: B build, V select, X erase, H pan · Ctrl+Z undo · Ctrl+C / V / D copy, paste, duplicate · Delete · R flip · arrows move the selection · [ ] change object · Q / E change category · T playtest · F from flag</li></ul>`,['Got it'])}
-async function edMore(){const r=await ask('Editor',`<p class="hint">Everything saves automatically.</p>`,['Level settings','Bot check','Clear test marks','Help & shortcuts','Close']);
+async function edMore(){const r=await ask('Editor',`<p class="hint">Everything saves automatically.</p>`,['Level settings','Bot check','Import GD level','Clear test marks','Help & shortcuts','Close']);
   if(r===0)edSettings();
   if(r===1){if(!ED.o.length){edStatus('Place some objects first.');return}if(ED.dirty){ED.lvl.o=ED.o;ED.L=SD.buildCustom(ED.lvl);ED.dirty=0}ED.sol=new SD.Solver(ED.L,{M:.05,dec:6,cap:350});ED.sol.rep=0}
-  if(r===2){ED.deaths=[];ED.path=null;edStatus('Test marks cleared.')}
-  if(r===3)edHelp()}
+  if(r===2)GDI.dialog();
+  if(r===3){ED.deaths=[];ED.path=null;edStatus('Test marks cleared.')}
+  if(r===4)edHelp()}
 /* ---------- wiring ---------- */
 function wireEditor(){
   $('edCats').onclick=e=>{const b=e.target.closest('button');if(!b)return;if(b.dataset.m){setMode(b.dataset.m);return}ED.cat=+b.dataset.c;ED.it=0;edPalette()};
@@ -2378,6 +2379,122 @@ function edEndGesture(cancel){
     for(const a of ED.o)if(a[1]>=x0&&a[1]<=x1&&a[2]<=y1&&a[2]+spanOf(a)-1>=y0)ED.sel.add(a);edPalette()}
   ED.box=null;ED.pan=null;ED.paint=false;ED.erSnap=0}
 wireEditor();
+
+/* ---------- GD level importer ----------
+   Reads a Geometry Dash level (.gmd file, or a level string, compressed "H4sI…" or plain "kS38,…;1,1,2,15,3,15;")
+   and turns it into Shape Dash editor objects. Gameplay objects, groups and the main triggers are mapped;
+   pure decoration and anything Shape Dash has no equivalent for is skipped and counted. */
+const GDI=(()=>{
+  const U=30; // GD units per block
+  const R=(a,b)=>{const o=[];for(let i=a;i<=b;i++)o.push(i);return o};
+  // object id lists (best effort: GD has thousands of ids; extra solid ids can be added in the import dialog)
+  const SOLID=new Set([1,2,3,4,5,6,7,...R(62,66),...R(68,72),...R(74,78),...R(81,83),...R(90,96),...R(116,122),...R(146,147),...R(160,169),...R(207,213),...R(247,275),...R(467,475),...R(641,664),...R(1155,1157)]);
+  const HALF=new Set([40,195,196,369,370,371,1903,1904,1905,1906]);
+  const SPIKE=new Set([8,144,177,216,218,363,421,446,667,1889,1891]);
+  const SMALL=new Set([39,103,145,205,217,392,422,447,458,459,1890,1892,9,61,243,244,366,367,368,989,991,720,1715,1716,1717,1718,1719,1720,1721,1722,1723]);
+  const SAW={88:1.2,89:.9,98:.6,183:1.2,184:.9,185:.6,186:1.2,187:.9,188:.6,397:1.2,398:.9,399:.6,678:1.2,679:.9,680:.6,740:1.2,741:.9,742:.6,918:1.2,919:.9,1619:1.2,1620:.9};
+  const MODE={12:'cube',13:'ship',47:'ball',111:'ufo',660:'wave',745:'robot',1331:'spider',1933:'swing'};
+  const SPEED={200:0,201:1,202:2,203:3,1334:4};
+  const ORB={36:'y',141:'p',84:'b',1022:'g',1330:'k',1704:'d',1751:'d',444:'y'};
+  const PAD={35:'y',140:'p',67:'b',1332:'y'};
+  const HDR_MODE=['cube','ship','ball','ufo','wave','robot','spider','swing'],HDR_SPEED=[1,0,2,3,4];
+  const EASE_MAP=[0,1,1,2,3,3,3,3,3,2,1,1,2,1,1,2,1,1,3];
+
+  function b64ToBytes(s){s=s.trim().replace(/-/g,'+').replace(/_/g,'/').replace(/[^A-Za-z0-9+/=]/g,'');while(s.length%4)s+='=';
+    const bin=atob(s),u=new Uint8Array(bin.length);for(let i=0;i<bin.length;i++)u[i]=bin.charCodeAt(i);return u}
+  async function inflate(bytes,fmt){const ds=new DecompressionStream(fmt);const st=new Blob([bytes]).stream().pipeThrough(ds);return await new Response(st).text()}
+  /* text in, plain level string out */
+  async function decode(text){text=String(text||'').trim();let name='';
+    const nm=text.match(/<k>k2<\/k>\s*<s>([^<]*)<\/s>/);if(nm)name=nm[1];
+    const k4=text.match(/<k>k4<\/k>\s*<s>([^<]*)<\/s>/);if(k4)text=k4[1];
+    else{const m=text.match(/(?:^|[:#])4:([A-Za-z0-9_\-+/=]{20,})/);if(m)text=m[1]} // server response "…:4:H4sI…:…"
+    text=text.trim();
+    if(/^kS\d|^\d+,\d+,\d+,/.test(text)||text.indexOf(';1,')>=0)return{str:text,name};
+    if(typeof DecompressionStream==='undefined')throw new Error('This browser cannot unzip GD level data. Try Chrome, Edge or Firefox.');
+    const by=b64ToBytes(text);let out=null,err;
+    for(const f of[by[0]===0x1f?'gzip':'deflate','gzip','deflate','deflate-raw']){try{out=await inflate(by,f);if(out)break}catch(e){err=e}}
+    if(!out)throw new Error('Could not read that level data ('+(err&&err.message||'unknown format')+').');
+    return{str:out,name}}
+
+  function rgbHue(r,g,b){r/=255;g/=255;b/=255;const mx=Math.max(r,g,b),mn=Math.min(r,g,b),d=mx-mn;if(d<1e-6)return null;let h;
+    if(mx===r)h=((g-b)/d)%6;else if(mx===g)h=(b-r)/d+2;else h=(r-g)/d+4;h=Math.round(h*60);return((h%360)+360)%360||360}
+  function parseObj(s){const p=s.split(','),o={};for(let i=0;i+1<p.length;i+=2)o[p[i]]=p[i+1];return o}
+  function hdrColor(h,ch){const m=String(h.kS38||'').split('|');for(const c of m){const q=parseObj(c.replace(/_/g,','));if(+q[6]===ch)return[+q[1]||0,+q[2]||0,+q[3]||0]}return null}
+
+  /* plain level string -> {lvl, stats} */
+  function convert(str,opt){opt=opt||{};const yoff=+opt.yoff||0,extra=new Set(opt.extra||[]),keepAll=!!opt.blocksForUnknown;
+    const parts=str.split(';').filter(Boolean);let hdr={},objs=parts;
+    if(parts.length&&/^k[A-Za-z]+\d/.test(parts[0])){hdr=parseObj(parts[0]);objs=parts.slice(1)}
+    const st={total:0,kept:0,deco:0,high:0,unsupported:{},groupsCut:0,spawnTrig:0};
+    const raw=[];for(const s of objs){const o=parseObj(s);if(o[1]==null)continue;st.total++;raw.push(o)}
+    // groups that triggers point at get Shape Dash numbers 1..99
+    const TRIG_IDS={901:1,1049:1,1007:1};const gmap=new Map();
+    for(const o of raw)if(TRIG_IDS[+o[1]]&&+o[51]&&!gmap.has(+o[51])&&gmap.size<99)gmap.set(+o[51],gmap.size+1);
+    const grpOf=o=>{if(!o[57])return 0;for(const g of String(o[57]).split('.')){const n=gmap.get(+g);if(n)return n}return 0};
+    const out=[],used=new Set();let coin=0;const ox=o=>(+o[2]||0)/U,oy=o=>(+o[3]||0)/U;
+    const put=a=>{const k=a[0]+','+a[1]+','+a[2];if(a[0]!=='X'&&used.has(k))return;used.add(k);out.push(a);st.kept++};
+    const pushO=(t,x,y,p,g,maxy)=>{y+=yoff;if(y<0||y>maxy){st.high++;return}x=Math.max(0,x);const a=[t,x,y,p==null?0:p];if(g)a[4]=g;put(a)};
+    const flipped=o=>{const r=((+o[6]||0)%360+360)%360,fy=+o[5]?1:0;return((r>90&&r<270)?1:0)^fy};
+    for(const o of raw){const id=+o[1],x=ox(o),y=oy(o),gx=Math.round(x-.5),gy=Math.round(y-.5),g=grpOf(o);
+      if(SOLID.has(id)||extra.has(id)){pushO('B',gx,gy,0,g,9);continue}
+      if(HALF.has(id)){const fy=flipped(o);pushO(fy?'T':'H',gx,Math.floor(y-.25),0,g,9);continue}
+      if(SPIKE.has(id)){pushO(flipped(o)?'D':'S',gx,gy,0,g,9);continue}
+      if(SMALL.has(id)){pushO(flipped(o)?'d':'s',gx,Math.round(y-.25-(flipped(o)?-.5:0)),0,g,9);continue}
+      if(SAW[id]){const sc=+o[32]||1;pushO('W',gx,gy,Math.round(SAW[id]*sc*10)/10,g,9);continue}
+      if(MODE[id]){pushO('M',gx,Math.max(0,gy-1),MODE[id],0,6);continue}
+      if(id===10||id===11){pushO('G',gx,Math.max(0,gy-1),id===11?-1:1,0,6);continue}
+      if(SPEED[id]!=null){pushO('V',gx,Math.max(0,gy-1),SPEED[id],0,6);continue}
+      if(id===99||id===101){pushO('N',gx,Math.max(0,gy-1),id===101?1:0,0,6);continue}
+      if(id===45||id===46){pushO('R',gx,Math.max(0,gy-1),id===45?1:0,0,6);continue}
+      if(ORB[id]){pushO('O',gx,gy,ORB[id],g,9);continue}
+      if(PAD[id]){const f=flipped(o);pushO('P',gx,f?Math.round(y-.85):Math.round(y-.15),PAD[id]+(f?'^':''),g,9);continue}
+      if(id===1329||id===142){if(coin<3)pushO('C',gx,gy,coin++,0,9);continue}
+      if(id===901||id===1049||id===1007){
+        if(+o[62]||+o[11]){st.spawnTrig++;continue}
+        const tg=gmap.get(+o[51]);if(!tg){st.groupsCut++;continue}const tx=Math.max(0,Math.round(x));
+        if(id===901){const e=EASE_MAP[+o[30]||0]||0;put(['E',tx,0,[tg,Math.round((+o[28]||0)/U*2)/2,Math.round((+o[29]||0)/U*2)/2,Math.round((+o[10]||0)*100)/100,e].join(',')])}
+        else if(id===1049)put(['F',tx,0,tg+','+(+o[56]?1:0)]);
+        else put(['A',tx,0,[tg,Math.max(0,Math.min(1,o[35]==null?1:+o[35])),Math.round((+o[10]||0)*100)/100].join(',')]);continue}
+      if(id===899){if(+o[23]===1000&&!(+o[62]||+o[11])){const h=rgbHue(+o[7]||0,+o[8]||0,+o[9]||0);if(h)put(['K',Math.max(0,Math.round(x)),0,h])}else st.deco++;continue}
+      if(id===1006){if(+o[62]||+o[11]){st.spawnTrig++;continue}const n=(k,d)=>o[k]==null?d:+o[k],r=n(7,255),gg=n(8,255),b=n(9,255);
+        const c=r>200&&gg>200&&b>200?1:r>gg&&r>b?(gg>150?4:2):3;put(['U',Math.max(0,Math.round(x)),0,c]);continue}
+      if(id===1520){put(['J',Math.max(0,Math.round(x)),0,(+o[75]||1)>2?2:1]);continue}
+      if(keepAll){pushO('B',gx,gy,1,g,9);continue} // as fake (non-solid) block so the shape is kept
+      st.deco++;st.unsupported[id]=(st.unsupported[id]||0)+1}
+    out.sort((a,b)=>a[1]-b[1]||a[2]-b[2]);
+    const mode=HDR_MODE[+hdr.kA2||0]||'cube',sp=HDR_SPEED[+hdr.kA4||0]??1;
+    if(+hdr.kA11)out.unshift(['G',0,0,-1]);if(+hdr.kA3)out.unshift(['N',0,0,1]);
+    const bg=hdrColor(hdr,1000);let h=bg?rgbHue(bg[0],bg[1],bg[2]):null;
+    return{lvl:{m:mode,sp,h:h||200,o:out},stats:st}}
+
+  /* dialog in the editor */
+  async function dialog(){
+    const r=await ask('Import a GD level',`<div class="form">
+      <p class="hint">Choose a <b>.gmd</b> level file, or paste a level string (starts with <code>H4sI</code> or <code>kS38</code>). This replaces what's in the editor right now (Undo brings it back).</p>
+      <label for="gdFile">Level file<input type="file" id="gdFile" accept=".gmd,.txt,.xml,text/plain"></label>
+      <label for="gdText" style="display:block">…or paste the level data<textarea id="gdText" class="tin" rows="3" style="width:100%;margin-top:4px" placeholder="H4sIAAAAAAAA…"></textarea></label>
+      <label for="gdY">Move everything up/down (blocks)<input type="number" id="gdY" value="0" min="-60" max="60" step="1"></label>
+      <label for="gdKeep"><span>Keep decoration shapes as see-through blocks</span><input type="checkbox" id="gdKeep"></label>
+      <label for="gdExtra">Extra solid IDs<input id="gdExtra" class="tin" placeholder="optional, e.g. 1260,1261"></label>
+      </div>`,['Import','Cancel']);
+    if(r!==0)return;
+    let text=($('gdText')&&$('gdText').value)||'';const f=$('gdFile')&&$('gdFile').files&&$('gdFile').files[0];
+    const yoff=+(($('gdY')||{}).value||0),keep=!!($('gdKeep')||{}).checked,extra=String(($('gdExtra')||{}).value||'').split(/[^0-9]+/).filter(Boolean).map(Number);
+    try{if(f)text=await f.text();if(!text.trim()){edStatus('No level data given.');return}
+      const d=await decode(text),res=convert(d.str,{yoff,extra,blocksForUnknown:keep});
+      if(!res.stats.kept){edStatus('Nothing in that level could be converted. Try moving it up or down.');return}
+      edSnap();ED.o.length=0;for(const a of res.lvl.o)ED.o.push(a);ED.lvl.m=res.lvl.m;ED.lvl.sp=res.lvl.sp;ED.lvl.h=res.lvl.h;if(d.name)ED.lvl.n=d.name.slice(0,28);
+      ED.sel.clear();ED.camX=-3;edChanged();edPalette();if($('edName'))$('edName').value=ED.lvl.n||'';
+      const s=res.stats,un=Object.keys(s.unsupported).length;
+      const lines=[`<b>${s.kept}</b> objects converted from ${s.total}.`];
+      if(s.high)lines.push(`${s.high} were outside Shape Dash's 10-block height and left out. Change "Move everything up/down" and import again to bring a different part into view.`);
+      if(s.deco)lines.push(`${s.deco} decoration or unsupported objects skipped${un?` (${un} kinds)`:''}.`);
+      if(s.spawnTrig)lines.push(`${s.spawnTrig} spawn/touch triggers skipped. Shape Dash triggers fire when the player passes them.`);
+      if(s.groupsCut)lines.push(`${s.groupsCut} triggers skipped (more than 99 groups).`);
+      lines.push('Playtest it and beat it to verify before sharing.');
+      ask('Import finished','<div class="form">'+lines.map(l=>`<p class="hint" style="opacity:1">${l}</p>`).join('')+'</div>',['OK'])}
+    catch(e){ask('Import failed',`<p class="hint">${esc(e.message||String(e))}</p>`,['OK'])}}
+  return{decode,convert,dialog}})();
 
 /* ===== Versus: live races against a friend =====
    Players connect through PeerJS (free public matchmaking, then a direct browser-to-browser link).
